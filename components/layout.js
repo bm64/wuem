@@ -1,6 +1,6 @@
 import Header from "./header";
 import Head from "next/head";
-import Footer from "./Footer";
+import Footer from "./footer";
 import "./layout.css";
 function Layout({ children }) {
   return (
