@@ -20,13 +20,13 @@ const withSlideIn = Component => () => {
   }, []);
 
   return (
-    <div ref={ref}>
-      <Component
-        style={{
-          transition: 'transform 1s',
-          transform: `translateX(${shouldSlide ? '0vw' : '100vw'})`,
-        }}
-      />
+    <div
+      style={{
+        transition: 'transform 1s',
+        transform: `translateX(${shouldSlide ? '0vw' : '100vw'})`,
+      }}
+      ref={ref}>
+      <Component />
     </div>
   );
 };

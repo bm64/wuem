@@ -34,7 +34,7 @@ function CarsInsurance() {
   );
 }
 
-const OC = withSlideIn() => (
+const OC = withSlideIn(() => (
   <div className={styles.item}>
     <p className={styles.item__text}>Ubezpieczenie autocasco</p>
     <FaCarCrash className={styles.item__icon} size={32} />
