@@ -168,25 +168,20 @@ function Home() {
         </Slider>
       </div>
       <div className={styles.contact_header}>
-        <h2>Skontaktuj się z nami!</h2>
+        <h1>Skontaktuj się z nami!</h1>
         <hr className={styles.medium_bottom_line} />
       </div>
       <div className={styles.contact}>
         <div className={styles.contact__info}></div>
         <div className={styles.contact__form}>
           <h1>Masz pytanie? Napisz do nas!</h1>
-
-          <h1></h1>
-          <br />
-          <h3></h3>
-          <br />
           <form>
             <input
               type="text"
               className={styles.form__name}
               placeholder=" Twoje imię"
             />
-
+            <br />
             <input
               type="text"
               className={styles.form__mail}

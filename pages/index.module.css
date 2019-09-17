@@ -134,7 +134,7 @@
   justify-content: space-around;
   align-items: center;
 }
-.contact_header > h2 {
+.contact_header > h1 {
   font-size: 40px;
   font-weight: 400;
   color: #333;
@@ -155,7 +155,7 @@
   //background-color: #f0f0f0;
   justify-content: space-evenly;
   align-items: center;
-  height: 60vh;
+  height: 50vh;
 }
 .contact__form {
   display: flex;
@@ -165,48 +165,37 @@
   padding: 10px;
   height: 100%;
   box-shadow: 0 1rem 3rem 0 rgba(5, 22, 70, 0.1);
+  width: 25vw;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .contact__form > h1 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 400;
   color: #333;
+  margin-bottom: 30px;
 }
 
-.contact__form > h3 {
-  font-size: 25px;
-  color: #a68c69;
-  font-weight: 400;
+.form {
+  width: 100%;
 }
 form > input,
 textarea {
-  width: 100%;
-  background: #ffffff;
-  border: 1px solid #e5e9f0;
+  width: 20vw;
+  background-color: #fbfbfb;
+  border-bottom: 2px solid #333;
   color: #4e5a6d;
-  transition: border-color 0.3s;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  margin: 3px;
+  height: 5vh;
+  font-size: 20px;
+  outline: none;
 }
-.form__name {
-  width: 300px;
-  height: 40px;
-
-  margin: 5px;
-  font-size: 25px;
-}
-.form__mail {
-  margin: 5px;
-  width: 300px;
-  height: 40px;
-
-  font-size: 25px;
-}
-.form__message {
-  margin: 5px;
-  width: 610px;
-  height: 300px;
-
-  font-size: 25px;
-  text-align: top;
+form > textarea {
+  height: 20vh;
 }
 .form__submit {
   height: 50px;
