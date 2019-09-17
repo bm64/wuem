@@ -173,33 +173,34 @@ function Home() {
       </div>
       <div className={styles.contact}>
         <div className={styles.contact__info}></div>
-        <div className={styles.contact__form}>
-          <h1>Masz pytanie? Napisz do nas!</h1>
-          <form>
-            <input
-              type="text"
-              className={styles.form__name}
-              placeholder=" Twoje imię"
-            />
-            <br />
-            <input
-              type="text"
-              className={styles.form__mail}
-              placeholder=" Twój adres e-mail"
-            />
-            <br />
-            <textarea
-              type="text"
-              className={styles.form__message}
-              placeholder=" W czym możemy Ci pomóc"
-            />
-            <br />
-            <div type="submit" className={styles.form__submit}>
-              <span>Wyślij</span>
-            </div>
-            <br />
-          </form>
-        </div>
+        <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
+          <div className={styles.contact__form}>
+            <h1>Masz pytanie? Napisz do nas!</h1>
+            <form>
+              <input
+                type="text"
+                className={styles.form__name}
+                placeholder=" Twoje imię"
+              />
+              <br />
+              <input
+                type="text"
+                className={styles.form__mail}
+                placeholder=" Twój adres e-mail"
+              />
+              <br />
+              <textarea
+                type="text"
+                className={styles.form__message}
+                placeholder=" W czym możemy Ci pomóc"
+              />
+              <br />
+              <div type="submit" className={styles.form__submit}>
+                <span>Wyślij</span>
+              </div>
+            </form>
+          </div>
+        </ScrollAnimation>
       </div>
     </Layout>
   );

@@ -196,6 +196,7 @@ textarea {
 }
 form > textarea {
   height: 20vh;
+  padding-top: 10px;
 }
 .form__submit {
   height: 50px;
