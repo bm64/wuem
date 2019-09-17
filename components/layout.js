@@ -7,7 +7,6 @@ function Layout({ children }) {
     <>
       <Head>
         <title>WueM Finanse</title>
-
         <link
           href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
           rel="stylesheet"
