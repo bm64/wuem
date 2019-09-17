@@ -167,19 +167,18 @@ function Home() {
           </div>
         </Slider>
       </div>
+      <div className={styles.contact_header}>
+        <h2>Skontaktuj się z nami!</h2>
+        <hr className={styles.medium_bottom_line} />
+      </div>
       <div className={styles.contact}>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10197.168743002092!2d21.4199396!3d50.2864735!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x646d734823f4f0c9!2sWueM%20Finanse%20Ubezpieczenia%20Leasing!5e0!3m2!1spl!2spl!4v1568406377686!5m2!1spl!2spl"
-          width="700"
-          height="500"
-          frameborder="0"
-          style={{ border: 0 }}
-          allowfullscreen=""
-        ></iframe>
+        <div className={styles.contact__info}></div>
         <div className={styles.contact__form}>
-          <h1>Skontaktuj się z nami!</h1>
+          <h1>Masz pytanie? Napisz do nas!</h1>
+
+          <h1></h1>
           <br />
-          <h3>Masz pytanie? Potrzebujesz wyceny? Napisz do nas</h3>
+          <h3></h3>
           <br />
           <form>
             <input
