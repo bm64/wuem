@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
-import Section from '../section';
-import styles from '../../styles/sections/cars_insurance.module.scss';
+import React, { useState } from "react";
+import Section from "../section";
+import styles from "../../styles/sections/cars_insurance.module.scss";
 
-import withSlideIn from '../../animations/withSlideIn';
+import withSlideIn from "../../animations/withSlideIn";
 
-import {FaCarCrash, FaBook, FaWrench} from 'react-icons/fa';
+import { FaCarCrash, FaBook, FaWrench } from "react-icons/fa";
 
 function CarsInsurance() {
   return (
@@ -36,16 +36,17 @@ function CarsInsurance() {
 
 const OC = withSlideIn(() => (
   <div className={styles.item}>
-    <p className={styles.item__text}>Ubezpieczenie autocasco</p>
+    <p className={styles.item__text}>
+      Ubezpieczenie odpowiedzialnosci cywilnej
+    </p>
+
     <FaCarCrash className={styles.item__icon} size={32} />
   </div>
 ));
 
 const AC = withSlideIn(() => (
   <div className={styles.item}>
-    <p className={styles.item__text}>
-      Ubezpieczenie odpowiedzialnosci cywilnej
-    </p>
+    <p className={styles.item__text}>Ubezpieczenie autocasco</p>
     <FaBook className={styles.item__icon} size={32} />
   </div>
 ));
