@@ -1,7 +1,7 @@
-import styles from "./header.module.css";
-import { FaPhoneSquare } from "react-icons/fa";
+import styles from '../styles/header.module.scss';
+import {FaPhoneSquare} from 'react-icons/fa';
 
-function MenuItem({ text }) {
+function MenuItem({text}) {
   return (
     <div className={styles.menu__item}>
       <div className={styles.menu__text}>{text}</div>

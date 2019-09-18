@@ -1,0 +1,35 @@
+@import '_base.scss';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto';
+  color: $primary;
+  overflow-x: hidden;
+  background-color: $white;
+
+  @include for-size(phone-only) {
+    font-size: 18px;
+  }
+
+  @include for-size(tablet-portrait-up) {
+    font-size: 24px;
+  }
+
+  @include for-size(desktop-up) {
+    font-size: 26px;
+  }
+
+  @include for-size(big-desktop-up) {
+    font-size: 28px;
+  }
+
+  font-weight: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}

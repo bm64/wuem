@@ -1,8 +1,8 @@
-import Header from "./header";
-import Head from "next/head";
-import Footer from "./footer";
-import "./layout.css";
-function Layout({ children }) {
+import Header from './header';
+import Head from 'next/head';
+import Footer from './footer';
+import '../styles/layout.scss';
+function Layout({children}) {
   return (
     <>
       <Head>
@@ -21,11 +21,6 @@ function Layout({ children }) {
           rel="stylesheet"
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-        />
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
         />
         <link
           rel="stylesheet"

@@ -1,32 +1,51 @@
-import {useState, useRef, useEffect} from 'react';
+import {useRef} from 'react';
 
-const withSlideIn = Component => () => {
+import useOnScroll from '../hooks/useOnScroll';
+
+const withSlideIn = (Component, duration = 1000) => props => {
   const ref = useRef(null);
-  const [shouldSlide, setShouldSlide] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (ref.current) {
-        const offset = ref.current.getBoundingClientRect().top;
-        const h = Math.max(
-          document.documentElement.clientHeight,
-          window.innerHeight || 0,
-        );
-        setShouldSlide(offset - h < 0);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-  }, []);
+  const shouldSlide = useOnScroll(ref);
 
   return (
     <div
       style={{
-        transition: 'transform 1s',
+        transition: `transform ${(duration / 1000.0).toFixed(2)}s`,
         transform: `translateX(${shouldSlide ? '0vw' : '100vw'})`,
       }}
       ref={ref}>
-      <Component />
+      <Component {...props} />
+    </div>
+  );
+};
+
+export const withLeftSlideIn = (Component, duration = 1000) => props => {
+  const ref = useRef(null);
+  const shouldSlide = useOnScroll(ref);
+
+  return (
+    <div
+      style={{
+        transition: `transform ${(duration / 1000.0).toFixed(2)}s`,
+        transform: `translateX(${shouldSlide ? '0vw' : '-100vw'})`,
+      }}
+      ref={ref}>
+      <Component {...props} />
+    </div>
+  );
+};
+
+export const withRightSlideIn = (Component, duration = 1000) => props => {
+  const ref = useRef(null);
+  const shouldSlide = useOnScroll(ref);
+
+  return (
+    <div
+      style={{
+        transition: `transform ${(duration / 1000.0).toFixed(2)}s`,
+        transform: `translateX(${shouldSlide ? '0vw' : '100vw'})`,
+      }}
+      ref={ref}>
+      <Component {...props} />
     </div>
   );
 };

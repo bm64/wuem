@@ -1,11 +1,12 @@
-import styles from "./footer.module.css";
+import styles from '../styles/footer.module.scss';
 import {
   FaGooglePlusG,
   FaFacebookF,
   FaTwitter,
   FaLinkedinIn,
-  FaMapMarkedAlt
-} from "react-icons/fa";
+  FaMapMarkedAlt,
+} from 'react-icons/fa';
+
 function Footer() {
   return (
     <div className={styles.container}>
@@ -46,7 +47,7 @@ function Footer() {
         </div>
         <div className={styles.footer__navigation}>
           <p>Nawigacja</p>
-          <ul style={{ listStyleType: "none" }}>
+          <ul style={{listStyleType: 'none'}}>
             <li>
               <a>Start</a>
             </li>
@@ -70,11 +71,10 @@ function Footer() {
         <a
           href="http://www.wuemfinanse.pl"
           style={{
-            color: "#a69c68",
-            textDecoration: "none"
-          }}
-        >
-          {" "}
+            color: '#a69c68',
+            textDecoration: 'none',
+          }}>
+          {' '}
           WueMfinanse.pl
         </a>
       </div>

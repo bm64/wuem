@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Section from '../section';
-import styles from './cars_insurance.module.css';
+import styles from '../../styles/sections/cars_insurance.module.scss';
 
 import withSlideIn from '../../animations/withSlideIn';
 

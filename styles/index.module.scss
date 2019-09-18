@@ -1,3 +1,5 @@
+@import '_base.scss';
+
 .carousel__container {
   //position: relative;
   width: 100vw;
@@ -37,26 +39,26 @@
   align-items: flex-end;
   justify-content: space-evenly;
   height: 70vh;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-size: 25px;
-  color: #a68c69;
+  color: $primary;
 }
 .carousel__left {
   background-color: transparent;
   outline: none;
   cursor: pointer;
   border: none;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-size: 25px;
-  color: #a68c69;
+  color: $primary;
   font-weight: 700;
 }
 .carousel__right {
   font-weight: 700;
-  color: #a68c69;
+  color: $primary;
   font-size: 25px;
   font-style: bold;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   border: none;
   cursor: pointer;
   background-color: transparent;
@@ -82,8 +84,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-left: ;
-  background-color: #fbfbfb;
+  background-color: $white;
   vertical-align: middle;
   text-align: center;
   color: #a68c69aa;
@@ -94,7 +95,7 @@
 .menu__item:hover {
   color: #ecebe4;
   //margin-left: 0px;
-  background-color: #a68c69;
+  background-color: $primary;
   cursor: pointer;
 }
 

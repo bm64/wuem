@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import Section from "../section";
+import React, {useState} from 'react';
+import Section from '../section';
+
 function HealthInsurance() {
   return (
     <Section image="/static/health_insurance_img.jpeg">
@@ -17,4 +18,5 @@ function HealthInsurance() {
     </Section>
   );
 }
+
 export default HealthInsurance;

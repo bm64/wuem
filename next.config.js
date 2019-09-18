@@ -1,8 +1,8 @@
-const withCSS = require("@zeit/next-css");
-module.exports = withCSS({
-  cssModules: true,
-  cssLoaderOptions: { localsConvention: "dashes", camelCase: true },
-  distDir: "_next"
-
-  /* config options here */
-});
+const withCSS = require('@zeit/next-css');
+const withSass = require('@zeit/next-sass');
+module.exports = withCSS(
+  withSass({
+    cssModules: true,
+    distDir: '_next',
+  }),
+);
