@@ -173,33 +173,34 @@ function Home() {
       </div>
       <div className={styles.contact}>
         <div className={styles.contact__info}></div>
-        <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
-          <div className={styles.contact__form}>
+        <ScrollAnimation
+          animateIn="fadeIn"
+          animateOut="fadeOut"
+          style={{ height: "100%" }}
+        >
+          <form className={styles.contact__form}>
             <h1>Masz pytanie? Napisz do nas!</h1>
-            <form>
-              <input
-                type="text"
-                className={styles.form__name}
-                placeholder=" Twoje imię"
-              />
-              <br />
-              <input
-                type="text"
-                className={styles.form__mail}
-                placeholder=" Twój adres e-mail"
-              />
-              <br />
-              <textarea
-                type="text"
-                className={styles.form__message}
-                placeholder=" W czym możemy Ci pomóc"
-              />
-              <br />
-              <div type="submit" className={styles.form__submit}>
-                <span>Wyślij</span>
-              </div>
-            </form>
-          </div>
+
+            <input
+              type="text"
+              className={styles.form__name}
+              placeholder=" Twoje imię"
+            />
+
+            <input
+              type="text"
+              className={styles.form__mail}
+              placeholder=" Twój adres e-mail"
+            />
+            <textarea
+              type="text"
+              className={styles.form__message}
+              placeholder=" W czym możemy Ci pomóc"
+            />
+            <div type="submit" className={styles.form__submit}>
+              Wyślij
+            </div>
+          </form>
         </ScrollAnimation>
       </div>
     </Layout>
