@@ -7,10 +7,14 @@ import {
   FaUmbrellaBeach,
   FaHome,
   FaHandshake,
-  FaHandHoldingUsd
+  FaHandHoldingUsd,
+  FaMapMarkedAlt,
+  FaPhone,
+  FaRegClock,
+  FaRegEnvelope,
+  FaPhoneVolume
 } from "react-icons/fa";
 import Slider from "react-slick";
-import "animate.css/animate.min.css";
 import ScrollAnimation from "react-animate-on-scroll";
 import CarsInsurance from "../components/sections/cars_insurance";
 import HealthInsurance from "../components/sections/health_insurance";
@@ -172,7 +176,28 @@ function Home() {
         <hr className={styles.medium_bottom_line} />
       </div>
       <div className={styles.contact}>
-        <div className={styles.contact__info}></div>
+        <div className={styles.contact__info}>
+          <div className={styles.info__location}>
+            <div>
+              <FaMapMarkedAlt style={{ margin: "auto 0", fontSize: "50px" }} />
+            </div>
+          </div>
+          <div className={styles.info__hours}>
+            <div>
+              <FaRegClock style={{ margin: "auto 0", fontSize: "50px" }} />
+            </div>
+          </div>
+          <div className={styles.info__email}>
+            <div>
+              <FaRegEnvelope style={{ margin: "auto 0", fontSize: "50px" }} />
+            </div>
+          </div>
+          <div className={styles.info__phone}>
+            <div>
+              <FaPhoneVolume style={{ margin: "auto 0", fontSize: "50px" }} />
+            </div>
+          </div>
+        </div>
         <ScrollAnimation
           animateIn="fadeIn"
           animateOut="fadeOut"
