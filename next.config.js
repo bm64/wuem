@@ -4,5 +4,8 @@ module.exports = withCSS(
   withSass({
     cssModules: true,
     distDir: '_next',
+    cssLoaderOptions: {
+      localIdentName: '[path][name]__[local]--[hash:base64:5]',
+    },
   }),
 );

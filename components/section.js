@@ -10,7 +10,9 @@ function Section({children, image}) {
 
   useEffect(() => {
     if (ignoreOnce) {
-      ignoreOnce = false;
+      setTimeout(() => {
+        ignoreOnce = false;
+      }, 100); // Anti-annoying scroll hack
       return;
     }
     window.scrollTo(0, sectionRef.current.offsetTop);

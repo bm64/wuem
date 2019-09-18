@@ -1,133 +1,91 @@
 @import '_base.scss';
 
 .carousel__container {
-  //position: relative;
   width: 100vw;
   height: 80vh;
-  //box-shadow: 3px 3px 4px 2px #ccc;
 }
+
 .carousel {
   position: relative;
   width: 100vw;
-  transition: transform 1s;
+  // transition: transform 1s;
   z-index: -1;
 }
 
-.img1 {
+.carousel__image {
   position: absolute;
   height: 100vh;
   width: 100vw;
-  left: 0vw;
   object-fit: cover;
 }
-.img2 {
-  object-fit: cover;
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  left: -100vw;
-}
-.img3 {
-  object-fit: cover;
-  position: absolute;
-  height: 75vh;
-  width: 100vw;
-  left: 100vw;
-}
-.carousel__buttons {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-evenly;
-  height: 70vh;
-  font-family: 'Roboto';
-  font-size: 25px;
-  color: $primary;
-}
-.carousel__left {
-  background-color: transparent;
-  outline: none;
-  cursor: pointer;
-  border: none;
-  font-family: 'Roboto';
-  font-size: 25px;
-  color: $primary;
-  font-weight: 700;
-}
-.carousel__right {
-  font-weight: 700;
-  color: $primary;
-  font-size: 25px;
-  font-style: bold;
-  font-family: 'Roboto';
-  border: none;
-  cursor: pointer;
-  background-color: transparent;
-  outline: none;
-}
+
 .menu {
   display: flex;
   flex-direction: row;
   justify-content: center;
   background-color: transparent;
-  height: 200px;
   align-items: center;
   height: 20vh;
   margin-bottom: 3vh;
 }
+
 .menu__item {
-  //border-radius: 10px;
-  height: 10vh;
-  width: 20vw;
-  //box-shadow: 3px 3px 4px 2px #ccc;
-  //border: 1px solid #c1af9677;
+  min-height: 10vh;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
   background-color: $white;
-  vertical-align: middle;
-  text-align: center;
-  color: #a68c69aa;
+
+  color: unquote($primary + 'aa');
   transition: background-color 0.5s;
-  background-color: white;
-  margin: 5px;
+
+  cursor: pointer;
+
+  margin-left: 5px;
 }
+
+.menu__item:first-child() {
+  margin-left: 0px;
+}
+
 .menu__item:hover {
   color: #ecebe4;
-  //margin-left: 0px;
   background-color: $primary;
-  cursor: pointer;
 }
 
 .menu__item > p {
-  margin-left: 30px;
+  margin-left: 2rem;
+  max-width: 50%;
 }
-.menu__item__selected {
+
+.menu__item--selected {
   color: #ecebe4;
-  //margin-left: 0px;
-  background-color: #a68c69;
-  cursor: pointer;
+  background-color: $primary;
 }
-.wrapper {
-  display: flex;
-  flex-direction: column;
-}
-.icon {
-  font-size: 50px;
+
+.menu__item-icon {
+  font-size: 2.3rem;
 }
 
 .slider__container {
   display: flex;
   flex-direction: row;
   justify-content: center;
+
   margin: 10vh 0 10vh 0;
 }
+
 .slider {
   max-width: 50vw;
 }
+
 .slider__img {
   max-width: 50vw;
 }
+
 .contact_header {
   margin-top: 75px;
   display: flex;

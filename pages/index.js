@@ -39,86 +39,31 @@ var settings = {
 function Home() {
   const [currentImage, setCurrentImage] = useState(1);
   const [currentSection, setCurrentSection] = useState(1);
+
   return (
     <Layout>
-      <div className={styles.wrapper}>
-        <div className={styles.carousel__container}>
-          <div
-            className={styles.carousel}
-            style={{transform: `translateX(${currentImage * 100}vw)`}}>
-            <img className={styles.img1} src="/static/1.jpg" />
-            <img className={styles.img2} src="/static/2.jpg" />
-            <img className={styles.img3} src="/static/3.jpg" />
-          </div>
-          <div className={styles.carousel__buttons}>
-            <button
-              onClick={() => setCurrentImage(1)}
-              className={styles.carousel__left}>
-              Ubezpieczenia
-            </button>
-            <button
-              onClick={() => setCurrentImage(0)}
-              className={styles.carousel__right}>
-              Kredyt i Leasing
-            </button>
-          </div>
+      <div className={styles.carousel__container}>
+        <div
+          className={styles.carousel}
+          style={{transform: `translateX(${currentImage * 100}vw)`}}>
+          <img
+            className={styles.carousel__image}
+            style={{left: '0vw'}}
+            src="/static/1.jpg"
+          />
+          <img
+            className={styles.carousel__image}
+            style={{left: '-100vw'}}
+            src="/static/2.jpg"
+          />
         </div>
-        {currentImage === 1 ? (
-          <div className={styles.menu}>
-            <div
-              className={`${styles.menu__item} ${
-                currentSection === 1 ? styles.menu__item__selected : ''
-              }`}
-              onClick={() => setCurrentSection(1)}>
-              <FaCar className={styles.icon} />
-              <p>Ubezpiecznia pojazdów</p>
-            </div>
-            <div
-              className={`${styles.menu__item} ${
-                currentSection === 2 ? styles.menu__item__selected : ''
-              }`}
-              onClick={() => setCurrentSection(2)}>
-              <FaHeartbeat className={styles.icon} />
-              <p>Ubezpieczenia zdrowotne</p>
-            </div>
-            <div
-              className={`${styles.menu__item} ${
-                currentSection === 3 ? styles.menu__item__selected : ''
-              }`}
-              onClick={() => setCurrentSection(3)}>
-              <FaUmbrellaBeach className={styles.icon} />
-              <p>Ubezpieczenia turystyczne</p>
-            </div>
-            <div
-              className={`${styles.menu__item} ${
-                currentSection === 4 ? styles.menu__item__selected : ''
-              }`}
-              onClick={() => setCurrentSection(4)}>
-              <FaHome className={styles.icon} />
-              <p>Ubezpieczenia nieruchomości</p>
-            </div>
-          </div>
-        ) : (
-          <div className={styles.menu}>
-            <div
-              className={`${styles.menu__item} ${
-                currentSection === 5 ? styles.menu__item__selected : ''
-              }`}
-              onClick={() => setCurrentSection(5)}>
-              <FaHandHoldingUsd className={styles.icon} />
-              <p>Kredyt</p>
-            </div>
-            <div
-              className={`${styles.menu__item} ${
-                currentSection === 6 ? styles.menu__item__selected : ''
-              }`}
-              onClick={() => setCurrentSection(6)}>
-              <FaHandshake className={styles.icon} />
-              <p>Leasing</p>
-            </div>
-          </div>
-        )}
       </div>
+
+      <MenuBar
+        currentImage={currentImage}
+        currentSection={currentSection}
+        changeSection={setCurrentSection}
+      />
 
       {currentSection === 1 && <CarsInsurance />}
       {currentSection === 2 && <HealthInsurance />}
@@ -178,6 +123,68 @@ function Home() {
     </Layout>
   );
 }
+
+const MenuBar = ({currentImage, currentSection, changeSection}) => {
+  return (
+    <>
+      {currentImage === 1 ? (
+        <div className={styles.menu}>
+          <div
+            className={`${styles.menu__item} ${
+              currentSection === 1 ? styles['menu__item--selected'] : ''
+            }`}
+            onClick={() => changeSection(1)}>
+            <FaCar className={styles['menu__item-icon']} />
+            <p>Ubezpiecznia pojazdów</p>
+          </div>
+          <div
+            className={`${styles.menu__item} ${
+              currentSection === 2 ? styles['menu__item--selected'] : ''
+            }`}
+            onClick={() => changeSection(2)}>
+            <FaHeartbeat className={styles['menu__item-icon']} />
+            <p>Ubezpieczenia zdrowotne</p>
+          </div>
+          <div
+            className={`${styles.menu__item} ${
+              currentSection === 3 ? styles['menu__item--selected'] : ''
+            }`}
+            onClick={() => changeSection(3)}>
+            <FaUmbrellaBeach className={styles['menu__item-icon']} />
+            <p>Ubezpieczenia turystyczne</p>
+          </div>
+          <div
+            className={`${styles.menu__item} ${
+              currentSection === 4 ? styles['menu__item--selected'] : ''
+            }`}
+            onClick={() => changeSection(4)}>
+            <FaHome className={styles['menu__item-icon']} />
+            <p>Ubezpieczenia nieruchomości</p>
+          </div>
+        </div>
+      ) : (
+        <div className={styles.menu}>
+          <div
+            className={`${styles.menu__item} ${
+              currentSection === 5 ? styles['menu__item--selected'] : ''
+            }`}
+            onClick={() => changeSection(5)}>
+            <FaHandHoldingUsd className={styles['menu__item-icon']} />
+            <p>Kredyt</p>
+          </div>
+          <div
+            className={`${styles.menu__item} ${
+              currentSection === 6 ? styles['menu__item--selected'] : ''
+            }`}
+            onClick={() => changeSection(6)}>
+            <FaHandshake className={styles['menu__item-icon']} />
+            <p>Leasing</p>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
 
 const ContactForm = withFadeIn(() => (
   <form className={styles.contact__form}>
