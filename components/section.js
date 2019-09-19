@@ -20,7 +20,7 @@ function Section({children, image}) {
 
   return (
     <div ref={sectionRef} className={styles.section}>
-      <Content children={children}>{children}</Content>
+      <Content>{children}</Content>
       <img src={image} className={styles.section__img} />
     </div>
   );

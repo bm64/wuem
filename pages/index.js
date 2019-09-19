@@ -39,7 +39,7 @@ var settings = {
 
 function Home() {
   const [currentImage, setCurrentImage] = useState(1);
-  const [currentSection, setCurrentSection] = useState(1);
+  const [currentSection, setCurrentSection] = useState(2);
 
   return (
     <Layout>

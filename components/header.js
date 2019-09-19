@@ -9,13 +9,12 @@ function MenuItem({text}) {
     </div>
   );
 }
+
 function Header() {
   return (
     <div className={styles.container}>
       <div className={styles.header__left}>
-        <div className={styles.logo__container}>
-          <img className={styles.logo} src="/static/logo.png" />
-        </div>
+        <img className={styles.logo} src="/static/logo.png" />
         <div className={styles.menu__container}>
           <MenuItem text="Start" />
           <MenuItem text="Ubezpieczenia" />
@@ -24,11 +23,11 @@ function Header() {
         </div>
       </div>
       <div className={styles.header__right}>
-        <FaPhoneSquare className={styles.icon} />
-
+        <FaPhoneSquare className={styles.header__icon} />
         <MenuItem text="123-123-123" />
       </div>
     </div>
   );
 }
+
 export default Header;
