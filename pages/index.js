@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import Layout from "../components/layout";
-import styles from "../styles/index.module.scss";
+import React, {useState} from 'react';
+import Layout from '../components/layout';
+import styles from '../styles/index.module.scss';
 import {
   FaCar,
   FaHeartbeat,
@@ -12,18 +12,19 @@ import {
   FaPhone,
   FaRegClock,
   FaRegEnvelope,
-  FaPhoneVolume
-} from "react-icons/fa";
+  FaPhoneVolume,
+  FaArrowDown,
+} from 'react-icons/fa';
 
-import Slider from "react-slick";
-import CarsInsurance from "../components/sections/cars_insurance";
-import HealthInsurance from "../components/sections/health_insurance";
-import TravelInsurance from "../components/sections/travel_insurance";
-import PropertyInsurance from "../components/sections/property_insurance";
-import Loan from "../components/sections/loan";
-import Leasing from "../components/sections/leasing";
+import Slider from 'react-slick';
+import CarsInsurance from '../components/sections/cars_insurance';
+import HealthInsurance from '../components/sections/health_insurance';
+import TravelInsurance from '../components/sections/travel_insurance';
+import PropertyInsurance from '../components/sections/property_insurance';
+import Loan from '../components/sections/loan';
+import Leasing from '../components/sections/leasing';
 
-import withFadeIn from "../animations/withFadeIn";
+import withFadeIn from '../animations/withFadeIn';
 
 var settings = {
   dots: true,
@@ -33,7 +34,7 @@ var settings = {
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2000,
-  arrows: false
+  arrows: false,
 };
 
 function Home() {
@@ -45,16 +46,15 @@ function Home() {
       <div className={styles.carousel__container}>
         <div
           className={styles.carousel}
-          style={{ transform: `translateX(${currentImage * 100}vw)` }}
-        >
+          style={{transform: `translateX(${currentImage * 100}vw)`}}>
           <img
             className={styles.carousel__image}
-            style={{ left: "0vw" }}
+            style={{left: '0vw'}}
             src="/static/1.jpg"
           />
           <img
             className={styles.carousel__image}
-            style={{ left: "-100vw" }}
+            style={{left: '-100vw'}}
             src="/static/2.jpg"
           />
         </div>
@@ -65,6 +65,7 @@ function Home() {
         currentSection={currentSection}
         changeSection={setCurrentSection}
       />
+      <FaArrowDown className={styles.arrow} />
 
       {currentSection === 1 && <CarsInsurance />}
       {currentSection === 2 && <HealthInsurance />}
@@ -100,7 +101,7 @@ function Home() {
         <div className={styles.contact__info}>
           <div className={styles.info__location}>
             <div className={styles.contact__icon__wrapper}>
-              <FaMapMarkedAlt style={{ margin: "auto 0", fontSize: "50px" }} />
+              <FaMapMarkedAlt style={{margin: 'auto 0', fontSize: '50px'}} />
             </div>
             <div className={styles.contact__text}>
               <h2>Adres:</h2>
@@ -110,7 +111,7 @@ function Home() {
           </div>
           <div className={styles.info__hours}>
             <div className={styles.contact__icon__wrapper}>
-              <FaRegClock style={{ margin: "auto 0", fontSize: "50px" }} />
+              <FaRegClock style={{margin: 'auto 0', fontSize: '50px'}} />
             </div>
             <div className={styles.contact__text}>
               <h2>Godziny otwarcia:</h2>
@@ -120,7 +121,7 @@ function Home() {
           </div>
           <div className={styles.info__email}>
             <div className={styles.contact__icon__wrapper}>
-              <FaRegEnvelope style={{ margin: "auto 0", fontSize: "50px" }} />
+              <FaRegEnvelope style={{margin: 'auto 0', fontSize: '50px'}} />
             </div>
             <div className={styles.contact__text}>
               <h2>E-mail:</h2>
@@ -129,7 +130,7 @@ function Home() {
           </div>
           <div className={styles.info__phone}>
             <div className={styles.contact__icon__wrapper}>
-              <FaPhoneVolume style={{ margin: "auto 0", fontSize: "50px" }} />
+              <FaPhoneVolume style={{margin: 'auto 0', fontSize: '50px'}} />
             </div>
             <div className={styles.contact__text}>
               <h2>Telefon:</h2>
@@ -143,45 +144,41 @@ function Home() {
   );
 }
 
-const MenuBar = ({ currentImage, currentSection, changeSection }) => {
+const MenuBar = ({currentImage, currentSection, changeSection}) => {
   return (
     <>
       {currentImage === 1 ? (
         <div className={styles.menu}>
           <div
             className={`${styles.menu__item} ${
-              currentSection === 1 ? styles["menu__item--selected"] : ""
+              currentSection === 1 ? styles['menu__item--selected'] : ''
             }`}
-            onClick={() => changeSection(1)}
-          >
-            <FaCar className={styles["menu__item-icon"]} />
+            onClick={() => changeSection(1)}>
+            <FaCar className={styles['menu__item-icon']} />
             <p>Ubezpiecznia pojazdów</p>
           </div>
           <div
             className={`${styles.menu__item} ${
-              currentSection === 2 ? styles["menu__item--selected"] : ""
+              currentSection === 2 ? styles['menu__item--selected'] : ''
             }`}
-            onClick={() => changeSection(2)}
-          >
-            <FaHeartbeat className={styles["menu__item-icon"]} />
+            onClick={() => changeSection(2)}>
+            <FaHeartbeat className={styles['menu__item-icon']} />
             <p>Ubezpieczenia zdrowotne</p>
           </div>
           <div
             className={`${styles.menu__item} ${
-              currentSection === 3 ? styles["menu__item--selected"] : ""
+              currentSection === 3 ? styles['menu__item--selected'] : ''
             }`}
-            onClick={() => changeSection(3)}
-          >
-            <FaUmbrellaBeach className={styles["menu__item-icon"]} />
+            onClick={() => changeSection(3)}>
+            <FaUmbrellaBeach className={styles['menu__item-icon']} />
             <p>Ubezpieczenia turystyczne</p>
           </div>
           <div
             className={`${styles.menu__item} ${
-              currentSection === 4 ? styles["menu__item--selected"] : ""
+              currentSection === 4 ? styles['menu__item--selected'] : ''
             }`}
-            onClick={() => changeSection(4)}
-          >
-            <FaHome className={styles["menu__item-icon"]} />
+            onClick={() => changeSection(4)}>
+            <FaHome className={styles['menu__item-icon']} />
             <p>Ubezpieczenia nieruchomości</p>
           </div>
         </div>
@@ -189,20 +186,18 @@ const MenuBar = ({ currentImage, currentSection, changeSection }) => {
         <div className={styles.menu}>
           <div
             className={`${styles.menu__item} ${
-              currentSection === 5 ? styles["menu__item--selected"] : ""
+              currentSection === 5 ? styles['menu__item--selected'] : ''
             }`}
-            onClick={() => changeSection(5)}
-          >
-            <FaHandHoldingUsd className={styles["menu__item-icon"]} />
+            onClick={() => changeSection(5)}>
+            <FaHandHoldingUsd className={styles['menu__item-icon']} />
             <p>Kredyt</p>
           </div>
           <div
             className={`${styles.menu__item} ${
-              currentSection === 6 ? styles["menu__item--selected"] : ""
+              currentSection === 6 ? styles['menu__item--selected'] : ''
             }`}
-            onClick={() => changeSection(6)}
-          >
-            <FaHandshake className={styles["menu__item-icon"]} />
+            onClick={() => changeSection(6)}>
+            <FaHandshake className={styles['menu__item-icon']} />
             <p>Leasing</p>
           </div>
         </div>

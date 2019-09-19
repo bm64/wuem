@@ -1,4 +1,4 @@
-@import "_base.scss";
+@import '_base.scss';
 
 .carousel__container {
   width: 100vw;
@@ -25,8 +25,7 @@
   justify-content: center;
   background-color: transparent;
   align-items: center;
-  height: 20vh;
-  margin-bottom: 3vh;
+  height: 15vh;
 }
 
 .menu__item {
@@ -39,7 +38,7 @@
 
   background-color: $white;
 
-  color: unquote($primary + "aa");
+  color: unquote($primary + 'aa');
   transition: background-color 0.5s;
 
   cursor: pointer;
@@ -68,6 +67,33 @@
 
 .menu__item-icon {
   font-size: 2.3rem;
+}
+
+.arrow {
+  height: 3vh;
+  text-align: center;
+  animation: bounce 2s infinite;
+  padding-bottom: 1.2vh;
+
+  width: 100%;
+
+  color: $white;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
 
 .slider__container {
