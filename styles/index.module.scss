@@ -1,4 +1,4 @@
-@import '_base.scss';
+@import "_base.scss";
 
 .carousel__container {
   width: 100vw;
@@ -40,7 +40,7 @@
 
   background-color: $white;
 
-  color: unquote($primary + 'aa');
+  color: unquote($primary + "aa");
   transition: background-color 0.5s;
 
   cursor: pointer;
@@ -270,4 +270,15 @@ form > textarea {
 .form__submit:hover {
   background-color: #1e90ff;
   color: white;
+}
+.map__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 3rem;
+}
+.map {
+  margin: auto 0;
+  width: 85%;
+  min-height: 50vh;
 }
