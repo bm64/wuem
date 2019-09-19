@@ -26,6 +26,11 @@
   background-color: transparent;
   align-items: center;
   height: 15vh;
+
+  position: sticky;
+  top: 100px;
+
+  z-index: 3;
 }
 
 .menu__item {

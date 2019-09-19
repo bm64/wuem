@@ -59,7 +59,6 @@ function Home() {
           />
         </div>
       </div>
-
       <MenuBar
         currentImage={currentImage}
         currentSection={currentSection}
