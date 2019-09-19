@@ -5,6 +5,7 @@ module.exports = withCSS(
     cssModules: true,
     distDir: '_next',
     cssLoaderOptions: {
+      localsConvention: 'dashes',
       localIdentName: '[path][name]__[local]--[hash:base64:5]',
     },
   }),

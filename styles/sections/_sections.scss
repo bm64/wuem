@@ -1,0 +1,42 @@
+.image-section {
+  min-height: 50vh;
+
+  padding: 6rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.image-section__text {
+  padding: 0rem 2rem;
+  max-width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.image-section__text > h2 {
+  padding: 2rem 0;
+  font-size: 4rem;
+  color: $black;
+}
+
+.image-section__text > p {
+  line-height: 3rem;
+}
+
+.image-section > img {
+  width: 45vw;
+}
+
+.section {
+  border-top: 1px solid #ebebeb;
+  background-color: #fafafa;
+  padding: 6rem 6rem;
+}
+
+.section > h3 {
+  color: $black;
+}

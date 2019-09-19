@@ -1,30 +1,25 @@
-import React, { useState } from "react";
-import Section from "../section";
-import styles from "../../styles/sections/cars_insurance.module.scss";
+import React, {useState, useRef} from 'react';
+import styles from '../../styles/sections/cars_insurance.module.scss';
 
-import withSlideIn from "../../animations/withSlideIn";
+import withSlideIn, {
+  withLeftSlideIn,
+  withRightSlideIn,
+} from '../../animations/withSlideIn';
 
-import { FaCarCrash, FaBook, FaWrench } from "react-icons/fa";
+import withScrollIn from '../../animations/withScrollIn';
+
+import {FaCarCrash, FaBook, FaWrench} from 'react-icons/fa';
 
 function CarsInsurance() {
   return (
     <>
-      <Section image="/static/car_insurance_img.jpeg">
-        <h1>Ubezpiecznia pojazdów</h1>
-        <p>
-          <span style={{marginLeft: '3rem'}} /> Lorem ipsum dolor sit a met,
-          consectetur adipiscing elit. Fusce fermentum pellentesque ligula, ac
-          porta quam auctor ut. Vivamus tincidunt tellus sem, nec placerat nulla
-          commodo vitae. In nec sem ac erat condimentum vestibulum eu quis
-          mauris. Sed non lobortis nisl. Nunc placerat quis turpis ac ornare.
-          Nunc ligula quam, hendrerit vitae pretium non, fermentum eu urna. Nunc
-          euismod, lectus quis sodales sollicitudin, nulla odio accumsan mauris,
-          vel lobortis metus urna a nulla.
-        </p>
-      </Section>
+      <div className={styles['image-section']}>
+        <CarsInsuranceText containerClass={styles['image-section__text']} />
+        <img src={'/static/car_insurance_img.jpeg'} />
+      </div>
       <div className={styles.section}>
-        <p>W naszej ofercie ubezpieczen dla pojazdow znajdziesz...</p>
-        <div className={styles.items}>
+        <h3>W naszej ofercie ubezpieczen dla pojazdow znajdziesz...</h3>
+        <div className={styles.insurances}>
           <OC />
           <AC />
           <Assistance />
@@ -34,28 +29,49 @@ function CarsInsurance() {
   );
 }
 
-const OC = withSlideIn(() => (
-  <div className={styles.item}>
-    <p className={styles.item__text}>
+const CarsInsuranceText = withLeftSlideIn(() => {
+  return (
+    <>
+      <h2>Ubezpiecznia pojazdów</h2>
+      <p>
+        <span style={{marginLeft: '3rem'}} /> Lorem ipsum dolor sit a met,
+        consectetur adipiscing elit. Fusce fermentum pellentesque ligula, ac
+        porta quam auctor ut. Vivamus tincidunt tellus sem, nec placerat nulla
+        commodo vitae. In nec sem ac erat condimentum vestibulum eu quis mauris.
+        Sed non lobortis nisl. Nunc placerat quis turpis ac ornare. Nunc ligula
+        quam, hendrerit vitae pretium non, fermentum eu urna. Nunc euismod,
+        lectus quis sodales sollicitudin, nulla odio accumsan mauris, vel
+        lobortis metus urna a nulla.
+      </p>
+    </>
+  );
+});
+
+const OC = withRightSlideIn(() => (
+  <div className={styles.insurances__insurance}>
+    <p className={styles['insurances__insurance-text']}>
       Ubezpieczenie odpowiedzialnosci cywilnej
     </p>
-
-    <FaCarCrash className={styles.item__icon} size={32} />
+    <FaCarCrash className={styles['insurances__insurance-icon']} size={32} />
   </div>
 ));
 
-const AC = withSlideIn(() => (
-  <div className={styles.item}>
-    <p className={styles.item__text}>Ubezpieczenie autocasco</p>
-    <FaBook className={styles.item__icon} size={32} />
+const AC = withRightSlideIn(() => (
+  <div className={styles.insurances__insurance}>
+    <p className={styles['insurances__insurance-text']}>
+      Ubezpieczenie autocasco
+    </p>
+    <FaBook className={styles['insurances__insurance-icon']} size={32} />
   </div>
 ));
 
-const Assistance = withSlideIn(() => (
-  <div className={styles.item}>
-    <p className={styles.item__text}>Ubezpieczenie Assistance</p>
-    <FaWrench className={styles.item__icon} size={32} />
+const Assistance = withRightSlideIn(() => (
+  <div className={styles.insurances__insurance}>
+    <p className={styles['insurances__insurance-text']}>
+      Ubezpieczenie Assistance
+    </p>
+    <FaWrench className={styles['insurances__insurance-icon']} size={32} />
   </div>
 ));
 
-export default CarsInsurance;
+export default withScrollIn(CarsInsurance);

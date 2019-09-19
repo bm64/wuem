@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import Section from "../section";
+import React, {useState} from 'react';
 function Loan() {
   return (
-    <Section image="/static/loan_img.jpeg">
+    <div image="/static/loan_img.jpeg">
       <h1>Kredyt</h1>
       <span>
         Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
@@ -14,7 +13,7 @@ function Loan() {
         sollicitudin, nulla odio accumsan mauris, vel lobortis metus urna a
         nulla.
       </span>
-    </Section>
+    </div>
   );
 }
 export default Loan;

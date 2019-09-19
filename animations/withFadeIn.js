@@ -8,6 +8,7 @@ const withFadeIn = (Component, duration = 1000) => props => {
 
   return (
     <div
+      className={props.containerClass}
       style={{
         transition: `opacity ${(duration / 1000).toFixed(2)}s`,
         opacity: shouldFade ? '1' : '0',

@@ -1,0 +1,61 @@
+@import '../_base.scss';
+@import '_sections.scss';
+
+.tabbed-section {
+  min-height: 80vh;
+  margin: 6rem;
+}
+
+.tabbed-section__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tabbed-section__top > div > h2 {
+  color: black;
+}
+
+.tabbed-section__top > div > h2:after {
+  content: ' wszedzie';
+  color: $primary-alt;
+}
+
+.tabbed-section__top > div > h3 {
+  margin-left: 3rem;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+}
+
+.tabs > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 1rem 1.25rem;
+  margin-left: 0.8rem;
+
+  max-width: 12rem;
+
+  border-bottom: 2px solid #ccc;
+}
+
+.tabs > div:first-child {
+  margin-left: 0;
+
+  border-bottom: 2px solid $primary-alt;
+}
+
+.tabs > div > svg {
+  color: $primary-alt;
+  font-size: 4rem;
+}
+
+.tabs > div > h3 {
+  padding: 1.25rem 0rem;
+  text-align: center;
+}

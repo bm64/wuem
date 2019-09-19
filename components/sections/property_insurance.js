@@ -1,10 +1,26 @@
-import React, { useState } from "react";
-import Section from "../section";
+import React, {useState} from 'react';
+
+import styles from '../../styles/sections/property_insurance.module.scss';
+
+import withScrollIn from '../../animations/withScrollIn';
+import {withLeftSlideIn, withRightSlideIn} from '../../animations/withSlideIn';
+
 function PropertyInsurance() {
   return (
-    <Section image="/static/property_insurance_img.jpeg">
-      <h1>Ubezpieczenia nieruchomości</h1>
-      <span>
+    <>
+      <div className={styles['image-section']}>
+        <PropertyInsuranceText containerClass={styles['image-section__text']} />
+        <img src={'/static/property_insurance_img.jpeg'} />
+      </div>
+    </>
+  );
+}
+
+const PropertyInsuranceText = withLeftSlideIn(() => {
+  return (
+    <>
+      <h2>Ubezpieczenia nieruchomości</h2>
+      <p>
         Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
         fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
         tincidunt tellus sem, nec placerat nulla commodo vitae. In nec sem ac
@@ -13,8 +29,9 @@ function PropertyInsurance() {
         pretium non, fermentum eu urna. Nunc euismod, lectus quis sodales
         sollicitudin, nulla odio accumsan mauris, vel lobortis metus urna a
         nulla.
-      </span>
-    </Section>
+      </p>
+    </>
   );
-}
-export default PropertyInsurance;
+});
+
+export default withScrollIn(PropertyInsurance);
