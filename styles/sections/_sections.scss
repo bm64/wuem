@@ -30,7 +30,7 @@
 
 // Image-Section specific
 .image-section > .image-section__text {
-  width: 50%;
+  width: 45%;
 
   display: flex;
   flex-direction: column;
@@ -42,12 +42,22 @@
   object-fit: contain;
 }
 
+// Delet this
 .image-section__text > h2 {
-  font-size: 2rem;
+  font-size: 2.25rem;
   color: $black;
 }
 
+.image-section__text > h2 > span {
+  color: $primary-alt;
+}
+
 .image-section__text > p {
-  padding: 2rem 1rem;
+  padding: 2rem 0rem;
   line-height: 2.5rem;
+  font-weight: 500;
+}
+
+.image-section__text > p:before {
+  content: ' ';
 }

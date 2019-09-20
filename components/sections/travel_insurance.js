@@ -32,7 +32,9 @@ function TravelInsurance() {
 const TravelInsuranceText = withLeftSlideIn(() => {
   return (
     <>
-      <h2>Ubezpieczenia turystyczne</h2>
+      <h2>
+        Ubezpieczenia <span>turystyczne</span>
+      </h2>
       <p>
         Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
         fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
