@@ -1,31 +1,27 @@
 @import '../_base.scss';
 @import '_sections.scss';
 
-.tabbed-section {
-  min-height: 80vh;
-  margin: 6rem;
+.travel-headline {
+  display: inline-block;
 }
 
-.tabbed-section__top {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.travel-headline > h2 {
+  color: $black;
 }
 
-.tabbed-section__top > div > h2 {
-  color: black;
-}
-
-.tabbed-section__top > div > h2:after {
+.travel-headline > h2:after {
   content: ' wszedzie';
   color: $primary-alt;
 }
 
-.tabbed-section__top > div > h3 {
+.travel-headline > h3 {
   margin-left: 3rem;
 }
 
 .tabs {
+  margin-top: 1.25rem;
+  float: right;
+
   display: flex;
   flex-direction: row;
 }
@@ -35,9 +31,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-
-  padding: 1rem 1.25rem;
-  margin-left: 0.8rem;
 
   max-width: 12rem;
 
@@ -52,10 +45,11 @@
 
 .tabs > div > svg {
   color: $primary-alt;
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .tabs > div > h3 {
+  font-size: 1.5rem;
   padding: 1.25rem 0rem;
   text-align: center;
 }

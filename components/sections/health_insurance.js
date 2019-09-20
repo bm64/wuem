@@ -11,12 +11,12 @@ import {FaUserShield, FaStethoscope, FaCreditCard} from 'react-icons/fa';
 function HealthInsurance() {
   return (
     <>
-      <div className={styles['image-section']}>
+      <div className={styles.imageSection}>
         <HealthInsuranceText containerClass={styles['image-section__text']} />
         <img src={'/static/health_insurance_img.jpeg'} />
       </div>
-      <div className={styles.section}>
-        <h2 className={styles['benefits-title']}>
+      <div className={styles.fixedSection}>
+        <h2 className={styles.benefitsTitle}>
           W pakiecie ubezpieczenia zdrowotnego otrzymujesz
         </h2>
         <Benefits containerClass={styles.benefits} />

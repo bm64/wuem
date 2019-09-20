@@ -10,21 +10,19 @@ import {FaBus, FaFly, FaPlane} from 'react-icons/fa';
 function TravelInsurance() {
   return (
     <>
-      <div className={styles['image-section']}>
+      <div className={styles.imageSection}>
         <TravelInsuranceText containerClass={styles['image-section__text']} />
-        <img src={'/static/travel_insurance_img.jpeg'} />;
+        <img src={'/static/travel_insurance_img.jpeg'} />
       </div>
-      <div className={styles['tabbed-section']}>
-        <div className={styles['tabbed-section__top']}>
-          <div>
-            <h2>Badz bezpieczny </h2>
-            <h3>Sprawdz nasze ubezpieczenia turystyczne...</h3>
-          </div>
-          <div className={styles.tabs}>
-            <DomesticHolidaysTab />
-            <ForeignHolidaysTab />
-            <MultitravelTab />
-          </div>
+      <div className={styles.fixedSection}>
+        <div className={styles.travelHeadline}>
+          <h2>Badz bezpieczny </h2>
+          <h3>Sprawdz nasze ubezpieczenia turystyczne...</h3>
+        </div>
+        <div className={styles.tabs}>
+          <DomesticHolidaysTab />
+          <ForeignHolidaysTab />
+          <MultitravelTab />
         </div>
       </div>
     </>

@@ -17,7 +17,7 @@ function CarsInsurance() {
         <CarsInsuranceText containerClass={styles['image-section__text']} />
         <img src={'/static/car_insurance_img.jpeg'} />
       </div>
-      <div className={styles.section}>
+      <div className={styles['fixed-section']}>
         <h3>W naszej ofercie ubezpieczen dla pojazdow znajdziesz...</h3>
         <div className={styles.insurances}>
           <OC />
