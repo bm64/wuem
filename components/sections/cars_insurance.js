@@ -13,11 +13,11 @@ import {FaCarCrash, FaBook, FaWrench} from 'react-icons/fa';
 function CarsInsurance() {
   return (
     <>
-      <div className={styles['image-section']}>
+      <div className={styles.imageSection}>
         <CarsInsuranceText containerClass={styles['image-section__text']} />
         <img src={'/static/car_insurance_img.jpeg'} />
       </div>
-      <div className={styles.section}>
+      <div className={styles.fixedSection}>
         <h3>W naszej ofercie ubezpieczen dla pojazdow znajdziesz...</h3>
         <div className={styles.insurances}>
           <OC />
@@ -32,16 +32,18 @@ function CarsInsurance() {
 const CarsInsuranceText = withLeftSlideIn(() => {
   return (
     <>
-      <h2>Ubezpiecznia pojazdów</h2>
+      <h2>
+        Ubezpiecznia <span>pojazdów</span>
+      </h2>
       <p>
-        <span style={{marginLeft: '3rem'}} /> Lorem ipsum dolor sit a met,
-        consectetur adipiscing elit. Fusce fermentum pellentesque ligula, ac
-        porta quam auctor ut. Vivamus tincidunt tellus sem, nec placerat nulla
-        commodo vitae. In nec sem ac erat condimentum vestibulum eu quis mauris.
-        Sed non lobortis nisl. Nunc placerat quis turpis ac ornare. Nunc ligula
-        quam, hendrerit vitae pretium non, fermentum eu urna. Nunc euismod,
-        lectus quis sodales sollicitudin, nulla odio accumsan mauris, vel
-        lobortis metus urna a nulla.
+        Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
+        fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
+        tincidunt tellus sem, nec placerat nulla commodo vitae. In nec sem ac
+        erat condimentum vestibulum eu quis mauris. Sed non lobortis nisl. Nunc
+        placerat quis turpis ac ornare. Nunc ligula quam, hendrerit vitae
+        pretium non, fermentum eu urna. Nunc euismod, lectus quis sodales
+        sollicitudin, nulla odio accumsan mauris, vel lobortis metus urna a
+        nulla.
       </p>
     </>
   );

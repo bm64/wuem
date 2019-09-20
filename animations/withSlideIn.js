@@ -36,4 +36,21 @@ export const withRightSlideIn = (Component, duration = 1000) => props => {
   );
 };
 
+export const withSlideDown = (Component, duration = 1000) => props => {
+  const ref = useRef(null);
+  const shouldSlide = useOnScroll(ref);
+
+  return (
+    <div
+      className={props.containerClass}
+      style={{
+        transition: `transform ${(duration / 1000.0).toFixed(2)}s`,
+        transform: `translateY(${shouldSlide ? '0vw' : '-50vw'})`,
+      }}
+      ref={ref}>
+      <Component {...props} />
+    </div>
+  );
+};
+
 export default withLeftSlideIn;

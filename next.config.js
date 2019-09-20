@@ -5,8 +5,9 @@ module.exports = withCSS(
     cssModules: true,
     distDir: '_next',
     cssLoaderOptions: {
+      camelCase: true,
       localsConvention: 'dashes',
-      localIdentName: '[path][name]__[local]--[hash:base64:5]',
+      localIdentName: '[local]--[hash:base64:5]',
     },
   }),
 );

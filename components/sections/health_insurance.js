@@ -11,12 +11,12 @@ import {FaUserShield, FaStethoscope, FaCreditCard} from 'react-icons/fa';
 function HealthInsurance() {
   return (
     <>
-      <div className={styles['image-section']}>
+      <div className={styles.imageSection}>
         <HealthInsuranceText containerClass={styles['image-section__text']} />
         <img src={'/static/health_insurance_img.jpeg'} />
       </div>
-      <div className={styles.section}>
-        <h2 className={styles['benefits-title']}>
+      <div className={styles.fixedSection}>
+        <h2 className={styles.benefitsTitle}>
           W pakiecie ubezpieczenia zdrowotnego otrzymujesz
         </h2>
         <Benefits containerClass={styles.benefits} />
@@ -28,16 +28,18 @@ function HealthInsurance() {
 const HealthInsuranceText = withLeftSlideIn(() => {
   return (
     <>
-      <h2>Ubezpieczenia zdrowotne</h2>
+      <h2>
+        Ubezpieczenia <span>zdrowotne</span>
+      </h2>
       <p>
-        <span style={{marginLeft: '3rem'}} /> Lorem ipsum dolor sit a met,
-        consectetur adipiscing elit. Fusce fermentum pellentesque ligula, ac
-        porta quam auctor ut. Vivamus tincidunt tellus sem, nec placerat nulla
-        commodo vitae. In nec sem ac erat condimentum vestibulum eu quis mauris.
-        Sed non lobortis nisl. Nunc placerat quis turpis ac ornare. Nunc ligula
-        quam, hendrerit vitae pretium non, fermentum eu urna. Nunc euismod,
-        lectus quis sodales sollicitudin, nulla odio accumsan mauris, vel
-        lobortis metus urna a nulla.
+        Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
+        fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
+        tincidunt tellus sem, nec placerat nulla commodo vitae. In nec sem ac
+        erat condimentum vestibulum eu quis mauris. Sed non lobortis nisl. Nunc
+        placerat quis turpis ac ornare. Nunc ligula quam, hendrerit vitae
+        pretium non, fermentum eu urna. Nunc euismod, lectus quis sodales
+        sollicitudin, nulla odio accumsan mauris, vel lobortis metus urna a
+        nulla.
       </p>
     </>
   );
