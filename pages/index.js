@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import Layout from '../components/layout';
 import styles from '../styles/index.module.scss';
 import {
   FaCar,
@@ -16,7 +15,11 @@ import {
   FaArrowDown,
 } from 'react-icons/fa';
 
+import Layout from '../components/layout';
+import Header from '../components/header';
+
 import Slider from 'react-slick';
+
 import CarsInsurance from '../components/sections/cars_insurance';
 import HealthInsurance from '../components/sections/health_insurance';
 import TravelInsurance from '../components/sections/travel_insurance';
@@ -43,6 +46,7 @@ function Home() {
 
   return (
     <Layout>
+      <Header />
       <div className={styles.carousel__container}>
         <div
           className={styles.carousel}

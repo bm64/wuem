@@ -29,7 +29,6 @@ function Layout({children}) {
 
         <script src="https://kit.fontawesome.com/4a78aee91a.js" />
       </Head>
-      <Header></Header>
       <main>{children}</main>
       <Footer></Footer>
     </>
