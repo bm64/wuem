@@ -10,31 +10,54 @@
 }
 
 .questions {
+  margin: 0 auto;
+
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
 }
 
 .question {
+  padding: 3rem;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+
+  max-width: 40%;
+}
+
+.question:nth-child(odd) {
+  border-left: none;
+  border-right: 1px solid #ccc;
+}
+
+.question:nth-child(even) {
+  border-right: none;
+  border-left: 1px solid #ccc;
+}
+
+.question > svg {
+  color: lighten($black, 20%);
 }
 
 .question > h3 {
-  color: $black;
-  font-size: 2.3rem;
-  padding: 2rem;
-}
+  margin-left: 0.5rem;
 
-.question > h3:before {
-  font-size: 3rem;
-  content: '❓    ';
+  display: inline;
+  vertical-align: top;
+  color: $black;
+  font-size: 1.5rem;
 }
 
 .answer {
+  padding: 1rem 0;
 }
 
 .answer > p {
-  margin-left: 5rem; // Delet this
-
-  font-size: 1.5rem;
+  color: lighten($black, 20%);
+  font-size: 1.3rem;
   font-weight: 400;
+  line-height: 1.75rem;
 }
