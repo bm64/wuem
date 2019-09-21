@@ -1,2 +1,19 @@
 @import '../_base.scss';
 @import '_sections.scss';
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card > svg {
+  font-size: 2.5rem;
+  color: $primary-alt;
+}
