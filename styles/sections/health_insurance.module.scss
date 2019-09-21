@@ -7,17 +7,14 @@
 }
 
 .benefits {
-  min-height: 50vh;
+  min-height: 35vh;
   width: 100%;
 
-  padding-top: 4rem;
+  padding-top: 6rem;
 
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
   flex-wrap: wrap;
-
-  margin: 0 0;
 }
 
 .benefits__benefit {
@@ -29,10 +26,11 @@
 
 .benefits__benefit > svg {
   font-size: 4rem;
-  color: $primary-alt;
+  color: $primary;
 }
 
 .benefits__benefit > p {
+  color: lighten($black, 10%);
   padding: 3rem 0;
   font-size: 1.5rem;
   text-align: center;

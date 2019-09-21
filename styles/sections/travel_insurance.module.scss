@@ -15,6 +15,7 @@
 }
 
 .travel-headline > h3 {
+  color: lighten($black, 15%);
   margin-left: 3rem;
 }
 
@@ -52,4 +53,5 @@
   font-size: 1.5rem;
   padding: 1.25rem 0rem;
   text-align: center;
+  font-weight: 500;
 }

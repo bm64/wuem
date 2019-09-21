@@ -56,23 +56,9 @@ const Benefits = withFadeIn(() => {
         <FaStethoscope />
         <p> Polisa bez badan lekarskich </p>
       </div>
-
       <div className={styles.benefits__benefit}>
         <FaCreditCard />
         <p> Pomoc finansowa w chorobie lub po wypadku </p>
-      </div>
-      <div className={styles.benefits__benefit}>
-        <FaStethoscope />
-        <p> Polisa bez badan lekarskich </p>
-      </div>
-
-      <div className={styles.benefits__benefit}>
-        <FaUserShield />
-        <p> Ochrona dla calej rodziny </p>
-      </div>
-      <div className={styles.benefits__benefit}>
-        <FaStethoscope />
-        <p> Polisa bez badan lekarskich </p>
       </div>
     </>
   )

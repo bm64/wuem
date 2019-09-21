@@ -1,6 +1,10 @@
 @import '../_base.scss';
 @import '_sections.scss';
 
+.headline {
+  color: $black;
+}
+
 .insurances {
   padding: 1rem 0;
   display: flex;
@@ -23,6 +27,7 @@
 }
 
 .insurances__insurance-text {
+  color: lighten($black, 20%);
   padding: 2rem;
 }
 
