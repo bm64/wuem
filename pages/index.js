@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import styles from '../styles/index.module.scss';
+import React, { useState } from 'react'
+import styles from '../styles/index.module.scss'
 import {
   FaCar,
   FaHeartbeat,
@@ -13,23 +13,23 @@ import {
   FaRegEnvelope,
   FaPhoneVolume,
   FaArrowDown,
-} from 'react-icons/fa';
+} from 'react-icons/fa'
 
-import Layout from '../components/layout';
-import Header from '../components/header';
+import Layout from '../components/layout'
+import Header from '../components/header'
 
-import Slider from 'react-slick';
+import Slider from 'react-slick'
 
-import CarsInsurance from '../components/sections/cars_insurance';
-import HealthInsurance from '../components/sections/health_insurance';
-import TravelInsurance from '../components/sections/travel_insurance';
-import PropertyInsurance from '../components/sections/property_insurance';
-import Loan from '../components/sections/loan';
-import Leasing from '../components/sections/leasing';
+import CarsInsurance from '../components/sections/cars_insurance'
+import HealthInsurance from '../components/sections/health_insurance'
+import TravelInsurance from '../components/sections/travel_insurance'
+import PropertyInsurance from '../components/sections/property_insurance'
+import Loan from '../components/sections/loan'
+import Leasing from '../components/sections/leasing'
 
-import FAQ from '../components/sections/faq';
+import FAQ from '../components/sections/faq'
 
-import withFadeIn from '../animations/withFadeIn';
+import withFadeIn from '../animations/withFadeIn'
 
 var settings = {
   dots: true,
@@ -40,11 +40,11 @@ var settings = {
   autoplay: true,
   autoplaySpeed: 2000,
   arrows: false,
-};
+}
 
 function Home() {
-  const [currentImage, setCurrentImage] = useState(1);
-  const [currentSection, setCurrentSection] = useState(1);
+  const [currentImage, setCurrentImage] = useState(1)
+  const [currentSection, setCurrentSection] = useState(1)
 
   return (
     <Layout>
@@ -52,15 +52,14 @@ function Home() {
       <div className={styles.carousel__container}>
         <div
           className={styles.carousel}
-          style={{transform: `translateX(${currentImage * 100}vw)`}}>
-          <img
-            className={styles.carousel__image}
-            style={{left: '0vw'}}
-            src="/static/1.jpg"
-          />
+          style={{ transform: `translateX(${currentImage * 100}vw)` }}
+        >
+          <img className={styles.carousel__image} style={{ left: '0vw' }} />
           <div
             className={styles.carousel__image}
-            style={{left: '-100vw', backgroundImage: 'url(/static/4.jpeg)'}}
+            style={{
+              left: '-100vw',
+            }}
           />
         </div>
         <FaArrowDown className={styles.arrow} />
@@ -108,7 +107,7 @@ function Home() {
         <div className={styles.contact__info}>
           <div className={styles.info__location}>
             <div className={styles.contact__icon__wrapper}>
-              <FaMapMarkedAlt style={{margin: 'auto 0', fontSize: '50px'}} />
+              <FaMapMarkedAlt style={{ margin: 'auto 0', fontSize: '50px' }} />
             </div>
             <div className={styles.contact__text}>
               <h2>Adres:</h2>
@@ -118,7 +117,7 @@ function Home() {
           </div>
           <div className={styles.info__hours}>
             <div className={styles.contact__icon__wrapper}>
-              <FaRegClock style={{margin: 'auto 0', fontSize: '50px'}} />
+              <FaRegClock style={{ margin: 'auto 0', fontSize: '50px' }} />
             </div>
             <div className={styles.contact__text}>
               <h2>Godziny otwarcia:</h2>
@@ -128,7 +127,7 @@ function Home() {
           </div>
           <div className={styles.info__email}>
             <div className={styles.contact__icon__wrapper}>
-              <FaRegEnvelope style={{margin: 'auto 0', fontSize: '50px'}} />
+              <FaRegEnvelope style={{ margin: 'auto 0', fontSize: '50px' }} />
             </div>
             <div className={styles.contact__text}>
               <h2>E-mail:</h2>
@@ -137,7 +136,7 @@ function Home() {
           </div>
           <div className={styles.info__phone}>
             <div className={styles.contact__icon__wrapper}>
-              <FaPhoneVolume style={{margin: 'auto 0', fontSize: '50px'}} />
+              <FaPhoneVolume style={{ margin: 'auto 0', fontSize: '50px' }} />
             </div>
             <div className={styles.contact__text}>
               <h2>Telefon:</h2>
@@ -152,15 +151,15 @@ function Home() {
           className={styles.map}
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10197.168743002092!2d21.4199396!3d50.2864735!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x646d734823f4f0c9!2sWueM%20Finanse%20Ubezpieczenia%20Leasing!5e0!3m2!1spl!2spl!4v1568916799182!5m2!1spl!2spl"
           frameborder="0"
-          style={{border: 0}}
+          style={{ border: 0 }}
           allowfullscreen=""
         />
       </div>
     </Layout>
-  );
+  )
 }
 
-const MenuBar = ({currentImage, currentSection, changeSection}) => {
+const MenuBar = ({ currentImage, currentSection, changeSection }) => {
   return (
     <>
       {currentImage === 1 ? (
@@ -169,7 +168,8 @@ const MenuBar = ({currentImage, currentSection, changeSection}) => {
             className={`${styles.menu__item} ${
               currentSection === 1 ? styles['menu__item--selected'] : ''
             }`}
-            onClick={() => changeSection(1)}>
+            onClick={() => changeSection(1)}
+          >
             <FaCar className={styles['menu__item-icon']} />
             <p>Ubezpiecznia pojazdów</p>
           </div>
@@ -177,7 +177,8 @@ const MenuBar = ({currentImage, currentSection, changeSection}) => {
             className={`${styles.menu__item} ${
               currentSection === 2 ? styles['menu__item--selected'] : ''
             }`}
-            onClick={() => changeSection(2)}>
+            onClick={() => changeSection(2)}
+          >
             <FaHeartbeat className={styles['menu__item-icon']} />
             <p>Ubezpieczenia zdrowotne</p>
           </div>
@@ -185,7 +186,8 @@ const MenuBar = ({currentImage, currentSection, changeSection}) => {
             className={`${styles.menu__item} ${
               currentSection === 3 ? styles['menu__item--selected'] : ''
             }`}
-            onClick={() => changeSection(3)}>
+            onClick={() => changeSection(3)}
+          >
             <FaUmbrellaBeach className={styles['menu__item-icon']} />
             <p>Ubezpieczenia turystyczne</p>
           </div>
@@ -193,7 +195,8 @@ const MenuBar = ({currentImage, currentSection, changeSection}) => {
             className={`${styles.menu__item} ${
               currentSection === 4 ? styles['menu__item--selected'] : ''
             }`}
-            onClick={() => changeSection(4)}>
+            onClick={() => changeSection(4)}
+          >
             <FaHome className={styles['menu__item-icon']} />
             <p>Ubezpieczenia nieruchomości</p>
           </div>
@@ -204,7 +207,8 @@ const MenuBar = ({currentImage, currentSection, changeSection}) => {
             className={`${styles.menu__item} ${
               currentSection === 5 ? styles['menu__item--selected'] : ''
             }`}
-            onClick={() => changeSection(5)}>
+            onClick={() => changeSection(5)}
+          >
             <FaHandHoldingUsd className={styles['menu__item-icon']} />
             <p>Kredyt</p>
           </div>
@@ -212,15 +216,16 @@ const MenuBar = ({currentImage, currentSection, changeSection}) => {
             className={`${styles.menu__item} ${
               currentSection === 6 ? styles['menu__item--selected'] : ''
             }`}
-            onClick={() => changeSection(6)}>
+            onClick={() => changeSection(6)}
+          >
             <FaHandshake className={styles['menu__item-icon']} />
             <p>Leasing</p>
           </div>
         </div>
       )}
     </>
-  );
-};
+  )
+}
 
 const ContactForm = withFadeIn(() => (
   <form className={styles.contact__form}>
@@ -244,6 +249,6 @@ const ContactForm = withFadeIn(() => (
       Wyślij
     </div>
   </form>
-));
+))
 
-export default Home;
+export default Home
