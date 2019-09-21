@@ -54,13 +54,19 @@ function Home() {
           className={styles.carousel}
           style={{ transform: `translateX(${currentImage * 100}vw)` }}
         >
-          <img className={styles.carousel__image} style={{ left: '0vw' }} />
+          <div className={styles.carousel__image} style={{ left: '0vw' }}></div>
           <div
             className={styles.carousel__image}
-            style={{
-              left: '-100vw',
-            }}
-          />
+            style={{ left: '-100vw' }}
+          ></div>
+        </div>
+        <div className={styles.carousel__text}>
+          <h1>Poznaj nasze ubezpieczenia</h1>
+          <p>
+            Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w
+            przemyśle pornograficznym papież kremówka.
+          </p>
+          <div className={styles.carousel__button}>Sprawdź ofertę</div>
         </div>
         <FaArrowDown className={styles.arrow} />
       </div>

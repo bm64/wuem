@@ -14,17 +14,54 @@
 
 .carousel__image {
   position: absolute;
-  height: 100vh;
+  height: 140vh;
   width: 100vw;
-  background-size: 100% 110%;
+  background-size: 110% 120%;
+  transform: translate(0vh, -40vh);
 }
 .carousel__image:first-child {
   background-image: url('/static/finance.jpeg');
 }
 .carousel__image:last-child {
   background-image: url('/static/insurance.jpeg');
+<<<<<<< HEAD
+=======
 }
-
+.carousel__text {
+  transform: translate(35vh, 20vh);
+  color: $white;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 40%;
+}
+.carousel__text > h1 {
+  font-size: 6rem;
+}
+.carousel__text > p {
+  font-size: 3rem;
+  font-weight: 400;
+  width: 80%;
+}
+.carousel__button {
+  border: 3px solid #1e90ff;
+  outline: none;
+  color: #1e90ff;
+  background-color: $white;
+  transition-duration: 0.2s;
+  font-size: 2rem;
+  display: inline-block;
+  z-index: 5;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  align-self: flex-start;
+}
+.carousel__button:hover {
+  background-color: #1e90ff;
+  color: $white;
+>>>>>>> Add carousel text
+}
 .menu {
   display: flex;
   flex-direction: row;
@@ -94,7 +131,7 @@
   position: absolute;
   bottom: 0px;
 
-  height: 3vh;
+  height: 5vh;
   text-align: center;
   animation: bounce 2s infinite;
   padding-bottom: 1.2vh;
