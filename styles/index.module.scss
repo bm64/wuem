@@ -1,8 +1,8 @@
-@import "_base.scss";
+@import '_base.scss';
 
 .carousel__container {
   width: 100vw;
-  height: 80vh;
+  height: 100vh;
 }
 
 .carousel {
@@ -16,16 +16,16 @@
   position: absolute;
   height: 100vh;
   width: 100vw;
-  object-fit: cover;
+  background-size: 100% 110%;
 }
 
 .menu {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: transparent;
+  background-color: $white;
   align-items: center;
-  height: 15vh;
+  height: 20vh;
 }
 
 .menu__item {
@@ -40,12 +40,12 @@
 
   background-color: $white;
 
-  color: unquote($primary + "aa");
+  color: unquote($primary + 'aa');
   transition: background-color 0.5s;
 
   cursor: pointer;
 
-  margin-left: 5px;
+  box-shadow: 2px 5px 5px 0px #ccc;
 }
 
 .menu__item:first-child {
@@ -53,25 +53,34 @@
 }
 
 .menu__item:hover {
-  color: #ecebe4;
-  background-color: $primary;
+  color: $black;
 }
 
 .menu__item > p {
+  color: $primary;
   margin-left: 2rem;
+  text-align: center;
   max-width: 50%;
 }
 
 .menu__item--selected {
-  color: #ecebe4;
-  background-color: $primary;
+  //color: $white;
+  // background-color: $secondary;
+  z-index: 2;
+  border-bottom: 5px solid $primary;
+  box-shadow: 2px 5px 2px 0px #ccc;
 }
 
 .menu__item-icon {
+  display: none;
+  color: $primary-alt;
   font-size: 2.3rem;
 }
 
 .arrow {
+  position: absolute;
+  bottom: 0px;
+
   height: 3vh;
   text-align: center;
   animation: bounce 2s infinite;
