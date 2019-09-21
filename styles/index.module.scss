@@ -24,8 +24,6 @@
 }
 .carousel__image:last-child {
   background-image: url('/static/insurance.jpeg');
-<<<<<<< HEAD
-=======
 }
 .carousel__text {
   transform: translate(35vh, 20vh);
@@ -60,7 +58,6 @@
 .carousel__button:hover {
   background-color: #1e90ff;
   color: $white;
->>>>>>> Add carousel text
 }
 .menu {
   display: flex;
