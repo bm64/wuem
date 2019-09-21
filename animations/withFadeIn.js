@@ -10,7 +10,9 @@ const withFadeIn = (Component, duration = 1000) => props => {
     <div
       className={props.containerClass}
       style={{
-        transition: `opacity ${(duration / 1000).toFixed(2)}s`,
+        transition: shouldFade
+          ? `opacity ${(duration / 1000).toFixed(2)}s`
+          : '',
         opacity: shouldFade ? '1' : '0',
       }}
       ref={ref}>

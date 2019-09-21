@@ -27,6 +27,8 @@ import PropertyInsurance from '../components/sections/property_insurance';
 import Loan from '../components/sections/loan';
 import Leasing from '../components/sections/leasing';
 
+import FAQ from '../components/sections/faq';
+
 import withFadeIn from '../animations/withFadeIn';
 
 var settings = {
@@ -56,12 +58,12 @@ function Home() {
             style={{left: '0vw'}}
             src="/static/1.jpg"
           />
-          <img
+          <div
             className={styles.carousel__image}
-            style={{left: '-100vw'}}
-            src="/static/2.jpg"
+            style={{left: '-100vw', backgroundImage: 'url(/static/4.jpeg)'}}
           />
         </div>
+        <FaArrowDown className={styles.arrow} />
       </div>
 
       <MenuBar
@@ -70,14 +72,14 @@ function Home() {
         changeSection={setCurrentSection}
       />
 
-      <FaArrowDown className={styles.arrow} />
-
       {currentSection === 1 && <CarsInsurance />}
       {currentSection === 2 && <HealthInsurance />}
       {currentSection === 3 && <TravelInsurance />}
       {currentSection === 4 && <PropertyInsurance />}
       {currentSection === 5 && <Loan />}
       {currentSection === 6 && <Leasing />}
+
+      <FAQ />
 
       <div className={styles.slider__container}>
         <Slider {...settings} className={styles.slider}>
