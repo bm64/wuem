@@ -1,25 +1,25 @@
-import {useRef, useEffect} from 'react';
+import { useRef, useEffect } from 'react'
 
-var ignoreOnce = true;
+var ignoreOnce = true
 
 const withScrollIn = Component => props => {
-  const ref = useRef(null);
+  const ref = useRef(null)
 
   useEffect(() => {
     if (ignoreOnce) {
       setTimeout(() => {
-        ignoreOnce = false;
-      }, 100); // Anti-annoying scroll hack
-      return;
+        ignoreOnce = false
+      }, 100) // Anti-annoying scroll hack
+      return
     }
-    if (ref.current) window.scrollTo(0, ref.current.offsetTop);
-  }, []);
+    if (ref.current) window.scrollTo(0, ref.current.offsetTop)
+  }, [])
 
   return (
     <div ref={ref}>
       <Component {...props} />
     </div>
-  );
-};
+  )
+}
 
-export default withScrollIn;
+export default withScrollIn

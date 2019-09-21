@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
-import styles from '../../styles/sections/health_insurance.module.scss';
+import React, { useState } from 'react'
+import styles from '../../styles/sections/health_insurance.module.scss'
 
-import withScrollIn from '../../animations/withScrollIn';
-import withFadeIn from '../../animations/withFadeIn';
+import withScrollIn from '../../animations/withScrollIn'
+import withFadeIn from '../../animations/withFadeIn'
 
-import {withLeftSlideIn} from '../../animations/withSlideIn';
+import { withLeftSlideIn } from '../../animations/withSlideIn'
 
-import {FaUserShield, FaStethoscope, FaCreditCard} from 'react-icons/fa';
+import { FaUserShield, FaStethoscope, FaCreditCard } from 'react-icons/fa'
 
 function HealthInsurance() {
   return (
@@ -22,7 +22,7 @@ function HealthInsurance() {
         <Benefits containerClass={styles.benefits} />
       </div>
     </>
-  );
+  )
 }
 
 const HealthInsuranceText = withLeftSlideIn(() => {
@@ -42,8 +42,8 @@ const HealthInsuranceText = withLeftSlideIn(() => {
         nulla.
       </p>
     </>
-  );
-});
+  )
+})
 
 const Benefits = withFadeIn(() => {
   return (
@@ -75,7 +75,7 @@ const Benefits = withFadeIn(() => {
         <p> Polisa bez badan lekarskich </p>
       </div>
     </>
-  );
-}, 2000);
+  )
+}, 2000)
 
-export default withScrollIn(HealthInsurance);
+export default withScrollIn(HealthInsurance)

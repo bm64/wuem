@@ -1,14 +1,14 @@
-import React, {useState, useRef} from 'react';
-import styles from '../../styles/sections/cars_insurance.module.scss';
+import React, { useState, useRef } from 'react'
+import styles from '../../styles/sections/cars_insurance.module.scss'
 
 import withSlideIn, {
   withLeftSlideIn,
   withRightSlideIn,
-} from '../../animations/withSlideIn';
+} from '../../animations/withSlideIn'
 
-import withScrollIn from '../../animations/withScrollIn';
+import withScrollIn from '../../animations/withScrollIn'
 
-import {FaCarCrash, FaBook, FaWrench} from 'react-icons/fa';
+import { FaCarCrash, FaBook, FaWrench } from 'react-icons/fa'
 
 function CarsInsurance() {
   return (
@@ -26,7 +26,7 @@ function CarsInsurance() {
         </div>
       </div>
     </>
-  );
+  )
 }
 
 const CarsInsuranceText = withLeftSlideIn(() => {
@@ -46,8 +46,8 @@ const CarsInsuranceText = withLeftSlideIn(() => {
         nulla.
       </p>
     </>
-  );
-});
+  )
+})
 
 const OC = withRightSlideIn(() => (
   <div className={styles.insurances__insurance}>
@@ -56,7 +56,7 @@ const OC = withRightSlideIn(() => (
     </p>
     <FaCarCrash className={styles['insurances__insurance-icon']} size={32} />
   </div>
-));
+))
 
 const AC = withRightSlideIn(() => (
   <div className={styles.insurances__insurance}>
@@ -65,7 +65,7 @@ const AC = withRightSlideIn(() => (
     </p>
     <FaBook className={styles['insurances__insurance-icon']} size={32} />
   </div>
-));
+))
 
 const Assistance = withRightSlideIn(() => (
   <div className={styles.insurances__insurance}>
@@ -74,6 +74,6 @@ const Assistance = withRightSlideIn(() => (
     </p>
     <FaWrench className={styles['insurances__insurance-icon']} size={32} />
   </div>
-));
+))
 
-export default withScrollIn(CarsInsurance);
+export default withScrollIn(CarsInsurance)

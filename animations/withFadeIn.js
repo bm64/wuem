@@ -1,10 +1,10 @@
-import {useRef} from 'react';
+import { useRef } from 'react'
 
-import useOnScroll from '../hooks/useOnScroll';
+import useOnScroll from '../hooks/useOnScroll'
 
 const withFadeIn = (Component, duration = 1000) => props => {
-  const ref = useRef(null);
-  const shouldFade = useOnScroll(ref);
+  const ref = useRef(null)
+  const shouldFade = useOnScroll(ref)
 
   return (
     <div
@@ -15,10 +15,11 @@ const withFadeIn = (Component, duration = 1000) => props => {
           : '',
         opacity: shouldFade ? '1' : '0',
       }}
-      ref={ref}>
+      ref={ref}
+    >
       <Component {...props} />
     </div>
-  );
-};
+  )
+}
 
-export default withFadeIn;
+export default withFadeIn

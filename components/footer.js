@@ -1,11 +1,11 @@
-import styles from "../styles/footer.module.scss";
+import styles from '../styles/footer.module.scss'
 import {
   FaGooglePlusG,
   FaFacebookF,
   FaTwitter,
   FaLinkedinIn,
-  FaMapMarkedAlt
-} from "react-icons/fa";
+  FaMapMarkedAlt,
+} from 'react-icons/fa'
 
 function Footer() {
   return (
@@ -44,6 +44,6 @@ function Footer() {
       </div>
       <div className={styles.footer__bottom}>Copyright © 2019 WueMFinanse</div>
     </div>
-  );
+  )
 }
-export default Footer;
+export default Footer

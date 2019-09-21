@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react'
 
-import styles from '../../styles/sections/travel_insurance.module.scss';
+import styles from '../../styles/sections/travel_insurance.module.scss'
 
-import withScrollIn from '../../animations/withScrollIn';
-import {withLeftSlideIn, withRightSlideIn} from '../../animations/withSlideIn';
+import withScrollIn from '../../animations/withScrollIn'
+import { withLeftSlideIn, withRightSlideIn } from '../../animations/withSlideIn'
 
-import {FaBus, FaFly, FaPlane} from 'react-icons/fa';
+import { FaBus, FaFly, FaPlane } from 'react-icons/fa'
 
 function TravelInsurance() {
   return (
@@ -26,7 +26,7 @@ function TravelInsurance() {
         </div>
       </div>
     </>
-  );
+  )
 }
 
 const TravelInsuranceText = withLeftSlideIn(() => {
@@ -46,8 +46,8 @@ const TravelInsuranceText = withLeftSlideIn(() => {
         nulla.
       </p>
     </>
-  );
-});
+  )
+})
 
 const DomesticHolidaysTab = withRightSlideIn(() => {
   return (
@@ -55,8 +55,8 @@ const DomesticHolidaysTab = withRightSlideIn(() => {
       <FaBus />
       <h3>Wycieczki krajowe</h3>
     </>
-  );
-}, 750);
+  )
+}, 750)
 
 const ForeignHolidaysTab = withRightSlideIn(() => {
   return (
@@ -64,8 +64,8 @@ const ForeignHolidaysTab = withRightSlideIn(() => {
       <FaPlane />
       <h3>Wycieczki zagraniczne</h3>
     </>
-  );
-}, 1000);
+  )
+}, 1000)
 
 const MultitravelTab = withRightSlideIn(() => {
   return (
@@ -73,7 +73,7 @@ const MultitravelTab = withRightSlideIn(() => {
       <FaFly />
       <h3>Ubezpieczenie Multitravel</h3>
     </>
-  );
-}, 1200);
+  )
+}, 1200)
 
-export default withScrollIn(TravelInsurance);
+export default withScrollIn(TravelInsurance)

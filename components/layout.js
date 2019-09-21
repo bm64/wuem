@@ -1,8 +1,8 @@
-import Header from './header';
-import Head from 'next/head';
-import Footer from './footer';
-import '../styles/layout.scss';
-function Layout({children}) {
+import Header from './header'
+import Head from 'next/head'
+import Footer from './footer'
+import '../styles/layout.scss'
+function Layout({ children }) {
   return (
     <>
       <Head>
@@ -32,6 +32,6 @@ function Layout({children}) {
       <main>{children}</main>
       <Footer></Footer>
     </>
-  );
+  )
 }
-export default Layout;
+export default Layout

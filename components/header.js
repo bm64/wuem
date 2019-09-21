@@ -1,13 +1,13 @@
-import styles from '../styles/header.module.scss';
-import {FaPhoneSquare} from 'react-icons/fa';
+import styles from '../styles/header.module.scss'
+import { FaPhoneSquare } from 'react-icons/fa'
 
-function MenuItem({text}) {
+function MenuItem({ text }) {
   return (
     <div className={styles.menu__item}>
       <div className={styles.menu__text}>{text}</div>
       <div className={styles.menu__underline} />
     </div>
-  );
+  )
 }
 
 function Header() {
@@ -27,7 +27,7 @@ function Header() {
         <MenuItem text="123-123-123" />
       </div>
     </div>
-  );
+  )
 }
 
-export default Header;
+export default Header

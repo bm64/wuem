@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react'
 
 function Leasing() {
   return (
@@ -15,6 +15,6 @@ function Leasing() {
         nulla.
       </span>
     </div>
-  );
+  )
 }
-export default Leasing;
+export default Leasing

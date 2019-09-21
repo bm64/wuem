@@ -1,17 +1,17 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react'
 
-import styles from '../../styles/sections/property_insurance.module.scss';
+import styles from '../../styles/sections/property_insurance.module.scss'
 
-import withScrollIn from '../../animations/withScrollIn';
-import withFadeIn from '../../animations/withFadeIn';
+import withScrollIn from '../../animations/withScrollIn'
+import withFadeIn from '../../animations/withFadeIn'
 
 import {
   withLeftSlideIn,
   withRightSlideIn,
   withSlideDown,
-} from '../../animations/withSlideIn';
+} from '../../animations/withSlideIn'
 
-import {FaHome, FaBuilding, FaHouseDamage} from 'react-icons/fa';
+import { FaHome, FaBuilding, FaHouseDamage } from 'react-icons/fa'
 
 function PropertyInsurance() {
   return (
@@ -28,7 +28,7 @@ function PropertyInsurance() {
         </div>
       </div>
     </>
-  );
+  )
 }
 
 const PropertyInsuranceText = withLeftSlideIn(() => {
@@ -48,8 +48,8 @@ const PropertyInsuranceText = withLeftSlideIn(() => {
         nulla.
       </p>
     </>
-  );
-});
+  )
+})
 
 const HouseInsurance = withFadeIn(
   withSlideDown(() => {
@@ -58,10 +58,10 @@ const HouseInsurance = withFadeIn(
         <FaHome />
         <h3>Ubezpieczenie domu</h3>
       </div>
-    );
+    )
   }, 1500),
-  2000,
-);
+  2000
+)
 
 const FlatInsurance = withFadeIn(
   withSlideDown(() => {
@@ -70,10 +70,10 @@ const FlatInsurance = withFadeIn(
         <FaBuilding />
         <h3>Ubezpieczenie mieszkania</h3>
       </div>
-    );
+    )
   }, 1500),
-  2000,
-);
+  2000
+)
 
 const HouseInBuildInsurance = withFadeIn(
   withSlideDown(() => {
@@ -82,9 +82,9 @@ const HouseInBuildInsurance = withFadeIn(
         <FaHouseDamage />
         <h3>Ubezpieczenia domu w budowie</h3>
       </div>
-    );
+    )
   }, 1500),
-  2000,
-);
+  2000
+)
 
-export default withScrollIn(PropertyInsurance);
+export default withScrollIn(PropertyInsurance)

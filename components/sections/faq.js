@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from '../../styles/sections/faq.module.scss';
+import React from 'react'
+import styles from '../../styles/sections/faq.module.scss'
 
 function FAQ() {
   return (
@@ -13,7 +13,7 @@ function FAQ() {
         <Question />
       </div>
     </div>
-  );
+  )
 }
 
 const Question = () => (
@@ -28,6 +28,6 @@ const Question = () => (
       </p>
     </div>
   </div>
-);
+)
 
-export default FAQ;
+export default FAQ

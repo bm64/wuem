@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react'
 function Loan() {
   return (
     <div image="/static/loan_img.jpeg">
@@ -14,6 +14,6 @@ function Loan() {
         nulla.
       </span>
     </div>
-  );
+  )
 }
-export default Loan;
+export default Loan
