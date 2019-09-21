@@ -44,8 +44,10 @@ export const withSlideDown = (Component, duration = 1000) => props => {
     <div
       className={props.containerClass}
       style={{
-        transition: `transform ${(duration / 1000.0).toFixed(2)}s`,
-        transform: `translateY(${shouldSlide ? '0vw' : '-50vw'})`,
+        transition: shouldSlide
+          ? `transform ${(duration / 1000.0).toFixed(2)}s`
+          : '',
+        transform: `translateY(${shouldSlide ? '0vw' : '-30vw'})`,
       }}
       ref={ref}>
       <Component {...props} />
