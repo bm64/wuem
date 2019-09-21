@@ -1,4 +1,4 @@
-@import "_base.scss";
+@import '_base.scss';
 
 .carousel__container {
   width: 100vw;
@@ -19,10 +19,10 @@
   background-size: 100% 110%;
 }
 .carousel__image:first-child {
-  background-image: url("/static/finance.jpeg");
+  background-image: url('/static/finance.jpeg');
 }
 .carousel__image:last-child {
-  background-image: url("/static/insurance.jpeg");
+  background-image: url('/static/insurance.jpeg');
 }
 
 .menu {
@@ -32,6 +32,9 @@
   background-color: $white;
   align-items: center;
   height: 20vh;
+
+  margin: 0 auto;
+  max-width: 1400px;
 }
 
 .menu__item {
@@ -46,7 +49,7 @@
 
   background-color: $white;
 
-  color: unquote($primary + "aa");
+  color: unquote($primary + 'aa');
 
   cursor: pointer;
   font-weight: 400;

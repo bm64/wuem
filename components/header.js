@@ -12,7 +12,7 @@ function MenuItem({ text }) {
 
 function Header() {
   return (
-    <div className={styles.container}>
+    <div className={styles.header}>
       <div className={styles.header__left}>
         <img className={styles.logo} src="/static/logo.png" />
         <div className={styles.menu__container}>
