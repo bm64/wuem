@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react'
 import styles from '../styles/header.module.scss'
 import { FaPhoneSquare } from 'react-icons/fa'
 
@@ -11,10 +12,23 @@ function MenuItem({ text }) {
 }
 
 function Header() {
+  const [isCompact, setCompact] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setCompact(window.scrollY > 0)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+  })
+
   return (
     <div className={styles.header}>
       <div className={styles.header__left}>
-        <img className={styles.logo} src="/static/logo.png" />
+        <img
+          className={`${styles.logo} ${isCompact ? styles.logoCompact : ''}`}
+          src="/static/logo.png"
+        />
         <div className={styles.menu__container}>
           <MenuItem text="Start" />
           <MenuItem text="Ubezpieczenia" />

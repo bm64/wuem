@@ -24,7 +24,12 @@
 }
 
 .logo {
-  height: 7rem;
+  transition: height 0.5s;
+  height: 6.5rem;
+}
+
+.logo-compact {
+  height: 5rem;
 }
 
 .header__left {
