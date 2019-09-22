@@ -16,7 +16,8 @@ function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setCompact(window.scrollY > 500)
+      if (window.scrollY > 300 && !isCompact) setCompact(true)
+      else if (window.scrollY < 300 && isCompact) setCompact(false)
     }
 
     window.addEventListener('scroll', handleScroll)
