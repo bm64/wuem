@@ -1,10 +1,8 @@
 .section {
   min-height: 50vh;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   width: 100%;
-
   border-top: 1px solid #ebebeb;
 }
 
@@ -43,6 +41,9 @@
 .image-section > img {
   width: 40%;
   object-fit: contain;
+  @include for-size(phone-only) {
+    display: none;
+  }
 }
 
 // Delet this
