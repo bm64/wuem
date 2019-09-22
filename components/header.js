@@ -16,31 +16,36 @@ function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setCompact(window.scrollY > 0)
+      setCompact(window.scrollY > 500)
     }
 
     window.addEventListener('scroll', handleScroll)
   })
 
   return (
-    <div className={styles.header}>
-      <div className={styles.header__left}>
-        <img
-          className={`${styles.logo} ${isCompact ? styles.logoCompact : ''}`}
-          src="/static/logo.png"
-        />
-        <div className={styles.menu__container}>
-          <MenuItem text="Start" />
-          <MenuItem text="Ubezpieczenia" />
-          <MenuItem text="Kredyt i Leasing" />
-          <MenuItem text="Kontakt" />
+    <div className={styles.container}>
+      <div className={styles.header}>
+        <div className={styles.header__left}>
+          <img
+            className={`${styles.logo} ${isCompact ? styles.logoCompact : ''}`}
+            src={isCompact ? '/static/footer_logo2.png' : '/static/logo.png'}
+          />
+          <div className={styles.menu__container}>
+            <MenuItem text="Start" />
+            <MenuItem text="Ubezpieczenia" />
+            <MenuItem text="Kredyt i Leasing" />
+            <MenuItem text="Kontakt" />
+          </div>
         </div>
-      </div>
-      <div className={styles.header__right}>
-        <FaPhoneSquare className={styles.header__icon} />
-        {/*<MenuItem text="+48 509 755 700"></MenuItem>*/}
-        <div className={styles.call__button}>
-          <span>+48 509 755 700</span>
+        <div className={styles.header__right}>
+          <FaPhoneSquare className={styles.header__icon} />
+          {/*<MenuItem text="+48 509 755 700"></MenuItem>*/}
+          <div
+            className={styles.call__button}
+            style={isCompact ? { border: 'none' } : {}}
+          >
+            <span>+48 509 755 700</span>
+          </div>
         </div>
       </div>
     </div>

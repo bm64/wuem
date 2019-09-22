@@ -64,7 +64,7 @@ function Home() {
           <h1>Poznaj nasze ubezpieczenia</h1>
           <p>
             Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w
-            przemyśle pornograficznym papież kremówka.
+            przemyśle przykładowy wypełniacz w przemyśle.
           </p>
           <div className={styles.carousel__button}>Sprawdź ofertę</div>
         </div>

@@ -3,19 +3,23 @@
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   font-style: normal;
   font-weight: 500;
   color: $primary;
   background-color: $white;
   z-index: 3;
-
-  position: fixed;
-
-  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
-
+.container {
+  position: fixed;
+  width: 100%;
+  background-color: $white;
+  align-items: center;
+  z-index: 5;
+}
 .menu__container {
   display: flex;
   flex-direction: row;
@@ -24,12 +28,12 @@
 }
 
 .logo {
-  transition: height 0.5s;
   height: 6.5rem;
+  transition: height 0.5s, width 0.5s;
 }
 
 .logo-compact {
-  height: 5rem;
+  height: 3rem;
 }
 
 .header__left {
