@@ -21,11 +21,7 @@ function PropertyInsurance() {
         <img src={'/static/property_insurance_img.jpeg'} />
       </div>
       <div className={styles.fixedSection}>
-        <div className={styles.cards}>
-          <HouseInsurance />
-          <FlatInsurance />
-          <HouseInBuildInsurance />
-        </div>
+        <Cards />
       </div>
     </>
   )
@@ -51,40 +47,51 @@ const PropertyInsuranceText = withLeftSlideIn(() => {
   )
 })
 
-const HouseInsurance = withFadeIn(
-  withSlideDown(() => {
-    return (
-      <div className={styles.card}>
-        <FaHome />
-        <h3>Ubezpieczenie domu</h3>
-      </div>
-    )
-  }, 1500),
+const Cards = withFadeIn(
+  () => (
+    <div className={styles.cards}>
+      <HouseInsurance />
+      <FlatInsurance />
+      <HouseInBuildInsurance />
+    </div>
+  ),
   2000
 )
 
-const FlatInsurance = withFadeIn(
-  withSlideDown(() => {
-    return (
-      <div className={styles.card}>
-        <FaBuilding />
-        <h3>Ubezpieczenie mieszkania</h3>
-      </div>
-    )
-  }, 1500),
-  2000
+const HouseInsurance = () => (
+  <div className={styles.card}>
+    <img src="/static/property1.jpg" />
+    <h3>Ubezpieczenie domu</h3>
+    <p>
+      Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce fermentum
+      pellentesque ligula, ac porta quam auctor ut. Vivamus tincidunt tellus
+      sem, nec placerat nulla commodo vitae.
+    </p>
+  </div>
 )
 
-const HouseInBuildInsurance = withFadeIn(
-  withSlideDown(() => {
-    return (
-      <div className={styles.card}>
-        <FaHouseDamage />
-        <h3>Ubezpieczenia domu w budowie</h3>
-      </div>
-    )
-  }, 1500),
-  2000
+const FlatInsurance = () => (
+  <div className={styles.card}>
+    <img src="/static/property1.jpg" />
+    <h3>Ubezpieczenie mieszkania</h3>
+    <p>
+      Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce fermentum
+      pellentesque ligula, ac porta quam auctor ut. Vivamus tincidunt tellus
+      sem, nec placerat nulla commodo vitae.
+    </p>
+  </div>
+)
+
+const HouseInBuildInsurance = () => (
+  <div className={styles.card}>
+    <img src="/static/property1.jpg" />
+    <h3>Ubezpieczenia domu w budowie</h3>
+    <p>
+      Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce fermentum
+      pellentesque ligula, ac porta quam auctor ut. Vivamus tincidunt tellus
+      sem, nec placerat nulla commodo vitae.
+    </p>
+  </div>
 )
 
 export default withScrollIn(PropertyInsurance)
