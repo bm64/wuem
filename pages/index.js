@@ -138,7 +138,7 @@ function Home() {
         </Slider>
       </div>
 
-      <div ref={contactRef} className={styles.contact_header}>
+      <div ref={contactRef} className={styles.section_header}>
         <h1>Skontaktuj się z nami!</h1>
         <hr className={styles.medium_bottom_line} />
       </div>
