@@ -2,16 +2,21 @@ import React, { useState, useEffect } from 'react'
 import styles from '../styles/header.module.scss'
 import { FaPhoneSquare } from 'react-icons/fa'
 
-function MenuItem({ text }) {
+function MenuItem({ text, onItemPressed }) {
   return (
-    <div className={styles.menu__item}>
+    <div className={styles.menu__item} onClick={() => onItemPressed()}>
       <div className={styles.menu__text}>{text}</div>
       <div className={styles.menu__underline} />
     </div>
   )
 }
 
-function Header() {
+function Header({
+  onStartPressed,
+  onInsurancesPressed,
+  onCreditLeasingPressed,
+  onContactPressed,
+}) {
   const [isCompact, setCompact] = useState(false)
 
   useEffect(() => {
@@ -32,15 +37,19 @@ function Header() {
             src={isCompact ? '/static/footer_logo2.png' : '/static/logo.png'}
           />
           <div className={styles.menu__container}>
-            <MenuItem text="Start" />
-            <MenuItem text="Ubezpieczenia" />
-            <MenuItem text="Kredyt i Leasing" />
-            <MenuItem text="Kontakt" />
+            <MenuItem text="Start" onItemPressed={() => onStartPressed()} />
+            <MenuItem
+              text="Ubezpieczenia"
+              onItemPressed={() => onInsurancesPressed()}
+            />
+            <MenuItem
+              text="Kredyt i Leasing"
+              onItemPressed={() => onCreditLeasingPressed()}
+            />
+            <MenuItem text="Kontakt" onItemPressed={() => onContactPressed()} />
           </div>
         </div>
         <div className={styles.header__right}>
-          <FaPhoneSquare className={styles.header__icon} />
-          {/*<MenuItem text="+48 509 755 700"></MenuItem>*/}
           <div
             className={styles.call__button}
             style={isCompact ? { border: 'none' } : {}}

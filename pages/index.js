@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import styles from '../styles/index.module.scss'
 import {
   FaCar,
@@ -8,7 +8,6 @@ import {
   FaHandshake,
   FaHandHoldingUsd,
   FaMapMarkedAlt,
-  FaPhone,
   FaRegClock,
   FaRegEnvelope,
   FaPhoneVolume,
@@ -46,9 +45,28 @@ function Home() {
   const [currentImage, setCurrentImage] = useState(1)
   const [currentSection, setCurrentSection] = useState(1)
 
+  const contactRef = useRef(null)
+
   return (
     <Layout>
-      <Header />
+      <Header
+        onStartPressed={() => window.scrollTo(0, 0)}
+        onInsurancesPressed={() => {
+          setCurrentImage(1)
+          window.scrollTo(0, window.innerHeight - 80)
+        }}
+        onCreditLeasingPressed={() => {
+          setCurrentImage(0)
+          window.scrollTo(0, window.innerHeight - 80)
+        }}
+        onContactPressed={() => {
+          window.scrollBy(
+            0,
+            contactRef.current.getBoundingClientRect().top -
+              (contactRef.current.getBoundingClientRect().height + 40)
+          )
+        }}
+      />
       <div className={styles.carousel__container}>
         <div
           className={styles.carousel}
@@ -66,7 +84,14 @@ function Home() {
             Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w
             przemyśle przykładowy wypełniacz w przemyśle.
           </p>
-          <div className={styles.carousel__button}>Sprawdź ofertę</div>
+          <div
+            className={styles.carousel__button}
+            onClick={() =>
+              window.scrollTo(0, window.innerHeight - window.innerHeight / 20)
+            }
+          >
+            Sprawdź ofertę
+          </div>
         </div>
         <FaArrowDown className={styles.arrow} />
       </div>
@@ -112,7 +137,8 @@ function Home() {
           </div>
         </Slider>
       </div>
-      <div className={styles.section_header}>
+
+      <div ref={contactRef} className={styles.contact_header}>
         <h1>Skontaktuj się z nami!</h1>
         <hr className={styles.medium_bottom_line} />
       </div>
