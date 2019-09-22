@@ -17,37 +17,56 @@
 }
 
 .benefits:hover > .benefit--selected {
-  border-top: none;
-  border-right: none;
+  border-top: 3px solid transparent;
+  border-right: 3px solid transparent;
   border-bottom: 3px solid #ccc;
+  background-color: $white;
 }
 
 .benefits:hover > .benefit--selected:hover {
   border-top: 3px solid $primary-alt;
   border-right: 3px solid $primary-alt;
-  border-bottom: none;
+  border-bottom: 3px solid transparent;
+  background-color: darken($white, 5%);
 }
 
 .benefit {
   width: 33%;
   border-bottom: 3px solid #ccc;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 3px solid transparent;
 
-  padding: 0.3rem 0.8rem;
+  padding: 0.3rem 0rem;
 }
 
 .benefit--selected {
   border-top: 3px solid $primary-alt;
   border-right: 3px solid $primary-alt;
-  border-bottom: none;
+  border-bottom: 3px solid transparent;
 
   border-radius: 2px;
+
+  background-color: darken($white, 5%);
 }
 
 .benefit:hover {
   border-top: 3px solid $primary-alt;
   border-right: 3px solid $primary-alt;
   border-left: 3px solid $primary-alt;
-  border-bottom: none;
+  border-bottom: 3px solid transparent;
+
+  background-color: darken($white, 5%);
+
+  cursor: pointer;
+}
+
+.benefit:first-child:hover {
+  border-left: 3px solid transparent;
+}
+
+.benefit:last-child:hover {
+  border-right: 3px solid transparent;
 }
 
 .benefit > svg {
@@ -60,6 +79,8 @@
   padding: 3rem 0;
   font-size: 1.25rem;
 
+  width: 100%;
+
   text-align: center;
   vertical-align: super;
 }
@@ -68,4 +89,22 @@
   padding: 3rem 1rem;
   line-height: 3rem;
   color: lighten($black, 20%);
+}
+
+.benefit-container {
+  display: flex;
+  flex-direction: row;
+
+  padding: 1rem 0;
+
+  background-color: darken($white, 5%);
+}
+
+.benefit-container > img {
+  width: 30vw;
+  height: 40vh;
+}
+
+.benefit-container > p {
+  align-self: stretch;
 }
