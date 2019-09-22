@@ -25,6 +25,7 @@ function HealthInsurance() {
             className={`${styles.benefit} ${
               currentTab === 0 ? styles['benefit--selected'] : ''
             }`}
+            onClick={() => setCurrentTab(0)}
           >
             <FaUserShield />
             <span> Ochrona dla calej rodziny </span>
@@ -33,6 +34,7 @@ function HealthInsurance() {
             className={`${styles.benefit} ${
               currentTab === 1 ? styles['benefit--selected'] : ''
             }`}
+            onClick={() => setCurrentTab(1)}
           >
             <FaStethoscope />
             <span> Polisa bez badan lekarskich </span>
@@ -41,38 +43,50 @@ function HealthInsurance() {
             className={`${styles.benefit} ${
               currentTab === 2 ? styles['benefit--selected'] : ''
             }`}
+            onClick={() => setCurrentTab(2)}
           >
             <FaCreditCard />
             <span> Polisa bez badan lekarskich </span>
           </div>
         </div>
-        {currentTab === 0 && (
-          <p className={styles.benefitText}>
-            Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
-            fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
-            tincidunt tellus sem, nec placerat nulla commodo vitae. In nec sem
-            ac erat condimentum vestibulum eu quis mauris. Sed non lobortis
-            nisl. Nunc placerat quis turpis ac ornare.
-          </p>
-        )}
-        {currentTab === 1 && (
-          <p className={styles.benefitText}>
-            Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
-            fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
-            tincidunt tellus sem, nec placerat nulla commodo vitae. In nec sem
-            ac erat condimentum vestibulum eu quis mauris. Sed non lobortis
-            nisl. Nunc placerat quis turpis ac ornare.
-          </p>
-        )}
-        {currentTab === 2 && (
-          <p className={styles.benefitText}>
-            Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
-            fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
-            tincidunt tellus sem, nec placerat nulla commodo vitae. In nec sem
-            ac erat condimentum vestibulum eu quis mauris. Sed non lobortis
-            nisl. Nunc placerat quis turpis ac ornare.
-          </p>
-        )}
+        <div className={styles.benefitContainer}>
+          {currentTab === 0 && (
+            <>
+              <img src="/static/health1.jpg" />
+              <p className={styles.benefitText}>
+                Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
+                fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
+                tincidunt tellus sem, nec placerat nulla commodo vitae. In nec
+                sem ac erat condimentum vestibulum eu quis mauris. Sed non
+                lobortis nisl. Nunc placerat quis turpis ac ornare.
+              </p>
+            </>
+          )}
+          {currentTab === 1 && (
+            <>
+              <img src="/static/health1.jpg" />
+              <p className={styles.benefitText}>
+                Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
+                fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
+                tincidunt tellus sem, nec placerat nulla commodo vitae. In nec
+                sem ac erat condimentum vestibulum eu quis mauris. Sed non
+                lobortis nisl. Nunc placerat quis turpis ac ornare.
+              </p>
+            </>
+          )}
+          {currentTab === 2 && (
+            <>
+              <img src="/static/health1.jpg" />
+              <p className={styles.benefitText}>
+                Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
+                fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
+                tincidunt tellus sem, nec placerat nulla commodo vitae. In nec
+                sem ac erat condimentum vestibulum eu quis mauris. Sed non
+                lobortis nisl. Nunc placerat quis turpis ac ornare.
+              </p>
+            </>
+          )}
+        </div>
       </div>
     </>
   )
