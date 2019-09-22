@@ -9,6 +9,7 @@ import { withLeftSlideIn } from '../../animations/withSlideIn'
 import { FaUserShield, FaStethoscope, FaCreditCard } from 'react-icons/fa'
 
 function HealthInsurance() {
+  const [currentTab, setCurrentTab] = useState(0)
   return (
     <>
       <div className={styles.imageSection}>
@@ -19,7 +20,59 @@ function HealthInsurance() {
         <h2 className={styles.benefitsTitle}>
           W pakiecie ubezpieczenia zdrowotnego otrzymujesz
         </h2>
-        <Benefits containerClass={styles.benefits} />
+        <div className={styles.benefits}>
+          <div
+            className={`${styles.benefit} ${
+              currentTab === 0 ? styles['benefit--selected'] : ''
+            }`}
+          >
+            <FaUserShield />
+            <span> Ochrona dla calej rodziny </span>
+          </div>
+          <div
+            className={`${styles.benefit} ${
+              currentTab === 1 ? styles['benefit--selected'] : ''
+            }`}
+          >
+            <FaStethoscope />
+            <span> Polisa bez badan lekarskich </span>
+          </div>
+          <div
+            className={`${styles.benefit} ${
+              currentTab === 2 ? styles['benefit--selected'] : ''
+            }`}
+          >
+            <FaCreditCard />
+            <span> Polisa bez badan lekarskich </span>
+          </div>
+        </div>
+        {currentTab === 0 && (
+          <p className={styles.benefitText}>
+            Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
+            fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
+            tincidunt tellus sem, nec placerat nulla commodo vitae. In nec sem
+            ac erat condimentum vestibulum eu quis mauris. Sed non lobortis
+            nisl. Nunc placerat quis turpis ac ornare.
+          </p>
+        )}
+        {currentTab === 1 && (
+          <p className={styles.benefitText}>
+            Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
+            fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
+            tincidunt tellus sem, nec placerat nulla commodo vitae. In nec sem
+            ac erat condimentum vestibulum eu quis mauris. Sed non lobortis
+            nisl. Nunc placerat quis turpis ac ornare.
+          </p>
+        )}
+        {currentTab === 2 && (
+          <p className={styles.benefitText}>
+            Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
+            fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
+            tincidunt tellus sem, nec placerat nulla commodo vitae. In nec sem
+            ac erat condimentum vestibulum eu quis mauris. Sed non lobortis
+            nisl. Nunc placerat quis turpis ac ornare.
+          </p>
+        )}
       </div>
     </>
   )
@@ -44,24 +97,5 @@ const HealthInsuranceText = withLeftSlideIn(() => {
     </>
   )
 })
-
-const Benefits = withFadeIn(() => {
-  return (
-    <>
-      <div className={styles.benefits__benefit}>
-        <FaUserShield />
-        <p> Ochrona dla calej rodziny </p>
-      </div>
-      <div className={styles.benefits__benefit}>
-        <FaStethoscope />
-        <p> Polisa bez badan lekarskich </p>
-      </div>
-      <div className={styles.benefits__benefit}>
-        <FaCreditCard />
-        <p> Pomoc finansowa w chorobie lub po wypadku </p>
-      </div>
-    </>
-  )
-}, 2000)
 
 export default withScrollIn(HealthInsurance)

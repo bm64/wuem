@@ -7,31 +7,65 @@
 }
 
 .benefits {
-  min-height: 35vh;
   width: 100%;
 
-  padding-top: 6rem;
+  margin-top: 6rem;
 
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
-.benefits__benefit {
+.benefits:hover > .benefit--selected {
+  border-top: none;
+  border-right: none;
+  border-bottom: 3px solid #ccc;
+}
+
+.benefits:hover > .benefit--selected:hover {
+  border-top: 3px solid $primary-alt;
+  border-right: 3px solid $primary-alt;
+  border-bottom: none;
+}
+
+.benefit {
   width: 33%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border-bottom: 3px solid #ccc;
+
+  padding: 0.3rem 0.8rem;
 }
 
-.benefits__benefit > svg {
-  font-size: 4rem;
+.benefit--selected {
+  border-top: 3px solid $primary-alt;
+  border-right: 3px solid $primary-alt;
+  border-bottom: none;
+
+  border-radius: 2px;
+}
+
+.benefit:hover {
+  border-top: 3px solid $primary-alt;
+  border-right: 3px solid $primary-alt;
+  border-left: 3px solid $primary-alt;
+  border-bottom: none;
+}
+
+.benefit > svg {
+  font-size: 3rem;
   color: $primary;
 }
 
-.benefits__benefit > p {
+.benefit > span {
   color: lighten($black, 10%);
   padding: 3rem 0;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+
   text-align: center;
+  vertical-align: super;
+}
+
+.benefit-text {
+  padding: 3rem 1rem;
+  line-height: 3rem;
+  color: lighten($black, 20%);
 }
