@@ -70,7 +70,14 @@ function Home() {
         </div>
         <FaArrowDown className={styles.arrow} />
       </div>
-
+      <div className={styles.section_header}>
+        <h1>Rodzaje ubezpieczeń</h1>
+        <p>
+          Lorem ipsum dolor sit a met, consectetur adipiscing elit. <br />
+          Fusce fermentum pellentesque ligula
+        </p>
+        <hr className={styles.medium_bottom_line} />
+      </div>
       <MenuBar
         currentImage={currentImage}
         currentSection={currentSection}
@@ -105,7 +112,7 @@ function Home() {
           </div>
         </Slider>
       </div>
-      <div className={styles.contact_header}>
+      <div className={styles.section_header}>
         <h1>Skontaktuj się z nami!</h1>
         <hr className={styles.medium_bottom_line} />
       </div>
