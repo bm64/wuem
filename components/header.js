@@ -24,7 +24,10 @@ function Header() {
       </div>
       <div className={styles.header__right}>
         <FaPhoneSquare className={styles.header__icon} />
-        <MenuItem text="123-123-123" />
+        {/*<MenuItem text="+48 509 755 700"></MenuItem>*/}
+        <div className={styles.call__button}>
+          <span>+48 509 755 700</span>
+        </div>
       </div>
     </div>
   )
