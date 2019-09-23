@@ -126,7 +126,7 @@ function Home() {
             może rozpraszać zrozumiała zawartość strony, kiedy ten chce zobaczyć
             sam jej wygląd. WueM Finanse to Ogólnie znana teza głosi, iż
             użytkownika może rozpraszać zrozumiała zawartość strony, kiedy ten
-            chce zobaczyć sam jej wygląd.
+            chce zobaczyć sam .
           </p>
         </div>
       </div>
@@ -152,49 +152,15 @@ function Home() {
       </div>
 
       <div ref={contactRef} className={styles.section_header}>
-        <h1>Skontaktuj się z nami!</h1>
+        <h1>Masz pytanie?</h1>
         <hr className={styles.medium_bottom_line} />
       </div>
       <div className={styles.contact}>
-        <div className={styles.contact__info}>
-          <div className={styles.info__location}>
-            <div className={styles.contact__icon__wrapper}>
-              <FaMapMarkedAlt style={{ margin: 'auto 0', fontSize: '50px' }} />
-            </div>
-            <div className={styles.contact__text}>
-              <h2>Adres:</h2>
-              <p>Rynek 27/I piętro</p>
-              <p>39-300 Mielec</p>
-            </div>
-          </div>
-          <div className={styles.info__hours}>
-            <div className={styles.contact__icon__wrapper}>
-              <FaRegClock style={{ margin: 'auto 0', fontSize: '50px' }} />
-            </div>
-            <div className={styles.contact__text}>
-              <h2>Godziny otwarcia:</h2>
-              <p>pn-pt 09:00 - 17:00</p>
-              <p>sob. 09:00 - 13:00</p>
-            </div>
-          </div>
-          <div className={styles.info__email}>
-            <div className={styles.contact__icon__wrapper}>
-              <FaRegEnvelope style={{ margin: 'auto 0', fontSize: '50px' }} />
-            </div>
-            <div className={styles.contact__text}>
-              <h2>E-mail:</h2>
-              <p>biuro@wuemfinanse.pl</p>
-            </div>
-          </div>
-          <div className={styles.info__phone}>
-            <div className={styles.contact__icon__wrapper}>
-              <FaPhoneVolume style={{ margin: 'auto 0', fontSize: '50px' }} />
-            </div>
-            <div className={styles.contact__text}>
-              <h2>Telefon:</h2>
-              <p>+48 509 755 700</p>
-            </div>
-          </div>
+        <ContactInfo />
+        <div className={styles.info__divider}>
+          <div className={styles.line} />
+          <p>LUB</p>
+          <div className={styles.line} />
         </div>
         <ContactForm />
       </div>
@@ -279,28 +245,68 @@ const MenuBar = ({ currentImage, currentSection, changeSection }) => {
   )
 }
 
-const ContactForm = withFadeIn(() => (
+const ContactForm = () => (
   <form className={styles.contact__form}>
-    <h1>Masz pytanie? Napisz do nas!</h1>
-    <input
-      type="text"
-      className={styles.form__name}
-      placeholder=" Twoje imię"
-    />
+    <h1>Napisz do nas!</h1>
+    <input type="text" className={styles.form__name} placeholder="Twoje imię" />
     <input
       type="text"
       className={styles.form__mail}
-      placeholder=" Twój adres e-mail"
+      placeholder="Twój adres e-mail"
     />
     <textarea
       type="text"
       className={styles.form__message}
-      placeholder=" W czym możemy Ci pomóc"
+      placeholder="W czym możemy Ci pomóc"
     />
     <div type="submit" className={styles.form__submit}>
       Wyślij
     </div>
   </form>
-))
+)
+
+const ContactInfo = () => (
+  <div className={styles.contact__info}>
+    <h1 className={styles.info__headline}>Odwiedź nas!</h1>
+    <div className={styles.info__location}>
+      <div className={styles.contact__icon__wrapper}>
+        <FaMapMarkedAlt style={{ margin: 'auto 0', fontSize: '50px' }} />
+      </div>
+      <div className={styles.contact__text}>
+        <h2>Adres:</h2>
+        <p>Rynek 27/I piętro</p>
+        <p>39-300 Mielec</p>
+      </div>
+    </div>
+    <div className={styles.info__hours}>
+      <div className={styles.contact__icon__wrapper}>
+        <FaRegClock style={{ margin: 'auto 0', fontSize: '50px' }} />
+      </div>
+      <div className={styles.contact__text}>
+        <h2>Godziny otwarcia:</h2>
+        <p>pn-pt 09:00 - 17:00</p>
+        <p>sob. 09:00 - 13:00</p>
+      </div>
+    </div>
+    <div className={styles.info__email}>
+      <div className={styles.contact__icon__wrapper}>
+        <FaRegEnvelope style={{ margin: 'auto 0', fontSize: '50px' }} />
+      </div>
+      <div className={styles.contact__text}>
+        <h2>E-mail:</h2>
+        <p>biuro@wuemfinanse.pl</p>
+      </div>
+    </div>
+    <div className={styles.info__phone}>
+      <div className={styles.contact__icon__wrapper}>
+        <FaPhoneVolume style={{ margin: 'auto 0', fontSize: '50px' }} />
+      </div>
+      <div className={styles.contact__text}>
+        <h2>Telefon:</h2>
+        <p>+48 509 755 700</p>
+      </div>
+    </div>
+  </div>
+)
 
 export default Home
