@@ -86,9 +86,7 @@ function Home() {
           </p>
           <div
             className={styles.carousel__button}
-            onClick={() =>
-              window.scrollTo(0, window.innerHeight - window.innerHeight / 20)
-            }
+            onClick={() => window.scrollTo(0, window.innerHeight - 80)}
           >
             Sprawdź ofertę
           </div>

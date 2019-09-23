@@ -12,7 +12,7 @@ const withScrollIn = Component => props => {
       }, 100) // Anti-annoying scroll hack
       return
     }
-    if (ref.current) window.scrollTo(0, ref.current.offsetTop)
+    if (ref.current) window.scrollTo(0, ref.current.offsetTop - 80)
   }, [])
 
   return (
