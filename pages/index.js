@@ -1,10 +1,6 @@
 import React, { useState, useRef } from 'react'
 import styles from '../styles/index.module.scss'
 import {
-  FaCar,
-  FaHeartbeat,
-  FaUmbrellaBeach,
-  FaHome,
   FaHandshake,
   FaHandHoldingUsd,
   FaMapMarkedAlt,
@@ -19,12 +15,8 @@ import Header from '../components/header'
 
 import Slider from 'react-slick'
 
-import CarsInsurance from '../components/sections/cars_insurance'
-import HealthInsurance from '../components/sections/health_insurance'
-import TravelInsurance from '../components/sections/travel_insurance'
-import PropertyInsurance from '../components/sections/property_insurance'
-import Loan from '../components/sections/loan'
-import Leasing from '../components/sections/leasing'
+import Insurances from '../components/insurances'
+import Loans from '../components/loans'
 
 import FAQ from '../components/sections/faq'
 
@@ -43,7 +35,6 @@ var settings = {
 
 function Home() {
   const [currentImage, setCurrentImage] = useState(1)
-  const [currentSection, setCurrentSection] = useState(1)
 
   const contactRef = useRef(null)
 
@@ -93,43 +84,14 @@ function Home() {
         </div>
         <FaArrowDown className={styles.arrow} />
       </div>
-      <div className={styles.section_header}>
-        <h1>Rodzaje ubezpieczeń</h1>
-        <p>
-          Lorem ipsum dolor sit a met, consectetur adipiscing elit. <br />
-          Fusce fermentum pellentesque ligula
-        </p>
-        <hr className={styles.medium_bottom_line} />
-      </div>
-      <MenuBar
-        currentImage={currentImage}
-        currentSection={currentSection}
-        changeSection={setCurrentSection}
-      />
 
-      {currentSection === 1 && <CarsInsurance />}
-      {currentSection === 2 && <HealthInsurance />}
-      {currentSection === 3 && <TravelInsurance />}
-      {currentSection === 4 && <PropertyInsurance />}
-      {currentSection === 5 && <Loan />}
-      {currentSection === 6 && <Leasing />}
+      <Insurances />
+
+      <Loans />
 
       <FAQ />
-      <div className={styles.aboutUs}>
-        <div className={styles.aboutUs__image} />
-        <div className={styles.aboutUs__text}>
-          <h1>O naszej firmie</h1>
-          <p>
-            WueM Finanse to Ogólnie znana teza głosi, iż użytkownika może
-            rozpraszać zrozumiała zawartość strony, kiedy ten chce zobaczyć sam
-            jej wygląd. WueM Finanse to Ogólnie znana teza głosi, iż użytkownika
-            może rozpraszać zrozumiała zawartość strony, kiedy ten chce zobaczyć
-            sam jej wygląd. WueM Finanse to Ogólnie znana teza głosi, iż
-            użytkownika może rozpraszać zrozumiała zawartość strony, kiedy ten
-            chce zobaczyć sam .
-          </p>
-        </div>
-      </div>
+
+      <About />
 
       <div className={styles.slider__container}>
         <Slider {...settings} className={styles.slider}>
@@ -177,73 +139,22 @@ function Home() {
   )
 }
 
-const MenuBar = ({ currentImage, currentSection, changeSection }) => {
-  return (
-    <>
-      {currentImage === 1 ? (
-        <div className={styles.menu}>
-          <div
-            className={`${styles.menu__item} ${
-              currentSection === 1 ? styles['menu__item--selected'] : ''
-            }`}
-            onClick={() => changeSection(1)}
-          >
-            <FaCar className={styles['menu__item-icon']} />
-            <p>Ubezpiecznia pojazdów</p>
-          </div>
-          <div
-            className={`${styles.menu__item} ${
-              currentSection === 2 ? styles['menu__item--selected'] : ''
-            }`}
-            onClick={() => changeSection(2)}
-          >
-            <FaHeartbeat className={styles['menu__item-icon']} />
-            <p>Ubezpieczenia zdrowotne</p>
-          </div>
-          <div
-            className={`${styles.menu__item} ${
-              currentSection === 3 ? styles['menu__item--selected'] : ''
-            }`}
-            onClick={() => changeSection(3)}
-          >
-            <FaUmbrellaBeach className={styles['menu__item-icon']} />
-            <p>Ubezpieczenia turystyczne</p>
-          </div>
-          <div
-            className={`${styles.menu__item} ${
-              currentSection === 4 ? styles['menu__item--selected'] : ''
-            }`}
-            onClick={() => changeSection(4)}
-          >
-            <FaHome className={styles['menu__item-icon']} />
-            <p>Ubezpieczenia nieruchomości</p>
-          </div>
-        </div>
-      ) : (
-        <div className={styles.menu}>
-          <div
-            className={`${styles.menu__item} ${
-              currentSection === 5 ? styles['menu__item--selected'] : ''
-            }`}
-            onClick={() => changeSection(5)}
-          >
-            <FaHandHoldingUsd className={styles['menu__item-icon']} />
-            <p>Kredyt</p>
-          </div>
-          <div
-            className={`${styles.menu__item} ${
-              currentSection === 6 ? styles['menu__item--selected'] : ''
-            }`}
-            onClick={() => changeSection(6)}
-          >
-            <FaHandshake className={styles['menu__item-icon']} />
-            <p>Leasing</p>
-          </div>
-        </div>
-      )}
-    </>
-  )
-}
+const About = () => (
+  <div className={styles.aboutUs}>
+    <div className={styles.aboutUs__image} />
+    <div className={styles.aboutUs__text}>
+      <h1>O naszej firmie</h1>
+      <p>
+        WueM Finanse to Ogólnie znana teza głosi, iż użytkownika może rozpraszać
+        zrozumiała zawartość strony, kiedy ten chce zobaczyć sam jej wygląd.
+        WueM Finanse to Ogólnie znana teza głosi, iż użytkownika może rozpraszać
+        zrozumiała zawartość strony, kiedy ten chce zobaczyć sam jej wygląd.
+        WueM Finanse to Ogólnie znana teza głosi, iż użytkownika może rozpraszać
+        zrozumiała zawartość strony, kiedy ten chce zobaczyć sam jej wygląd.
+      </p>
+    </div>
+  </div>
+)
 
 const ContactForm = () => (
   <form className={styles.contact__form}>
