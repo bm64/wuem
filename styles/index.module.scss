@@ -26,7 +26,7 @@
   background-image: url('/static/insurance.jpeg');
 }
 .carousel__text {
-  transform: translate(35vh, 20vh);
+  transform: translate(20%, 45%);
   color: $white;
   display: flex;
   flex-direction: column;
@@ -154,12 +154,49 @@
   }
 }
 
+.aboutUs {
+  width: 100%;
+  text-align: center;
+  height: 70vh;
+}
+
+.aboutUs__image {
+  background-size: 100% 100%;
+
+  width: 100%;
+  height: 100%;
+  background-image: url('/static/about_us.jpeg');
+}
+.aboutUs__text {
+  transform: translate(50vw, -55vh);
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 40%;
+  width: 45%;
+  text-align: right;
+}
+.aboutUs__text > h1 {
+  font-size: 4rem;
+  text-align: right;
+
+  padding: 2rem 0;
+  // font-weight: 500;
+}
+.aboutUs__text > p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-align: right;
+  line-height: 2.5rem;
+}
+
 .slider__container {
   display: flex;
   flex-direction: row;
   justify-content: center;
 
-  margin: 10vh 0 10vh 0;
+  padding: 5rem 0;
 }
 
 .slider {

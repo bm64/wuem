@@ -117,6 +117,21 @@ function Home() {
       {currentSection === 6 && <Leasing />}
 
       <FAQ />
+      <div className={styles.aboutUs}>
+        <div className={styles.aboutUs__image} />
+        <div className={styles.aboutUs__text}>
+          <h1>O naszej firmie</h1>
+          <p>
+            WueM Finanse to Ogólnie znana teza głosi, iż użytkownika może
+            rozpraszać zrozumiała zawartość strony, kiedy ten chce zobaczyć sam
+            jej wygląd. WueM Finanse to Ogólnie znana teza głosi, iż użytkownika
+            może rozpraszać zrozumiała zawartość strony, kiedy ten chce zobaczyć
+            sam jej wygląd. WueM Finanse to Ogólnie znana teza głosi, iż
+            użytkownika może rozpraszać zrozumiała zawartość strony, kiedy ten
+            chce zobaczyć sam jej wygląd.
+          </p>
+        </div>
+      </div>
 
       <div className={styles.slider__container}>
         <Slider {...settings} className={styles.slider}>
