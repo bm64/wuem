@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 
 import styles from '../../styles/sections/travel_insurance.module.scss'
 
@@ -8,21 +8,60 @@ import { withLeftSlideIn, withRightSlideIn } from '../../animations/withSlideIn'
 import { FaBus, FaFly, FaPlane } from 'react-icons/fa'
 
 function TravelInsurance() {
+  const [currentTab, setCurrentTab] = useState(0)
+
   return (
     <>
       <div className={styles.imageSection}>
         <TravelInsuranceText containerClass={styles['image-section__text']} />
         <img src={'/static/travel_insurance_img.jpeg'} />
       </div>
-      <div className={styles.fixedSection}>
-        <div className={styles.travelHeadline}>
-          <h2>Badz bezpieczny </h2>
-          <h3>Sprawdz nasze ubezpieczenia turystyczne...</h3>
+      <div className={styles.travelSection}>
+        <div className={styles.left}>
+          <div className={styles.travelHeadline}>
+            <h2>Badz bezpieczny </h2>
+            <h3>Sprawdz nasze ubezpieczenia turystyczne...</h3>
+          </div>
+          {currentTab === 0 && <img src={'/static/travel1.jpg'} />}
+          {currentTab === 1 && <img src={'/static/travel2.jpg'} />}
+          {currentTab === 2 && <img src={'/static/travel3.jpg'} />}
         </div>
-        <div className={styles.tabs}>
-          <DomesticHolidaysTab />
-          <ForeignHolidaysTab />
-          <MultitravelTab />
+        <div className={styles.right}>
+          <div className={styles.tabs}>
+            <div
+              className={`${styles.tab} ${
+                currentTab === 0 ? styles['tab--selected'] : ''
+              }`}
+              onClick={() => setCurrentTab(0)}
+            >
+              <FaBus />
+              <h3>Wycieczki krajowe</h3>
+            </div>
+            <div
+              className={`${styles.tab} ${
+                currentTab === 1 ? styles['tab--selected'] : ''
+              }`}
+              onClick={() => setCurrentTab(1)}
+            >
+              <FaPlane />
+              <h3>Wycieczki zagraniczne</h3>
+            </div>
+            <div
+              className={`${styles.tab} ${
+                currentTab === 2 ? styles['tab--selected'] : ''
+              }`}
+              onClick={() => setCurrentTab(2)}
+            >
+              <FaFly />
+              <h3>Ubezpiecznie multitravel</h3>
+            </div>
+          </div>
+          <ul className={styles.insuranceBenefits}>
+            <li>Bendonc na wakacjach jebiemy cie w dupe</li>
+            <li>Bendonc na wakacjach jebiemy cie w dupe</li>
+            <li>Bendonc na wakacjach jebiemy cie w dupe</li>
+            <li>Bendonc na wakacjach jebiemy cie w dupe</li>
+          </ul>
         </div>
       </div>
     </>
@@ -48,32 +87,5 @@ const TravelInsuranceText = withLeftSlideIn(() => {
     </>
   )
 })
-
-const DomesticHolidaysTab = withRightSlideIn(() => {
-  return (
-    <>
-      <FaBus />
-      <h3>Wycieczki krajowe</h3>
-    </>
-  )
-}, 750)
-
-const ForeignHolidaysTab = withRightSlideIn(() => {
-  return (
-    <>
-      <FaPlane />
-      <h3>Wycieczki zagraniczne</h3>
-    </>
-  )
-}, 1000)
-
-const MultitravelTab = withRightSlideIn(() => {
-  return (
-    <>
-      <FaFly />
-      <h3>Ubezpieczenie Multitravel</h3>
-    </>
-  )
-}, 1200)
 
 export default withScrollIn(TravelInsurance)

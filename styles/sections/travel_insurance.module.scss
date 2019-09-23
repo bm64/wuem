@@ -1,6 +1,24 @@
 @import '../_base.scss';
 @import '_sections.scss';
 
+.travel-section {
+  @extend .fixed-section;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.left > img {
+  display: block;
+  margin: auto auto;
+}
+
 .travel-headline {
   display: inline-block;
 }
@@ -21,13 +39,12 @@
 
 .tabs {
   margin-top: 1.25rem;
-  float: right;
 
   display: flex;
   flex-direction: row;
 }
 
-.tabs > div {
+.tab {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -38,20 +55,48 @@
   border-bottom: 2px solid #ccc;
 }
 
-.tabs > div:first-child {
-  margin-left: 0;
+.tab {
+  cursor: pointer;
+}
 
+.tab:first-child {
+  margin-left: 0;
+}
+
+.tab:hover {
+  border-bottom: 2px solid $primary-alt;
+  background-color: lighten($primary-alt, 38%);
+}
+
+.tab--selected {
   border-bottom: 2px solid $primary-alt;
 }
 
-.tabs > div > svg {
+.tab > svg {
+  padding-top: 2rem;
   color: $primary-alt;
   font-size: 2rem;
 }
 
-.tabs > div > h3 {
+.tab > h3 {
   font-size: 1.5rem;
   padding: 1.25rem 0rem;
   text-align: center;
   font-weight: 500;
+}
+
+.insurance-benefits {
+  padding: 1rem 0rem;
+}
+
+.insurance-benefits > li:before {
+  font-size: 1rem;
+  content: '⮕ ';
+  vertical-align: middle;
+  padding-right: 0.3rem;
+}
+
+.insurance-benefits > li {
+  color: lighten($black, 20%);
+  line-height: 2.5rem;
 }
