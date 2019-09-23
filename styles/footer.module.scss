@@ -57,8 +57,7 @@
 }
 
 .footer-content > p {
-  flex-grow: 1;
-  color: $black;
+  color: lighten($primary, 10%);
 
   text-align: center;
 
@@ -66,7 +65,13 @@
     font-size: 0.9rem;
   }
 
-  padding: 1rem 0.3rem;
+  padding: 1rem 1.2rem;
+
+  cursor: pointer;
+}
+
+.footer-content > p:hover {
+  color: $primary;
 }
 
 .footer-content > p:last-child {
