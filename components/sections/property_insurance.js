@@ -94,4 +94,4 @@ const HouseInBuildInsurance = () => (
   </div>
 )
 
-export default withScrollIn(PropertyInsurance)
+export default PropertyInsurance

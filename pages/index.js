@@ -35,6 +35,7 @@ function Home() {
 
   const insurancesRef = useRef(null)
   const loansRef = useRef(null)
+  const aboutRef = useRef(null)
   const contactRef = useRef(null)
 
   return (
@@ -58,6 +59,9 @@ function Home() {
               loansRef.current.getBoundingClientRect().height +
               40
           )
+        }}
+        onAboutPressed={() => {
+          window.scrollBy(0, aboutRef.current.getBoundingClientRect().top - 60)
         }}
         onContactPressed={() => {
           window.scrollBy(
@@ -98,7 +102,7 @@ function Home() {
       <Loans sectionRef={loansRef} />
 
       <FAQ />
-      <About />
+      <About sectionRef={aboutRef} />
 
       <div className={styles.slider__container}>
         <Slider {...settings} className={styles.slider}>
@@ -155,8 +159,8 @@ function Home() {
   )
 }
 
-const About = () => (
-  <div className={styles.aboutUs}>
+const About = ({ sectionRef }) => (
+  <div ref={sectionRef} className={styles.aboutUs}>
     <div className={styles.aboutUs__image} />
     <div className={styles.aboutUs__text}>
       <h1>O naszej firmie</h1>

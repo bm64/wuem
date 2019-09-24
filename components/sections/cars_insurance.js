@@ -179,4 +179,4 @@ const Assistance = withRightSlideIn(() => {
   )
 })
 
-export default withScrollIn(CarsInsurance)
+export default CarsInsurance

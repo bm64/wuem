@@ -31,4 +31,4 @@ const LoanText = withLeftSlideIn(() => (
   </>
 ))
 
-export default withScrollIn(Loan)
+export default Loan

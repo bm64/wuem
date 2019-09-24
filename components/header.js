@@ -16,6 +16,7 @@ function Header({
   onInsurancesPressed,
   onCreditLeasingPressed,
   onContactPressed,
+  onAboutPressed,
 }) {
   const [isCompact, setCompact] = useState(false)
 
@@ -46,6 +47,7 @@ function Header({
               text="Kredyt i Leasing"
               onItemPressed={() => onCreditLeasingPressed()}
             />
+            <MenuItem text="O nas" onItemPressed={() => onAboutPressed()} />
             <MenuItem text="Kontakt" onItemPressed={() => onContactPressed()} />
           </div>
         </div>

@@ -109,4 +109,4 @@ const HealthInsuranceText = withLeftSlideIn(() => {
   )
 })
 
-export default withScrollIn(HealthInsurance)
+export default HealthInsurance

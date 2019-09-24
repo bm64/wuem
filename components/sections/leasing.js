@@ -31,4 +31,4 @@ const LeasingText = withLeftSlideIn(() => (
   </>
 ))
 
-export default withScrollIn(Leasing)
+export default Leasing

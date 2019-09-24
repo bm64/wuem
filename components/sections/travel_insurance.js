@@ -88,4 +88,4 @@ const TravelInsuranceText = withLeftSlideIn(() => {
   )
 })
 
-export default withScrollIn(TravelInsurance)
+export default TravelInsurance
