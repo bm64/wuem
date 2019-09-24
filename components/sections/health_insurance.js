@@ -27,8 +27,7 @@ function HealthInsurance() {
             }`}
             onClick={() => setCurrentTab(0)}
           >
-            <FaUserShield />
-            <span> Ochrona dla calej rodziny </span>
+            <p>Ochrona dla calej rodziny</p>
           </div>
           <div
             className={`${styles.benefit} ${
@@ -36,8 +35,7 @@ function HealthInsurance() {
             }`}
             onClick={() => setCurrentTab(1)}
           >
-            <FaStethoscope />
-            <span> Polisa bez badan lekarskich </span>
+            <p>Polisa bez badan lekarskich</p>
           </div>
           <div
             className={`${styles.benefit} ${
@@ -45,8 +43,7 @@ function HealthInsurance() {
             }`}
             onClick={() => setCurrentTab(2)}
           >
-            <FaCreditCard />
-            <span> Polisa bez badan lekarskich </span>
+            <p>Polisa bez badan lekarskich</p>
           </div>
         </div>
         <div className={styles.benefitContainer}>

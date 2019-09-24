@@ -20,14 +20,12 @@
   border-top: 3px solid transparent;
   border-right: 3px solid transparent;
   border-bottom: 3px solid #ccc;
-  background-color: $white;
 }
 
 .benefits:hover > .benefit--selected:hover {
-  border-top: 3px solid $primary-alt;
-  border-right: 3px solid $primary-alt;
+  border-top: 3px solid $black;
+  border-right: 3px solid $black;
   border-bottom: 3px solid transparent;
-  background-color: darken($white, 5%);
 }
 
 .benefit {
@@ -37,26 +35,28 @@
   border-right: 3px solid transparent;
   border-top: 3px solid transparent;
 
-  padding: 0.3rem 0rem;
+  padding: 0.8rem 0rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  align-items: center;
 }
 
 .benefit--selected {
-  border-top: 3px solid $primary-alt;
-  border-right: 3px solid $primary-alt;
+  border-top: 3px solid $black;
+  border-right: 3px solid $black;
   border-bottom: 3px solid transparent;
 
   border-radius: 2px;
-
-  background-color: darken($white, 5%);
 }
 
 .benefit:hover {
-  border-top: 3px solid $primary-alt;
-  border-right: 3px solid $primary-alt;
-  border-left: 3px solid $primary-alt;
+  border-top: 3px solid $black;
+  border-right: 3px solid $black;
+  border-left: 3px solid $black;
   border-bottom: 3px solid transparent;
-
-  background-color: darken($white, 5%);
 
   cursor: pointer;
 }
@@ -96,13 +96,10 @@
   flex-direction: row;
 
   padding: 1rem 0;
-
-  background-color: darken($white, 5%);
 }
 
 .benefit-container > img {
-  width: 30vw;
-  height: 40vh;
+  min-width: 30%;
 }
 
 .benefit-container > p {
