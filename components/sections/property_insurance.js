@@ -18,9 +18,14 @@ function PropertyInsurance() {
     <>
       <div className={styles.imageSection}>
         <PropertyInsuranceText containerClass={styles['image-section__text']} />
-        <img src={'/static/property_insurance_img.jpeg'} />
+        <PropertyInsuranceImage
+          containerClass={styles['image-section__image']}
+        />
       </div>
-      <div className={styles.fixedSection}>
+      <div className={styles.propertySection}>
+        <h2 className={styles.propertyHeadline}>
+          Zabezpiecz swoje rodzinne progi juz <span>dzis</span>
+        </h2>
         <Cards />
       </div>
     </>
@@ -46,6 +51,11 @@ const PropertyInsuranceText = withLeftSlideIn(() => {
     </>
   )
 })
+
+const PropertyInsuranceImage = withFadeIn(
+  () => <img src={'/static/property_insurance_img.jpeg'} />,
+  2500
+)
 
 const Cards = withFadeIn(
   () => (

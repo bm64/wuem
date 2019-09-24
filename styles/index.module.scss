@@ -256,6 +256,8 @@
   padding: 0.5rem;
   width: 100%;
   text-align: center;
+
+  color: lighten($black, 10%);
 }
 
 .info__hours {
@@ -284,7 +286,7 @@
 }
 
 .contact__text > h2 {
-  color: $black;
+  color: $primary;
   //font-weight: 500;
   letter-spacing: 0.1rem;
   font-size: 2rem;
@@ -294,6 +296,7 @@
   //font-weight: 400;
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
+  color: lighten($black, 20%);
 }
 
 .contact__form {
@@ -312,7 +315,7 @@
 
 .contact__form > h1 {
   font-size: 30px;
-  color: #333;
+  color: lighten($black, 10%);
   padding: 0.5rem;
 }
 

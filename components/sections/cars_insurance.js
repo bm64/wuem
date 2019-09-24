@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react'
 import styles from '../../styles/sections/cars_insurance.module.scss'
 
 import { withLeftSlideIn, withRightSlideIn } from '../../animations/withSlideIn'
+import withFadeIn from '../../animations/withFadeIn'
 
 import withScrollIn from '../../animations/withScrollIn'
 
@@ -18,12 +19,13 @@ function CarsInsurance() {
     <>
       <div className={styles.imageSection}>
         <CarsInsuranceText containerClass={styles['image-section__text']} />
-        <img src={'/static/car_insurance_img.jpeg'} />
+        <CarsInsuranceImage containerClass={styles['image-section__image']} />
       </div>
       <div className={styles.fixedSection}>
-        <h3 className={styles.headline}>
-          W naszej ofercie ubezpieczen komunikacyjnych znajdziesz między innymi:
-        </h3>
+        <h2 className={styles.headline}>
+          Potrzebujesz <span>kompleksowego</span> ubezpiecznia dla swojego
+          pojazdu? Tutaj znajdziesz to czego szukasz
+        </h2>
         <div className={styles.insurances}>
           <OC containerClass={styles.insurance} />
           <AC containerClass={styles.insurance} />
@@ -52,6 +54,11 @@ const CarsInsuranceText = withLeftSlideIn(() => {
     </>
   )
 })
+
+const CarsInsuranceImage = withFadeIn(
+  () => <img src={'/static/car_insurance_img.jpeg'} />,
+  2500
+)
 
 const OC = withRightSlideIn(() => {
   const [showContent, setShowContent] = useState(false)

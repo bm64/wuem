@@ -3,6 +3,8 @@ import React, { useState, useMemo } from 'react'
 import styles from '../../styles/sections/travel_insurance.module.scss'
 
 import withScrollIn from '../../animations/withScrollIn'
+import withFadeIn from '../../animations/withFadeIn'
+
 import { withLeftSlideIn, withRightSlideIn } from '../../animations/withSlideIn'
 
 import { FaBus, FaFly, FaPlane } from 'react-icons/fa'
@@ -14,7 +16,7 @@ function TravelInsurance() {
     <>
       <div className={styles.imageSection}>
         <TravelInsuranceText containerClass={styles['image-section__text']} />
-        <img src={'/static/travel_insurance_img.jpeg'} />
+        <TravelInsuranceImage containerClass={styles['image-section__image']} />
       </div>
       <div className={styles.travelSection}>
         <div className={styles.left}>
@@ -87,5 +89,10 @@ const TravelInsuranceText = withLeftSlideIn(() => {
     </>
   )
 })
+
+const TravelInsuranceImage = withFadeIn(
+  () => <img src={'/static/travel_insurance_img.jpeg'} />,
+  2500
+)
 
 export default TravelInsurance
