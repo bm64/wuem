@@ -14,11 +14,11 @@ function HealthInsurance() {
     <>
       <div className={styles.imageSection}>
         <HealthInsuranceText containerClass={styles['image-section__text']} />
-        <img src={'/static/health_insurance_img.jpeg'} />
+        <HealthInsuranceImage containerClass={styles['image-section__image']} />
       </div>
       <div className={styles.fixedSection}>
         <h2 className={styles.benefitsTitle}>
-          W pakiecie ubezpieczenia zdrowotnego otrzymujesz
+          Z nami poczujesz sie <span>bezpiecznie</span> w kazdym momencie
         </h2>
         <div className={styles.benefits}>
           <div
@@ -109,4 +109,8 @@ const HealthInsuranceText = withLeftSlideIn(() => {
   )
 })
 
+const HealthInsuranceImage = withFadeIn(
+  () => <img src={'/static/health_insurance_img.jpeg'} />,
+  2500
+)
 export default HealthInsurance

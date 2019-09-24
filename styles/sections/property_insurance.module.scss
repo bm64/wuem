@@ -1,6 +1,27 @@
 @import '../_base.scss';
 @import '_sections.scss';
 
+.property-section {
+  @extend .fixed-section;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  min-height: 70vh;
+}
+
+.property-headline {
+  color: $black;
+  text-align: center;
+
+  margin: 0 auto;
+}
+
+.property-headline > span {
+  color: $primary-alt;
+}
+
 .cards {
   display: flex;
   flex-direction: row;
@@ -18,6 +39,8 @@
   align-self: stretch;
 
   border: 1px solid #ccc;
+
+  padding-bottom: 1rem;
 
   max-width: 30%;
 }

@@ -30,6 +30,15 @@ var settings = {
   arrows: false,
 }
 
+function scrollTo(ref) {
+  window.scrollBy(
+    0,
+    ref.current.getBoundingClientRect().top -
+      ref.current.getBoundingClientRect().height +
+      40
+  )
+}
+
 function Home() {
   const [currentImage, setCurrentImage] = useState(1)
 
@@ -44,31 +53,17 @@ function Home() {
         onStartPressed={() => window.scrollTo(0, 0)}
         onInsurancesPressed={() => {
           setCurrentImage(1)
-          window.scrollBy(
-            0,
-            insurancesRef.current.getBoundingClientRect().top -
-              insurancesRef.current.getBoundingClientRect().height +
-              40
-          )
+          scrollTo(insurancesRef)
         }}
         onCreditLeasingPressed={() => {
           setCurrentImage(0)
-          window.scrollBy(
-            0,
-            loansRef.current.getBoundingClientRect().top -
-              loansRef.current.getBoundingClientRect().height +
-              40
-          )
+          scrollTo(loansRef)
         }}
         onAboutPressed={() => {
           window.scrollBy(0, aboutRef.current.getBoundingClientRect().top - 60)
         }}
         onContactPressed={() => {
-          window.scrollBy(
-            0,
-            contactRef.current.getBoundingClientRect().top -
-              (contactRef.current.getBoundingClientRect().height + 40)
-          )
+          scrollTo(contactRef)
         }}
       />
       <div className={styles.carousel__container}>

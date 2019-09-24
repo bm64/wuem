@@ -6,6 +6,10 @@
   color: $black;
 }
 
+.benefits-title > span {
+  color: $primary-alt;
+}
+
 .benefits {
   width: 100%;
 
@@ -30,13 +34,15 @@
   align-items: center;
 }
 
+.benefit:hover {
+  cursor: pointer;
+}
+
 .benefit--selected {
   border-top: 3px solid $black;
   border-right: 3px solid $black;
   border-left: 3px solid $black;
   border-bottom: 3px solid transparent;
-
-  border-radius: 2px;
 }
 
 .benefit > svg {
