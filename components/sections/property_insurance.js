@@ -32,7 +32,7 @@ function PropertyInsurance() {
   )
 }
 
-const PropertyInsuranceText = withLeftSlideIn(() => {
+const PropertyInsuranceText = withFadeIn(() => {
   return (
     <>
       <h2>

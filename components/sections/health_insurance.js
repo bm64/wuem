@@ -89,7 +89,7 @@ function HealthInsurance() {
   )
 }
 
-const HealthInsuranceText = withLeftSlideIn(() => {
+const HealthInsuranceText = withFadeIn(() => {
   return (
     <>
       <h2>

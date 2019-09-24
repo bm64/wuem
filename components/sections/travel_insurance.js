@@ -70,7 +70,7 @@ function TravelInsurance() {
   )
 }
 
-const TravelInsuranceText = withLeftSlideIn(() => {
+const TravelInsuranceText = withFadeIn(() => {
   return (
     <>
       <h2>

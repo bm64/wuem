@@ -36,7 +36,7 @@ function CarsInsurance() {
   )
 }
 
-const CarsInsuranceText = withLeftSlideIn(() => {
+const CarsInsuranceText = withFadeIn(() => {
   return (
     <>
       <h2>

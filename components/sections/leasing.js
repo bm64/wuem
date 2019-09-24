@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styles from '../../styles/sections/leasing.module.scss'
 
 import withScrollIn from '../../animations/withScrollIn'
-
+import withFadeIn from '../../animations/withFadeIn'
 import { withLeftSlideIn } from '../../animations/withSlideIn'
 
 function Leasing() {
@@ -10,13 +10,13 @@ function Leasing() {
     <>
       <div className={styles.imageSection}>
         <LeasingText containerClass={styles['image-section__text']} />
-        <img src={'/static/leasing_1.jpeg'} />
+        <LeasingImage containerClass={styles['image-section__image']} />
       </div>
     </>
   )
 }
 
-const LeasingText = withLeftSlideIn(() => (
+const LeasingText = withFadeIn(() => (
   <>
     <h2>Leasing</h2>
     <p>
@@ -30,5 +30,10 @@ const LeasingText = withLeftSlideIn(() => (
     </p>
   </>
 ))
+
+const LeasingImage = withFadeIn(
+  () => <img src={'/static/leasing_1.jpeg'} />,
+  2000
+)
 
 export default Leasing
