@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import styles from '../../styles/sections/loan.module.scss'
 
+import withScrollIn from '../../animations/withScrollIn'
+
 import { withLeftSlideIn } from '../../animations/withSlideIn'
 
 function Loan() {
@@ -10,7 +12,6 @@ function Loan() {
         <LoanText containerClass={styles['image-section__text']} />
         <img src={'insurance.jpeg'} />
       </div>
-      <div className={styles.fixedSection}></div>
     </>
   )
 }
@@ -30,4 +31,4 @@ const LoanText = withLeftSlideIn(() => (
   </>
 ))
 
-export default Loan
+export default withScrollIn(Loan)

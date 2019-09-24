@@ -111,6 +111,7 @@
   height: 100%;
   background-image: url('/static/about_us.jpeg');
 }
+
 .aboutUs__text {
   transform: translate(50vw, -55vh);
   color: $white;
@@ -121,6 +122,7 @@
   width: 45%;
   text-align: right;
 }
+
 .aboutUs__text > h1 {
   font-size: 4rem;
   text-align: right;
@@ -129,6 +131,7 @@
   padding: 2rem 0;
   // font-weight: 500;
 }
+
 .aboutUs__text > p {
   font-size: 1.8rem;
   font-weight: 400;
@@ -160,11 +163,13 @@
   justify-content: space-around;
   align-items: center;
 }
+
 .section_header > h1 {
   font-size: 40px;
   font-weight: 500;
   color: $black;
 }
+
 .section_header > p {
   font-size: 25px;
   font-weight: 400;
@@ -172,6 +177,7 @@
   text-align: center;
   padding: 1rem;
 }
+
 .medium_bottom_line {
   width: 60px;
   border: 0;
@@ -180,6 +186,7 @@
   display: block;
   margin: 2rem 0;
 }
+
 .contact {
   display: flex;
   flex-direction: row;
@@ -192,12 +199,14 @@
   margin: 0 auto;
   padding: 2rem;
 }
+
 .info__divider {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
+
 .line {
   width: 3px;
   background-color: $primary;
@@ -213,12 +222,14 @@
   justify-content: space-between;
   width: 45%;
 }
+
 .info__location {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
+
 .contact__icon__wrapper {
   background-color: #1e90ff;
   border-radius: 35px;
@@ -229,13 +240,16 @@
   justify-content: center;
   align-items: center;
 }
+
 .contact__info > *:hover {
   transform: scale(1.1);
   //box-shadow: -8px 8px 8px 8px rgba(5, 22, 70, 0.1);
 }
+
 .contact__info > * {
   transition: box-shadow 0.3s, transform 0.3s;
 }
+
 .info__headline {
   font-size: 30px;
   color: #333;
@@ -262,22 +276,26 @@
   flex-direction: row;
   justify-content: flex-start;
 }
+
 .contact__text {
   padding-left: 2rem;
   display: flex;
   flex-direction: column;
 }
+
 .contact__text > h2 {
   color: $black;
   //font-weight: 500;
   letter-spacing: 0.1rem;
   font-size: 2rem;
 }
+
 .contact__text > p {
   //font-weight: 400;
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
 }
+
 .contact__form {
   display: flex;
   flex-direction: column;
@@ -289,6 +307,7 @@
   justify-content: space-evenly;
   //padding: 0.5rem 1.5rem;
   width: 45%;
+  min-height: 50vh;
 }
 
 .contact__form > h1 {
@@ -300,6 +319,7 @@
 .form {
   width: 100%;
 }
+
 form > input,
 textarea {
   //width: 20vw;
@@ -317,16 +337,19 @@ textarea {
   padding-left: 15px;
   width: 90%;
 }
+
 input:focus,
 textarea:focus {
   border-bottom: 2px solid $primary-alt;
 }
+
 form > textarea {
   height: 20vh;
   padding-top: 10px;
   resize: none;
   width: 90%;
 }
+
 .form__submit {
   height: 50px;
   width: 150px;
@@ -343,16 +366,19 @@ form > textarea {
   justify-content: center;
   align-items: center;
 }
+
 .form__submit:hover {
   background-color: #1e90ff;
   color: white;
 }
+
 .map__container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding-top: 3rem;
 }
+
 .map {
   margin: auto 0;
   width: 85%;

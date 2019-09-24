@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import styles from '../../styles/sections/leasing.module.scss'
 
+import withScrollIn from '../../animations/withScrollIn'
+
 import { withLeftSlideIn } from '../../animations/withSlideIn'
 
 function Leasing() {
@@ -10,7 +12,6 @@ function Leasing() {
         <LeasingText containerClass={styles['image-section__text']} />
         <img src={'insurance.jpeg'} />
       </div>
-      <div className={styles.fixedSection}></div>
     </>
   )
 }
@@ -30,4 +31,4 @@ const LeasingText = withLeftSlideIn(() => (
   </>
 ))
 
-export default Leasing
+export default withScrollIn(Leasing)

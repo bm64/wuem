@@ -8,12 +8,12 @@ import HealthInsurance from '../components/sections/health_insurance'
 import TravelInsurance from '../components/sections/travel_insurance'
 import PropertyInsurance from '../components/sections/property_insurance'
 
-function Insurances() {
+function Insurances({ sectionRef }) {
   const [currentSection, setCurrentSection] = useState(0)
 
   return (
     <>
-      <div className={styles.sectionHeader}>
+      <div ref={sectionRef} className={styles.sectionHeader}>
         <h1>Rodzaje ubezpieczeń</h1>
         <p>
           Lorem ipsum dolor sit a met, consectetur adipiscing elit. <br />
@@ -27,7 +27,7 @@ function Insurances() {
           className={`${styles.menu__item} ${
             currentSection === 0 ? styles['menu__item--selected'] : ''
           }`}
-          onClick={() => setCurrentSection(1)}
+          onClick={() => setCurrentSection(0)}
         >
           <FaCar className={styles['menu__item-icon']} />
           <p>Ubezpiecznia pojazdów</p>

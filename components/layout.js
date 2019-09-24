@@ -30,7 +30,6 @@ function Layout({ children }) {
         <script src="https://kit.fontawesome.com/4a78aee91a.js" />
       </Head>
       <main>{children}</main>
-      <Footer></Footer>
     </>
   )
 }

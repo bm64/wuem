@@ -79,6 +79,7 @@
 }
 
 .tab > h3 {
+  color: lighten($black, 25%);
   font-size: 1.5rem;
   padding: 1.25rem 0rem;
   text-align: center;
@@ -87,13 +88,6 @@
 
 .insurance-benefits {
   padding: 1rem 0rem;
-}
-
-.insurance-benefits > li:before {
-  font-size: 1rem;
-  content: '⮕ ';
-  vertical-align: middle;
-  padding-right: 0.3rem;
 }
 
 .insurance-benefits > li {
