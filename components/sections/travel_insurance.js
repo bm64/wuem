@@ -57,10 +57,10 @@ function TravelInsurance() {
             </div>
           </div>
           <ul className={styles.insuranceBenefits}>
-            <li>Bendonc na wakacjach jebiemy cie w dupe</li>
-            <li>Bendonc na wakacjach jebiemy cie w dupe</li>
-            <li>Bendonc na wakacjach jebiemy cie w dupe</li>
-            <li>Bendonc na wakacjach jebiemy cie w dupe</li>
+            <li>Pokrycie kosztów leczenia i transportu do szpitala </li>
+            <li>Odszkodowanie w razie nieszczęśliwego wypadku </li>
+            <li>Odszkodowanie za skradziony lub zniszczony bagaż </li>
+            <li>Koszty odwołania podróży </li>
           </ul>
         </div>
       </div>

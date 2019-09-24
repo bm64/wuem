@@ -10,7 +10,7 @@ function Leasing() {
     <>
       <div className={styles.imageSection}>
         <LeasingText containerClass={styles['image-section__text']} />
-        <img src={'insurance.jpeg'} />
+        <img src={'/static/leasing_1.jpeg'} />
       </div>
     </>
   )

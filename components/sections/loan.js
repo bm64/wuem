@@ -10,7 +10,7 @@ function Loan() {
     <>
       <div className={styles.imageSection}>
         <LoanText containerClass={styles['image-section__text']} />
-        <img src={'insurance.jpeg'} />
+        <img src={'/static/loan_1.jpeg'} />
       </div>
     </>
   )

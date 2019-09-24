@@ -87,7 +87,7 @@ const OC = withRightSlideIn(() => {
           mechanicznych, które chroni Cię przed odpowiedzialnością cywilną za
           szkody wyrządzone w wyniku kolizji bądź wypadku w ruchu drogowym.
         </p>
-        <img src={'/static/insurance.jpeg'} />
+        <img src={'/static/cars1.jpg'} />
       </div>
     </>
   )
@@ -130,7 +130,7 @@ const AC = withRightSlideIn(() => {
           Właściciel pojazdu może dobrać taki zakres ubezpieczenia, jaki jest
           dla niego najkorzystniejszy.
         </p>
-        <img src={'/static/insurance.jpeg'} />
+        <img src={'/static/leasing_2.jpeg'} />
       </div>
     </>
   )
@@ -170,7 +170,7 @@ const Assistance = withRightSlideIn(() => {
           Zapewnia podstawową pomoc, w nieoczekiwanych zdarzeniach losowych,
           takich jak kolizja, awaria, wypadek czy kradzież pojazdu.
         </p>
-        <img src={'/static/insurance.jpeg'} />
+        <img src={'/static/assistance.jpeg'} />
       </div>
     </>
   )
