@@ -1,8 +1,6 @@
 import React, { useState, useRef } from 'react'
 import styles from '../styles/index.module.scss'
 import {
-  FaHandshake,
-  FaHandHoldingUsd,
   FaMapMarkedAlt,
   FaRegClock,
   FaRegEnvelope,
@@ -12,6 +10,7 @@ import {
 
 import Layout from '../components/layout'
 import Header from '../components/header'
+import Footer from '../components/footer'
 
 import Slider from 'react-slick'
 
@@ -19,8 +18,6 @@ import Insurances from '../components/insurances'
 import Loans from '../components/loans'
 
 import FAQ from '../components/sections/faq'
-
-import withFadeIn from '../animations/withFadeIn'
 
 var settings = {
   dots: true,
@@ -36,6 +33,8 @@ var settings = {
 function Home() {
   const [currentImage, setCurrentImage] = useState(1)
 
+  const insurancesRef = useRef(null)
+  const loansRef = useRef(null)
   const contactRef = useRef(null)
 
   return (
@@ -44,11 +43,21 @@ function Home() {
         onStartPressed={() => window.scrollTo(0, 0)}
         onInsurancesPressed={() => {
           setCurrentImage(1)
-          window.scrollTo(0, window.innerHeight - 80)
+          window.scrollBy(
+            0,
+            insurancesRef.current.getBoundingClientRect().top -
+              insurancesRef.current.getBoundingClientRect().height +
+              40
+          )
         }}
         onCreditLeasingPressed={() => {
           setCurrentImage(0)
-          window.scrollTo(0, window.innerHeight - 80)
+          window.scrollBy(
+            0,
+            loansRef.current.getBoundingClientRect().top -
+              loansRef.current.getBoundingClientRect().height +
+              40
+          )
         }}
         onContactPressed={() => {
           window.scrollBy(
@@ -85,12 +94,10 @@ function Home() {
         <FaArrowDown className={styles.arrow} />
       </div>
 
-      <Insurances />
-
-      <Loans />
+      <Insurances sectionRef={insurancesRef} />
+      <Loans sectionRef={loansRef} />
 
       <FAQ />
-
       <About />
 
       <div className={styles.slider__container}>
@@ -135,6 +142,15 @@ function Home() {
           allowfullscreen=""
         />
       </div>
+      <Footer
+        onContactPressed={() =>
+          window.scrollBy(
+            0,
+            contactRef.current.getBoundingClientRect().top -
+              (contactRef.current.getBoundingClientRect().height + 40)
+          )
+        }
+      />
     </Layout>
   )
 }

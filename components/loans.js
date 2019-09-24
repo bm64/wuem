@@ -6,11 +6,12 @@ import { FaHandHoldingUsd, FaHandshake } from 'react-icons/fa'
 import Loan from './sections/loan.js'
 import Leasing from './sections/leasing.js'
 
-function Loans() {
+function Loans({ sectionRef }) {
   const [currentSection, setCurrentSection] = useState(0)
+
   return (
     <>
-      <div className={styles.sectionHeader}>
+      <div ref={sectionRef} className={styles.sectionHeader}>
         <h1>Rodzaje ubezpieczeń</h1>
         <p>
           Lorem ipsum dolor sit a met, consectetur adipiscing elit. <br />
