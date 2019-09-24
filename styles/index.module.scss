@@ -19,15 +19,18 @@
   background-size: 110% 120%;
   transform: translate(0vh, -50vh);
 }
+
 .carousel__image:first-child {
   background-image: url('/static/finance.jpeg');
   background-size: 100%;
   transform: translate(0vh, 0vh);
   height: 100vh;
 }
+
 .carousel__image:last-child {
   background-image: url('/static/insurance.jpeg');
 }
+
 .carousel__text {
   transform: translate(20%, 45%);
   color: $white;
@@ -38,16 +41,19 @@
   //transform: translate(50%, 45%);
   max-width: 80%;
 }
+
 .carousel__text > h1 {
   font-size: 4rem;
   text-shadow: 0 3px 16px rgba(0, 0, 0, 0.59);
 }
+
 .carousel__text > p {
   font-size: 2rem;
   font-weight: 400;
   width: 60%;
   text-shadow: 0 3px 16px rgba(0, 0, 0, 0.59);
 }
+
 .carousel__button {
   border: 3px solid #1e90ff;
   outline: none;
@@ -98,45 +104,50 @@
   }
 }
 
-.aboutUs {
+.about {
   width: 100%;
-  text-align: center;
   height: 70vh;
+
+  text-align: center;
 }
 
-.aboutUs__image {
-  background-size: 100% 100%;
-
+.about-image {
   width: 100%;
   height: 100%;
+
   background-image: url('/static/about_us.jpeg');
+  background-size: 100% 100%;
 }
 
-.aboutUs__text {
-  transform: translate(50vw, -55vh);
-  color: $white;
+.about-text {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+
   height: 40%;
   width: 45%;
+
   text-align: justify;
+  color: $white;
+
+  transform: translate(50vw, -55vh);
 }
 
-.aboutUs__text > h1 {
+.about-text > h1 {
   font-size: 4rem;
   text-align: right;
   text-shadow: 0 3px 16px rgba(0, 0, 0, 0.59);
 
   padding: 2rem 0;
-  // font-weight: 500;
 }
 
-.aboutUs__text > p {
+.about-text > p {
   font-size: 1.8rem;
   font-weight: 400;
-  text-align: right;
+
   line-height: 2.5rem;
+
+  text-align: right;
   text-shadow: 0 3px 16px rgba(0, 0, 0, 0.59);
 }
 
@@ -190,192 +201,148 @@
 .contact {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  //margin: 5vh 0 5vh 0;
+  justify-content: center;
   align-items: stretch;
+
   min-height: 50vh;
-  width: 1280px;
-  box-shadow: -8px 8px 8px 8px rgba(5, 22, 70, 0.1);
+  max-width: 1280px;
+
   margin: 0 auto;
   padding: 2rem;
+
+  box-shadow: -8px 8px 8px 8px rgba(5, 22, 70, 0.1);
 }
 
-.info__divider {
+.contact-divider {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+
+  padding: 0 2rem;
 }
 
 .line {
   width: 3px;
-  background-color: $primary;
   height: 25%;
+
+  background-color: $primary;
+
   padding: 3rem 0;
 }
 
-.contact__info {
+.contact-section {
   display: flex;
   flex-direction: column;
-  min-width: 25%;
-  min-height: 50vh;
   justify-content: space-between;
-  width: 45%;
+  align-items: stretch;
+
+  flex-grow: 1;
 }
 
-.info__location {
+.contact-headline {
+  font-size: 3rem;
+  text-align: center;
+  color: lighten($black, 10%);
+
+  padding: 0.5rem;
+}
+
+.info-item {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.contact__icon__wrapper {
-  background-color: #1e90ff;
-  border-radius: 35px;
-  height: 70px;
-  width: 70px;
-  color: white;
-  display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.contact__info > *:hover {
-  transform: scale(1.1);
-  //box-shadow: -8px 8px 8px 8px rgba(5, 22, 70, 0.1);
-}
-
-.contact__info > * {
-  transition: box-shadow 0.3s, transform 0.3s;
-}
-
-.info__headline {
-  font-size: 30px;
-  color: #333;
-  padding: 0.5rem;
-  width: 100%;
   text-align: center;
-
-  color: lighten($black, 10%);
+  min-width: 85%;
 }
 
-.info__hours {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+.info-item > svg {
+  font-size: 3rem;
 }
 
-.info__email {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+.contact-text {
+  flex-grow: 1;
+
+  transition: transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.info__phone {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+.contact-text:hover {
+  transform: scale(1.2);
 }
 
-.contact__text {
-  padding-left: 2rem;
-  display: flex;
-  flex-direction: column;
+.contact-text > h2 {
+  color: lighten($black, 15%);
 }
 
-.contact__text > h2 {
-  color: $primary;
-  //font-weight: 500;
-  letter-spacing: 0.1rem;
-  font-size: 2rem;
-}
-
-.contact__text > p {
-  //font-weight: 400;
-  font-size: 1.5rem;
-  letter-spacing: 0.1rem;
+.contact-text > p {
   color: lighten($black, 20%);
 }
 
-.contact__form {
-  display: flex;
-  flex-direction: column;
+.contact-input {
   background-color: #fbfbfb;
-  align-items: center;
-  height: 100%;
-  //box-shadow: -8px 8px 8px 8px rgba(5, 22, 70, 0.1);
-  min-width: 25%;
-  justify-content: space-evenly;
-  //padding: 0.5rem 1.5rem;
-  width: 45%;
-  min-height: 50vh;
-}
+  border: none;
+  border-bottom: 2px solid $primary;
 
-.contact__form > h1 {
-  font-size: 30px;
-  color: lighten($black, 10%);
-  padding: 0.5rem;
-}
-
-.form {
-  width: 100%;
-}
-
-form > input,
-textarea {
-  //width: 20vw;
-  background-color: #fbfbfb;
-  border-bottom: 2px solid #a68c69;
-  color: #4e5a6d;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  font-family: Roboto;
+  font-size: 1.2rem;
   font-weight: 700;
-  height: 5vh;
-  font-size: 20px;
-  outline: none;
-  padding-left: 15px;
-  width: 90%;
+
+  color: $black;
+
+  padding: 1.25rem 1rem;
 }
 
-input:focus,
-textarea:focus {
+.contact-input:focus {
   border-bottom: 2px solid $primary-alt;
 }
 
-form > textarea {
-  height: 20vh;
-  padding-top: 10px;
-  resize: none;
-  width: 90%;
-}
+.message-input {
+  flex-grow: 1;
 
-.form__submit {
-  height: 50px;
-  width: 150px;
-  border: 3px solid #1e90ff;
+  border: none;
+  border-bottom: 2px solid $primary;
   outline: none;
-  color: #1e90ff;
-  margin-left: 5px;
-  background-color: #fbfbfb;
-  transition-duration: 0.2s;
+
+  background-color: $white;
+
+  padding: 0.5rem 0.3rem;
+  margin: 1.5rem 0;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $black;
+
+  resize: none;
+}
+
+.message-input:focus {
+  border-bottom: 2px solid $primary-alt;
+}
+
+.submit-button {
+  border: 3px solid $primary-alt;
+  color: $black;
+  background-color: $white;
+
+  font-size: 1.25rem;
   text-align: center;
-  display: flex;
-  flex-direction: row;
-  font-size: 20px;
-  justify-content: center;
-  align-items: center;
+
+  padding: 1rem 3rem;
+
+  align-self: center;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s;
 }
 
-.form__submit:hover {
-  background-color: #1e90ff;
-  color: white;
+.submit-button:hover {
+  color: $white;
+  background-color: $primary-alt;
 }
 
-.map__container {
+.map-container {
   display: flex;
   flex-direction: row;
   justify-content: center;

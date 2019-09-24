@@ -123,16 +123,17 @@ function Home() {
         <h1>Masz pytanie?</h1>
         <hr className={styles.medium_bottom_line} />
       </div>
+
       <div className={styles.contact}>
         <ContactInfo />
-        <div className={styles.info__divider}>
+        <div className={styles.contactDivider}>
           <div className={styles.line} />
           <p>LUB</p>
           <div className={styles.line} />
         </div>
         <ContactForm />
       </div>
-      <div className={styles.map__container}>
+      <div className={styles.mapContainer}>
         <iframe
           className={styles.map}
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10197.168743002092!2d21.4199396!3d50.2864735!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x646d734823f4f0c9!2sWueM%20Finanse%20Ubezpieczenia%20Leasing!5e0!3m2!1spl!2spl!4v1568916799182!5m2!1spl!2spl"
@@ -155,9 +156,9 @@ function Home() {
 }
 
 const About = ({ sectionRef }) => (
-  <div ref={sectionRef} className={styles.aboutUs}>
-    <div className={styles.aboutUs__image} />
-    <div className={styles.aboutUs__text}>
+  <div ref={sectionRef} className={styles.about}>
+    <div className={styles.aboutImage} />
+    <div className={styles.aboutText}>
       <h1>O naszej firmie</h1>
       <p>
         WueM Finanse to Ogólnie znana teza głosi, iż użytkownika może rozpraszać
@@ -171,67 +172,61 @@ const About = ({ sectionRef }) => (
   </div>
 )
 
-const ContactForm = () => (
-  <form className={styles.contact__form}>
-    <h1>Napisz do nas!</h1>
-    <input type="text" className={styles.form__name} placeholder="Twoje imię" />
-    <input
-      type="text"
-      className={styles.form__mail}
-      placeholder="Twój adres e-mail"
-    />
-    <textarea
-      type="text"
-      className={styles.form__message}
-      placeholder="W czym możemy Ci pomóc"
-    />
-    <div type="submit" className={styles.form__submit}>
-      Wyślij
-    </div>
-  </form>
-)
-
 const ContactInfo = () => (
-  <div className={styles.contact__info}>
-    <h1 className={styles.info__headline}>Odwiedź nas!</h1>
-    <div className={styles.info__location}>
-      <div className={styles.contact__icon__wrapper}>
-        <FaMapMarkedAlt style={{ margin: 'auto 0', fontSize: '50px' }} />
-      </div>
-      <div className={styles.contact__text}>
+  <div className={styles.contactSection}>
+    <h1 className={styles.contactHeadline}>Odwiedź nas!</h1>
+    <div className={styles.infoItem}>
+      <FaMapMarkedAlt />
+      <div className={styles.contactText}>
         <h2>Adres:</h2>
         <p>Rynek 27/I piętro</p>
         <p>39-300 Mielec</p>
       </div>
     </div>
-    <div className={styles.info__hours}>
-      <div className={styles.contact__icon__wrapper}>
-        <FaRegClock style={{ margin: 'auto 0', fontSize: '50px' }} />
-      </div>
-      <div className={styles.contact__text}>
+    <div className={styles.infoItem}>
+      <FaRegClock />
+      <div className={styles.contactText}>
         <h2>Godziny otwarcia:</h2>
         <p>pn-pt 09:00 - 17:00</p>
         <p>sob. 09:00 - 13:00</p>
       </div>
     </div>
-    <div className={styles.info__email}>
-      <div className={styles.contact__icon__wrapper}>
-        <FaRegEnvelope style={{ margin: 'auto 0', fontSize: '50px' }} />
-      </div>
-      <div className={styles.contact__text}>
+    <div className={styles.infoItem}>
+      <FaRegEnvelope />
+      <div className={styles.contactText}>
         <h2>E-mail:</h2>
         <p>biuro@wuemfinanse.pl</p>
       </div>
     </div>
-    <div className={styles.info__phone}>
-      <div className={styles.contact__icon__wrapper}>
-        <FaPhoneVolume style={{ margin: 'auto 0', fontSize: '50px' }} />
-      </div>
-      <div className={styles.contact__text}>
+    <div className={styles.infoItem}>
+      <FaPhoneVolume />
+      <div className={styles.contactText}>
         <h2>Telefon:</h2>
         <p>+48 509 755 700</p>
       </div>
     </div>
+  </div>
+)
+
+const ContactForm = () => (
+  <div className={styles.contactSection}>
+    <h2 className={styles.contactHeadline}>Napisz do nas!</h2>
+    <input
+      type="text"
+      className={styles.contactInput}
+      placeholder="Twoje imię"
+    />
+    <input
+      type="text"
+      className={styles.contactInput}
+      placeholder="Twój adres e-mail"
+    />
+    <textarea
+      type="text"
+      className={styles.messageInput}
+      placeholder="W czym możemy Ci pomóc"
+    />
+    <div className={styles.submitButton}>Wyślij</div>
   </div>
 )
 
