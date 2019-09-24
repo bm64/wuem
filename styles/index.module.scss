@@ -200,12 +200,12 @@
 
 .contact {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: stretch;
 
-  @include for-size(phone-only) {
-    flex-direction: column;
+  @include for-size(tablet-landscape-up) {
+    flex-direction: row;
   }
 
   min-height: 50vh;
@@ -219,27 +219,28 @@
 
 .contact-divider {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 
-  @include for-size(phone-only) {
-    flex-direction: row;
+  @include for-size(tablet-landscape-up) {
+    flex-direction: column;
   }
 
   padding: 0 2rem;
 }
 
 .line {
-  width: 3px;
-  height: 25%;
-  padding: 3rem 0;
+  width: 25%;
+  height: 3px;
+  padding: 0 0rem;
+  margin: 2rem 0;
 
-  @include for-size(phone-only) {
-    width: 25%;
-    height: 3px;
-    padding: 0 0rem;
-    margin: 2rem 0;
+  @include for-size(tablet-landscape-up) {
+    width: 3px;
+    height: 25%;
+    padding: 3rem 0;
+    margin: 0 0;
   }
 
   background-color: $primary;

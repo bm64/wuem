@@ -13,9 +13,13 @@
   margin: 0 auto;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: stretch;
+
+  @include for-size(tablet-portrait-up) {
+    flex-direction: row;
+  }
 
   flex-wrap: wrap;
 }
@@ -25,9 +29,14 @@
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 
-  max-width: 40%;
+  width: 90%;
+
+  @include for-size(tablet-landscape-up) {
+    width: 20rem;
+  }
 }
 
+/*
 .question:nth-child(odd) {
   border-left: none;
   border-right: 1px solid #ccc;
@@ -36,7 +45,7 @@
 .question:nth-child(even) {
   border-right: none;
   border-left: 1px solid #ccc;
-}
+}*/
 
 .question > svg {
   color: lighten($black, 20%);
