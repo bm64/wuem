@@ -1,10 +1,8 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import styles from '../../styles/sections/cars_insurance.module.scss'
 
-import { withLeftSlideIn, withRightSlideIn } from '../../animations/withSlideIn'
+import { withSlideDown } from '../../animations/withSlideIn'
 import withFadeIn from '../../animations/withFadeIn'
-
-import withScrollIn from '../../animations/withScrollIn'
 
 import {
   FaCarCrash,
@@ -60,7 +58,7 @@ const CarsInsuranceImage = withFadeIn(
   2500
 )
 
-const OC = withRightSlideIn(() => {
+const OC = withSlideDown(() => {
   const [showContent, setShowContent] = useState(false)
   return (
     <>
@@ -100,7 +98,7 @@ const OC = withRightSlideIn(() => {
   )
 })
 
-const AC = withRightSlideIn(() => {
+const AC = withSlideDown(() => {
   const [showContent, setShowContent] = useState(false)
   return (
     <>
@@ -143,7 +141,7 @@ const AC = withRightSlideIn(() => {
   )
 })
 
-const Assistance = withRightSlideIn(() => {
+const Assistance = withSlideDown(() => {
   const [showContent, setShowContent] = useState(false)
   return (
     <>

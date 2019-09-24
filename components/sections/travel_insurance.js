@@ -2,7 +2,6 @@ import React, { useState, useMemo } from 'react'
 
 import styles from '../../styles/sections/travel_insurance.module.scss'
 
-import withScrollIn from '../../animations/withScrollIn'
 import withFadeIn from '../../animations/withFadeIn'
 
 import { withLeftSlideIn, withRightSlideIn } from '../../animations/withSlideIn'
