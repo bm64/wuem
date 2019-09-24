@@ -1,14 +1,17 @@
 import React, { useState, useRef } from 'react'
 import styles from '../../styles/sections/cars_insurance.module.scss'
 
-import withSlideIn, {
-  withLeftSlideIn,
-  withRightSlideIn,
-} from '../../animations/withSlideIn'
+import { withLeftSlideIn, withRightSlideIn } from '../../animations/withSlideIn'
 
 import withScrollIn from '../../animations/withScrollIn'
 
-import { FaCarCrash, FaBook, FaWrench } from 'react-icons/fa'
+import {
+  FaCarCrash,
+  FaTools,
+  FaWrench,
+  FaArrowCircleDown,
+  FaArrowCircleUp,
+} from 'react-icons/fa'
 
 function CarsInsurance() {
   return (
@@ -22,9 +25,9 @@ function CarsInsurance() {
           W naszej ofercie ubezpieczen dla pojazdow znajdziesz...
         </h3>
         <div className={styles.insurances}>
-          <OC />
-          <AC />
-          <Assistance />
+          <OC containerClass={styles.insurance} />
+          <AC containerClass={styles.insurance} />
+          <Assistance containerClass={styles.insurance} />
         </div>
       </div>
     </>
@@ -51,31 +54,129 @@ const CarsInsuranceText = withLeftSlideIn(() => {
   )
 })
 
-const OC = withRightSlideIn(() => (
-  <div className={styles.insurances__insurance}>
-    <p className={styles['insurances__insurance-text']}>
-      Ubezpieczenie odpowiedzialnosci cywilnej
-    </p>
-    <FaCarCrash className={styles['insurances__insurance-icon']} size={32} />
-  </div>
-))
+const OC = withRightSlideIn(() => {
+  const [showContent, setShowContent] = useState(false)
+  return (
+    <>
+      <div
+        className={`${styles.insuranceTop} ${
+          showContent ? styles['insurance-top--expanded'] : ''
+        }`}
+      >
+        <FaCarCrash className={styles.insuranceIcon} size={32} />
+        <p className={styles.insuranceText}>
+          Ubezpieczenie odpowiedzialnosci cywilnej
+        </p>
+        {!showContent && (
+          <FaArrowCircleDown
+            className={styles.insuranceExpand}
+            onClick={() => setShowContent(!showContent)}
+          />
+        )}
+        {showContent && (
+          <FaArrowCircleUp
+            className={styles.insuranceExpand}
+            onClick={() => setShowContent(!showContent)}
+          />
+        )}
+      </div>
+      <div
+        className={`${styles.insuranceContent} ${
+          !showContent ? styles['insurance-content--hidden'] : ''
+        }`}
+      >
+        <p>
+          Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
+          fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
+          tincidunt tellus sem, nec placerat nulla commodo vitae. In nec sem ac
+          erat condimentum vestibulum eu quis mauris. Sed non lobortis nisl
+        </p>
+        <img src={'/static/insurance.jpeg'} />
+      </div>
+    </>
+  )
+})
 
-const AC = withRightSlideIn(() => (
-  <div className={styles.insurances__insurance}>
-    <p className={styles['insurances__insurance-text']}>
-      Ubezpieczenie autocasco
-    </p>
-    <FaBook className={styles['insurances__insurance-icon']} size={32} />
-  </div>
-))
+const AC = withRightSlideIn(() => {
+  const [showContent, setShowContent] = useState(false)
+  return (
+    <>
+      <div
+        className={`${styles.insuranceTop} ${
+          showContent ? styles['insurance-top--expanded'] : ''
+        }`}
+      >
+        <FaTools className={styles.insuranceIcon} size={32} />
+        <p className={styles.insuranceText}>Ubezpieczenie autocasco</p>
+        {!showContent && (
+          <FaArrowCircleDown
+            className={styles.insuranceExpand}
+            onClick={() => setShowContent(!showContent)}
+          />
+        )}
+        {showContent && (
+          <FaArrowCircleUp
+            className={styles.insuranceExpand}
+            onClick={() => setShowContent(!showContent)}
+          />
+        )}
+      </div>
+      <div
+        className={`${styles.insuranceContent} ${
+          !showContent ? styles['insurance-content--hidden'] : ''
+        }`}
+      >
+        <p>
+          Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
+          fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
+          tincidunt tellus sem, nec placerat nulla commodo vitae. In nec sem ac
+          erat condimentum vestibulum eu quis mauris. Sed non lobortis nisl
+        </p>
+        <img src={'/static/insurance.jpeg'} />
+      </div>
+    </>
+  )
+})
 
-const Assistance = withRightSlideIn(() => (
-  <div className={styles.insurances__insurance}>
-    <p className={styles['insurances__insurance-text']}>
-      Ubezpieczenie Assistance
-    </p>
-    <FaWrench className={styles['insurances__insurance-icon']} size={32} />
-  </div>
-))
+const Assistance = withRightSlideIn(() => {
+  const [showContent, setShowContent] = useState(false)
+  return (
+    <>
+      <div
+        className={`${styles.insuranceTop} ${
+          showContent ? styles['insurance-top--expanded'] : ''
+        }`}
+      >
+        <FaWrench className={styles.insuranceIcon} size={32} />
+        <p className={styles.insuranceText}>Ubezpieczenie Assistance</p>
+        {!showContent && (
+          <FaArrowCircleDown
+            className={styles.insuranceExpand}
+            onClick={() => setShowContent(!showContent)}
+          />
+        )}
+        {showContent && (
+          <FaArrowCircleUp
+            className={styles.insuranceExpand}
+            onClick={() => setShowContent(!showContent)}
+          />
+        )}
+      </div>
+      <div
+        className={`${styles.insuranceContent} ${
+          !showContent ? styles['insurance-content--hidden'] : ''
+        }`}
+      >
+        <p>
+          Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
+          fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
+          tincidunt tellus sem, nec placerat nulla commodo vitae. In nec sem ac
+          erat condimentum vestibulum eu quis mauris. Sed non lobortis nisl
+        </p>
+        <img src={'/static/insurance.jpeg'} />
+      </div>
+    </>
+  )
+})
 
 export default withScrollIn(CarsInsurance)
