@@ -83,10 +83,10 @@ function Home() {
           ></div>
         </div>
         <div className={styles.carousel__text}>
-          <h1>Poznaj nasze ubezpieczenia</h1>
+          <h1>Ubezpieczenia dla Ciebie i Twoich bliskich</h1>
           <p>
-            Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w
-            przemyśle przykładowy wypełniacz w przemyśle.
+            Niezależnie, czy jesteś osobą prywatną, czy firmą, w naszej ofercie
+            znajdziesz ubezpieczenia dopasowane do twoich potrzeb.
           </p>
           <div
             className={styles.carousel__button}

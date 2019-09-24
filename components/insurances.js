@@ -30,7 +30,7 @@ function Insurances({ sectionRef }) {
           onClick={() => setCurrentSection(0)}
         >
           <FaCar className={styles['menu__item-icon']} />
-          <p>Ubezpiecznia pojazdów</p>
+          <p>Ubezpiecznia komunikacyjne</p>
         </div>
         <div
           className={`${styles.menu__item} ${

@@ -36,16 +36,16 @@
   justify-content: space-evenly;
   height: 40%;
   //transform: translate(50%, 45%);
+  max-width: 80%;
 }
 .carousel__text > h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   text-shadow: 0 3px 16px rgba(0, 0, 0, 0.59);
 }
 .carousel__text > p {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 400;
-  width: 80%;
-  width: 50%;
+  width: 60%;
   text-shadow: 0 3px 16px rgba(0, 0, 0, 0.59);
 }
 .carousel__button {
@@ -54,7 +54,7 @@
   color: #1e90ff;
   background-color: $white;
   transition-duration: 0.2s;
-  font-size: 2rem;
+  font-size: 1.8rem;
   display: inline-block;
   z-index: 5;
   padding: 1rem 2rem;

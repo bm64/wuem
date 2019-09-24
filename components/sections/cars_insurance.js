@@ -22,7 +22,7 @@ function CarsInsurance() {
       </div>
       <div className={styles.fixedSection}>
         <h3 className={styles.headline}>
-          W naszej ofercie ubezpieczen dla pojazdow znajdziesz...
+          W naszej ofercie ubezpieczen komunikacyjnych znajdziesz między innymi:
         </h3>
         <div className={styles.insurances}>
           <OC containerClass={styles.insurance} />
@@ -38,17 +38,16 @@ const CarsInsuranceText = withLeftSlideIn(() => {
   return (
     <>
       <h2>
-        Ubezpiecznia <span>pojazdów</span>
+        Ubezpiecznia <span>komunikacyjne</span>
       </h2>
       <p>
-        Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
-        fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
-        tincidunt tellus sem, nec placerat nulla commodo vitae. In nec sem ac
-        erat condimentum vestibulum eu quis mauris. Sed non lobortis nisl. Nunc
-        placerat quis turpis ac ornare. Nunc ligula quam, hendrerit vitae
-        pretium non, fermentum eu urna. Nunc euismod, lectus quis sodales
-        sollicitudin, nulla odio accumsan mauris, vel lobortis metus urna a
-        nulla.
+        Ubezpieczenia komunikacyjne to najczęściej wybierane produkty
+        ubezpieczeniowe przez Polaków. Obejmują swoją ochroną samochody,
+        motocykle i inne pojazdy. Możemy wyróżnić kilka rodzajów ubezpieczeń
+        komunikacyjnych, z czego najpopularniejszym i jednocześnie obowiązkowym
+        jest ubezpieczenie odpowiedzialności cywilnej (OC). W zależności od
+        potrzeb naszych klientów, doradzamy kiedy warto zaopatrzyć się w
+        dodatkowe ubezpieczenia takie jak Autocasco, Assistance czy NNW.
       </p>
     </>
   )
@@ -64,9 +63,7 @@ const OC = withRightSlideIn(() => {
         }`}
       >
         <FaCarCrash className={styles.insuranceIcon} size={32} />
-        <p className={styles.insuranceText}>
-          Ubezpieczenie odpowiedzialnosci cywilnej
-        </p>
+        <p className={styles.insuranceText}>Ubezpieczenie OC</p>
         {!showContent && (
           <FaArrowCircleDown
             className={styles.insuranceExpand}
@@ -86,10 +83,9 @@ const OC = withRightSlideIn(() => {
         }`}
       >
         <p>
-          Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
-          fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
-          tincidunt tellus sem, nec placerat nulla commodo vitae. In nec sem ac
-          erat condimentum vestibulum eu quis mauris. Sed non lobortis nisl
+          OC to ubezpieczenie odpowiedzialności cywilnej posiadaczy pojazdów
+          mechanicznych, które chroni Cię przed odpowiedzialnością cywilną za
+          szkody wyrządzone w wyniku kolizji bądź wypadku w ruchu drogowym.
         </p>
         <img src={'/static/insurance.jpeg'} />
       </div>
@@ -107,7 +103,7 @@ const AC = withRightSlideIn(() => {
         }`}
       >
         <FaTools className={styles.insuranceIcon} size={32} />
-        <p className={styles.insuranceText}>Ubezpieczenie autocasco</p>
+        <p className={styles.insuranceText}>Ubezpieczenie Autocasco (AC)</p>
         {!showContent && (
           <FaArrowCircleDown
             className={styles.insuranceExpand}
@@ -127,10 +123,12 @@ const AC = withRightSlideIn(() => {
         }`}
       >
         <p>
-          Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
-          fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
-          tincidunt tellus sem, nec placerat nulla commodo vitae. In nec sem ac
-          erat condimentum vestibulum eu quis mauris. Sed non lobortis nisl
+          Autocasco to dobrowolne ubezpieczenie, pozwalające pokryć koszty
+          naprawy pojazdu powstałe na skutek kolizji drogowej spowodowanej z
+          winy ubezpieczonego, jak również rekompensuje stratę finansową
+          powstałą w wyniku kradzieży pojazdu czy innych zdarzeń losowych.
+          Właściciel pojazdu może dobrać taki zakres ubezpieczenia, jaki jest
+          dla niego najkorzystniejszy.
         </p>
         <img src={'/static/insurance.jpeg'} />
       </div>
@@ -168,10 +166,9 @@ const Assistance = withRightSlideIn(() => {
         }`}
       >
         <p>
-          Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
-          fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
-          tincidunt tellus sem, nec placerat nulla commodo vitae. In nec sem ac
-          erat condimentum vestibulum eu quis mauris. Sed non lobortis nisl
+          Assistance to dobrowolne ubezpieczenie działające przez całą dobę.
+          Zapewnia podstawową pomoc, w nieoczekiwanych zdarzeniach losowych,
+          takich jak kolizja, awaria, wypadek czy kradzież pojazdu.
         </p>
         <img src={'/static/insurance.jpeg'} />
       </div>

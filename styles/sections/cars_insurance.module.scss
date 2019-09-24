@@ -39,8 +39,9 @@
 
 .insurance-text {
   flex-grow: 1;
-  color: lighten($black, 20%);
+  //color: lighten($black, 20%);
   padding: 2rem;
+  color: $black;
 }
 
 .insurance-icon {
@@ -53,6 +54,7 @@
 .insurance-expand {
   font-size: 3rem;
   color: lighten($primary, 20%);
+  //color: lighten($black, 20%);
 }
 
 .insurance-expand:hover {
@@ -74,7 +76,12 @@
 }
 
 .insurance-content > p {
+  font-weight: 500;
+  color: lighten($black, 10%);
+
   flex-shrink: 1;
+
+  padding: 0 1rem;
 }
 
 .insurance-content > img {
