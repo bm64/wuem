@@ -14,9 +14,13 @@
   @extend .fixed-section;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
+
+  @include for-size(tablet-landscape-up) {
+    flex-direction: row;
+  }
 }
 
 .fixed-section {
@@ -27,15 +31,19 @@
 }
 
 // Image-Section specific
-.image-section > .image-section__text {
+.image-section__text {
   color: lighten($black, 20%);
-  width: 60%;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  padding-right: 2rem;
+  text-align: justify;
+
+  @include for-size(tablet-landscape-up) {
+    padding-right: 2rem;
+    text-align: left;
+  }
 }
 
 // Delet this
@@ -49,7 +57,13 @@
 }
 
 .image-section__image {
-  width: 40%;
+  margin: 0 auto;
+  min-width: 45%;
+  max-width: 100%;
+
+  @include for-size(tablet-landscape-up) {
+    max-width: 45%;
+  }
 
   display: flex;
   align-items: center;
@@ -59,6 +73,7 @@
   width: 100%;
   margin: 0 auto;
   object-fit: contain;
+
   @include for-size(phone-only) {
     display: none;
   }
