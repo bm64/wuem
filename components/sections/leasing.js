@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import styles from '../../styles/sections/leasing.module.scss'
 
-import withScrollIn from '../../animations/withScrollIn'
 import withFadeIn from '../../animations/withFadeIn'
-import { withLeftSlideIn } from '../../animations/withSlideIn'
 
 function Leasing() {
   return (

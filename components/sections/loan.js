@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
 import styles from '../../styles/sections/loan.module.scss'
 
-import withScrollIn from '../../animations/withScrollIn'
 import withFadeIn from '../../animations/withFadeIn'
-
-import { withLeftSlideIn } from '../../animations/withSlideIn'
 
 function Loan() {
   return (

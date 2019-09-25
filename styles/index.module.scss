@@ -1,6 +1,6 @@
 @import '_base.scss';
 
-.carousel__container {
+.carousel-container {
   width: 100vw;
   height: 100vh;
 }
@@ -8,84 +8,124 @@
 .carousel {
   position: relative;
   width: 100vw;
-  // transition: transform 1s;
   z-index: -1;
+  transition: transform 0.5s;
 }
 
-.carousel__image {
+.carousel-image {
   position: absolute;
-  height: 150vh;
+  height: 100vh;
   width: 100vw;
   background-size: 110% 120%;
-  transform: translate(0vh, -50vh);
 }
 
-.carousel__image:first-child {
+.carousel-image:first-child {
   background-image: url('/static/finance.jpeg');
-  background-size: 100%;
-  transform: translate(0vh, 0vh);
-  height: 100vh;
+  background-size: cover;
+
+  left: 0vw;
 }
 
-.carousel__image:last-child {
+.carousel-image:nth-child(2) {
   background-image: url('/static/insurance.jpeg');
+  background-size: cover;
+
+  background-position: center;
+
+  left: -100vw;
 }
 
-.carousel__text {
-  transform: translate(20%, 45%);
-  color: $white;
+.next-image-button {
+  font-size: 4rem;
+  position: absolute;
+  right: 0px;
+  top: 50vh;
+  z-index: 3;
+}
+
+.previous-image-button {
+  font-size: 4rem;
+  position: absolute;
+  left: 0px;
+  top: 50vh;
+  z-index: 3;
+}
+
+.carousel-content {
+  position: absolute;
+  top: 6.5rem;
+
+  height: calc(100vh - 6.5rem);
+  width: 100vw;
+
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  height: 40%;
-  //transform: translate(50%, 45%);
-  max-width: 80%;
+  justify-content: space-between;
 }
 
-.carousel__text > h1 {
-  font-size: 4rem;
+.carousel-text {
+  flex-grow: 1;
+
+  color: $white;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: calc(5vw);
+
+  @include for-size(tablet-landscape-up) {
+    padding: calc(8rem + 5vw);
+  }
+}
+
+.carousel-text > h1 {
+  font-size: 3rem;
   text-shadow: 0 3px 16px rgba(0, 0, 0, 0.59);
 }
 
-.carousel__text > p {
+.carousel-text > p {
   font-size: 2rem;
   font-weight: 400;
-  width: 60%;
   text-shadow: 0 3px 16px rgba(0, 0, 0, 0.59);
+
+  max-width: 46rem;
+  padding: 1.5rem 0.3rem;
 }
 
-.carousel__button {
-  border: 3px solid #1e90ff;
-  outline: none;
-  color: #1e90ff;
-  background-color: $white;
-  transition-duration: 0.2s;
+.carousel-button {
   font-size: 1.8rem;
-  display: inline-block;
-  z-index: 5;
-  padding: 1rem 2rem;
-  cursor: pointer;
-  align-self: flex-start;
+  color: $primary-alt;
+
+  border: 3px solid $primary-alt;
   box-shadow: 0 3px 16px rgba(0, 0, 0, 0.59);
+  background-color: $white;
+
+  z-index: 4;
+
+  padding: 1rem 2rem;
+
+  cursor: pointer;
+
+  align-self: flex-start;
+
+  transition: background-color 0.2s, color 0.2s;
 }
 
-.carousel__button:hover {
-  background-color: #1e90ff;
+.carousel-button:hover {
+  background-color: $primary-alt;
   color: $white;
 }
 
 .arrow {
-  position: absolute;
-  bottom: 0px;
+  align-self: center;
 
-  height: 5vh;
-  text-align: center;
-  animation: bounce 2s infinite;
   padding-bottom: 1.2vh;
 
-  width: 100%;
-
+  font-size: 4rem;
+  text-align: center;
   color: $white;
+
+  animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
