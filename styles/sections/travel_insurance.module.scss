@@ -5,17 +5,21 @@
   @extend .fixed-section;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
+
+  @include for-size(tablet-portrait-up) {
+    flex-direction: row;
+  }
 }
 
 .left {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .left > img {
-  padding: 1rem;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -23,6 +27,7 @@
 
 .travel-headline {
   display: inline-block;
+  padding: 1rem 0;
 }
 
 .travel-headline > h2 {

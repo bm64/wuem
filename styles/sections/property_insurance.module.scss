@@ -16,6 +16,8 @@
   text-align: center;
 
   margin: 0 auto;
+
+  padding: 2rem 0;
 }
 
 .property-headline > span {
@@ -24,9 +26,13 @@
 
 .cards {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  @include for-size(tablet-landscape-up) {
+    flex-direction: row;
+  }
 }
 
 .card {
@@ -42,7 +48,9 @@
 
   padding-bottom: 1rem;
 
-  max-width: 30%;
+  @include for-size(tablet-landscape-up) {
+    max-width: 25rem;
+  }
 }
 
 .card > svg {

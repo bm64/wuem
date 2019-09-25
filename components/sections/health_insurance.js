@@ -1,12 +1,7 @@
 import React, { useState } from 'react'
 import styles from '../../styles/sections/health_insurance.module.scss'
 
-import withScrollIn from '../../animations/withScrollIn'
 import withFadeIn from '../../animations/withFadeIn'
-
-import { withLeftSlideIn } from '../../animations/withSlideIn'
-
-import { FaUserShield, FaStethoscope, FaCreditCard } from 'react-icons/fa'
 
 function HealthInsurance() {
   const [currentTab, setCurrentTab] = useState(0)
