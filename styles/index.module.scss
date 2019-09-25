@@ -9,6 +9,7 @@
   position: relative;
   width: 100vw;
   z-index: -1;
+  transition: transform 0.5s;
 }
 
 .carousel-image {
@@ -25,13 +26,29 @@
   left: 0vw;
 }
 
-.carousel-image:last-child {
+.carousel-image:nth-child(2) {
   background-image: url('/static/insurance.jpeg');
   background-size: cover;
 
   background-position: center;
 
   left: -100vw;
+}
+
+.next-image-button {
+  font-size: 4rem;
+  position: absolute;
+  right: 0px;
+  top: 50vh;
+  z-index: 3;
+}
+
+.previous-image-button {
+  font-size: 4rem;
+  position: absolute;
+  left: 0px;
+  top: 50vh;
+  z-index: 3;
 }
 
 .carousel-content {

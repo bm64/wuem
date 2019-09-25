@@ -6,6 +6,8 @@ import {
   FaRegEnvelope,
   FaPhoneVolume,
   FaArrowDown,
+  FaChevronLeft,
+  FaChevronRight,
 } from 'react-icons/fa'
 
 import Layout from '../components/layout'
@@ -70,7 +72,9 @@ function Home() {
       <div className={styles.carouselContainer}>
         <div
           className={styles.carousel}
-          style={{ transform: `translateX(${currentImage * 100}vw)` }}
+          style={{
+            transform: `translateX(${currentImage * 100}vw)`,
+          }}
         >
           <div className={styles.carouselImage} style={{ left: '0vw' }}></div>
           <div
@@ -95,7 +99,18 @@ function Home() {
           <FaArrowDown className={styles.arrow} />
         </div>
       </div>
-
+      {currentImage === 1 && (
+        <FaChevronRight
+          className={styles.nextImageButton}
+          onClick={() => setCurrentImage(0)}
+        />
+      )}
+      {currentImage === 0 && (
+        <FaChevronLeft
+          className={styles.previousImageButton}
+          onClick={() => setCurrentImage(1)}
+        />
+      )}
       <Insurances sectionRef={insurancesRef} />
       <Loans sectionRef={loansRef} />
 
