@@ -25,27 +25,14 @@
 }
 
 .question {
-  padding: 3rem;
+  padding: 3rem 1rem;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-
-  width: 90%;
 
   @include for-size(tablet-landscape-up) {
     width: 20rem;
   }
 }
-
-/*
-.question:nth-child(odd) {
-  border-left: none;
-  border-right: 1px solid #ccc;
-}
-
-.question:nth-child(even) {
-  border-right: none;
-  border-left: 1px solid #ccc;
-}*/
 
 .question > svg {
   color: lighten($black, 20%);
@@ -61,7 +48,7 @@
 }
 
 .answer {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 
 .answer > p {
