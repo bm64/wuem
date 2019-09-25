@@ -83,19 +83,37 @@ function Home() {
           ></div>
         </div>
         <div className={styles.carouselContent}>
-          <div className={styles.carouselText}>
-            <h1>Ubezpieczenia dla Ciebie i Twoich bliskich</h1>
-            <p>
-              Niezależnie, czy jesteś osobą prywatną, czy firmą, w naszej
-              ofercie znajdziesz ubezpieczenia dopasowane do twoich potrzeb.
-            </p>
-            <div
-              className={styles.carouselButton}
-              onClick={() => window.scrollTo(0, window.innerHeight - 80)}
-            >
-              Sprawdź ofertę
+          {currentImage === 1 && (
+            <div className={styles.carouselText}>
+              <h1>Ubezpieczenia dla Ciebie i Twoich bliskich</h1>
+              <p>
+                Niezależnie, czy jesteś osobą prywatną, czy firmą, w naszej
+                ofercie znajdziesz ubezpieczenia dopasowane do twoich potrzeb.
+              </p>
+              <div
+                className={styles.carouselButton}
+                onClick={() => window.scrollTo(0, window.innerHeight - 80)}
+              >
+                Sprawdź ofertę
+              </div>
             </div>
-          </div>
+          )}
+          {currentImage === 0 && (
+            <div className={styles.carouselText}>
+              <h1>Kredyt i leasing na kazda kieszen</h1>
+              <p>
+                Niezależnie, czy jesteś osobą prywatną, czy firmą, w naszej
+                ofercie znajdziesz ubezpieczenia dopasowane do twoich potrzeb.
+              </p>
+              <div
+                className={styles.carouselButton}
+                onClick={() => window.scrollTo(0, window.innerHeight - 80)}
+              >
+                Sprawdź ofertę
+              </div>
+            </div>
+          )}
+
           <FaArrowDown className={styles.arrow} />
         </div>
       </div>
