@@ -2,16 +2,7 @@ import React, { useState } from 'react'
 
 import styles from '../../styles/sections/property_insurance.module.scss'
 
-import withScrollIn from '../../animations/withScrollIn'
 import withFadeIn from '../../animations/withFadeIn'
-
-import {
-  withLeftSlideIn,
-  withRightSlideIn,
-  withSlideDown,
-} from '../../animations/withSlideIn'
-
-import { FaHome, FaBuilding, FaHouseDamage } from 'react-icons/fa'
 
 function PropertyInsurance() {
   return (

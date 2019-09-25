@@ -66,31 +66,34 @@ function Home() {
           scrollTo(contactRef)
         }}
       />
-      <div className={styles.carousel__container}>
+
+      <div className={styles.carouselContainer}>
         <div
           className={styles.carousel}
           style={{ transform: `translateX(${currentImage * 100}vw)` }}
         >
-          <div className={styles.carousel__image} style={{ left: '0vw' }}></div>
+          <div className={styles.carouselImage} style={{ left: '0vw' }}></div>
           <div
-            className={styles.carousel__image}
+            className={styles.carouselImage}
             style={{ left: '-100vw' }}
           ></div>
         </div>
-        <div className={styles.carousel__text}>
-          <h1>Ubezpieczenia dla Ciebie i Twoich bliskich</h1>
-          <p>
-            Niezależnie, czy jesteś osobą prywatną, czy firmą, w naszej ofercie
-            znajdziesz ubezpieczenia dopasowane do twoich potrzeb.
-          </p>
-          <div
-            className={styles.carousel__button}
-            onClick={() => window.scrollTo(0, window.innerHeight - 80)}
-          >
-            Sprawdź ofertę
+        <div className={styles.carouselContent}>
+          <div className={styles.carouselText}>
+            <h1>Ubezpieczenia dla Ciebie i Twoich bliskich</h1>
+            <p>
+              Niezależnie, czy jesteś osobą prywatną, czy firmą, w naszej
+              ofercie znajdziesz ubezpieczenia dopasowane do twoich potrzeb.
+            </p>
+            <div
+              className={styles.carouselButton}
+              onClick={() => window.scrollTo(0, window.innerHeight - 80)}
+            >
+              Sprawdź ofertę
+            </div>
           </div>
+          <FaArrowDown className={styles.arrow} />
         </div>
-        <FaArrowDown className={styles.arrow} />
       </div>
 
       <Insurances sectionRef={insurancesRef} />

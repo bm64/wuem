@@ -4,8 +4,6 @@ import styles from '../../styles/sections/travel_insurance.module.scss'
 
 import withFadeIn from '../../animations/withFadeIn'
 
-import { withLeftSlideIn, withRightSlideIn } from '../../animations/withSlideIn'
-
 import { FaBus, FaFly, FaPlane } from 'react-icons/fa'
 
 function TravelInsurance() {
