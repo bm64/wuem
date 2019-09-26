@@ -21,9 +21,9 @@ function TravelInsurance() {
             <h2>Badz bezpieczny </h2>
             <h3>Sprawdz nasze ubezpieczenia turystyczne...</h3>
           </div>
-          {currentTab === 0 && <img src={'/static/travel1.jpg'} />}
-          {currentTab === 1 && <img src={'/static/travel2.jpg'} />}
-          {currentTab === 2 && <img src={'/static/travel3.jpg'} />}
+          {currentTab === 0 && <img src={'/static/travel1.jpeg'} />}
+          {currentTab === 1 && <img src={'/static/travel2.jpeg'} />}
+          {currentTab === 2 && <img src={'/static/travel3.jpeg'} />}
         </div>
         <div className={styles.right}>
           <div className={styles.tabs}>

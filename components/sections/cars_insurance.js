@@ -43,11 +43,11 @@ const CarsInsuranceText = withFadeIn(() => {
       <p>
         Ubezpieczenia komunikacyjne to najczęściej wybierane produkty
         ubezpieczeniowe przez Polaków. Obejmują swoją ochroną samochody,
-        motocykle i inne pojazdy. Możemy wyróżnić kilka rodzajów ubezpieczeń
-        komunikacyjnych, z czego najpopularniejszym i jednocześnie obowiązkowym
-        jest ubezpieczenie odpowiedzialności cywilnej (OC). W zależności od
-        potrzeb naszych klientów, doradzamy kiedy warto zaopatrzyć się w
-        dodatkowe ubezpieczenia takie jak Autocasco, Assistance czy NNW.
+        motocykle i inne pojazdy. Ubezpieczenie odpowiedzialności cywilnej (OC),
+        jest najpopularniejszym i jednocześnie obowiązkowym ubezpieczeniem
+        komunikacyjnym. W zależności od potrzeb naszych klientów, doradzamy
+        kiedy warto zaopatrzyć się w dodatkowe ubezpieczenia takie jak
+        Autocasco, Assistance czy NNW.
       </p>
     </>
   )

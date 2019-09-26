@@ -12,7 +12,7 @@ function Loans({ sectionRef }) {
   return (
     <>
       <div ref={sectionRef} className={styles.sectionHeader}>
-        <h1>Rodzaje ubezpieczeń</h1>
+        <h1>Kredyt i Leasing</h1>
         <p>
           Lorem ipsum dolor sit a met, consectetur adipiscing elit. <br />
           Fusce fermentum pellentesque ligula

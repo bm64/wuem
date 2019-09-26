@@ -83,6 +83,8 @@
   font-size: 40px;
   font-weight: 500;
   color: $black;
+  max-width: 55%;
+  text-align: center;
 }
 
 .section-header > p {
@@ -91,6 +93,7 @@
   color: lighten($black, 20%);
   text-align: center;
   padding: 1rem;
+  max-width: 45%;
 }
 
 .medium_bottom_line {

@@ -14,10 +14,10 @@ function Insurances({ sectionRef }) {
   return (
     <>
       <div ref={sectionRef} className={styles.sectionHeader}>
-        <h1>Rodzaje ubezpieczeń</h1>
+        <h1>Ubezpieczenia dopasowane do Ciebie</h1>
         <p>
-          Lorem ipsum dolor sit a met, consectetur adipiscing elit. <br />
-          Fusce fermentum pellentesque ligula
+          Zapewniamy kompleksową pomoc w doborze najlepszego pakietu ubezpieczeń
+          w atrakcyjnej cenie.
         </p>
         <hr className={styles.medium_bottom_line} />
       </div>
