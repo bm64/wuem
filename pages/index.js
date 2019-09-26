@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useRef, useEffect } from 'react'
+import React, { useState, useMemo, useRef, useCallback, useEffect } from 'react'
 import styles from '../styles/index.module.scss'
 import {
   FaMapMarkedAlt,
@@ -53,6 +53,10 @@ function Home() {
 
   const [isContentHovered, setIsContentHovered] = useState(false)
 
+  const nextImage = useCallback(() => {
+    setCurrentImage(currentImage === 0 ? 1 : 0)
+  }, [currentImage])
+
   return (
     <Layout>
       <Header
@@ -85,8 +89,9 @@ function Home() {
         </div>
         <div className={styles.carouselContent}>
           <ProgressBar
+            reset={currentImage}
             shouldProgress={!isContentHovered}
-            onProgressEnded={() => setCurrentImage(currentImage === 0 ? 1 : 0)}
+            onProgressEnded={nextImage}
           />
 
           {currentImage === 1 && <InsurancesContent />}
@@ -99,6 +104,7 @@ function Home() {
           />
         </div>
       </div>
+
       {currentImage === 1 && (
         <FaChevronRight
           className={styles.nextImageButton}
@@ -174,7 +180,12 @@ function Home() {
   )
 }
 
-function ProgressBar({ shouldProgress, onProgressEnded, duration = 5000 }) {
+function ProgressBar({
+  shouldProgress,
+  onProgressEnded,
+  reset,
+  duration = 5000,
+}) {
   const progressRef = useRef(null)
 
   const [startValue, setStartValue] = useState(null)
@@ -234,6 +245,11 @@ function ProgressBar({ shouldProgress, onProgressEnded, duration = 5000 }) {
     if (!shouldProgress) pauseProgress()
     else startProgress()
   }, [shouldProgress])
+
+  useEffect(() => {
+    stopProgress()
+    setTimeout(() => startProgress(), 300)
+  }, [reset])
 
   return (
     <div

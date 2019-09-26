@@ -25,16 +25,14 @@
   flex-direction: column;
 
   margin-top: 1rem;
-
-  @include for-size(tablet-portrait-up) {
-    padding: 0 1rem;
-  }
 }
 
 .insurance-top {
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  padding: 0 1rem;
 }
 
 .insurance-top--expanded {
@@ -96,4 +94,8 @@
   height: 20vh;
   display: block;
   object-fit: cover;
+
+  @include for-size(phone-only) {
+    display: none;
+  }
 }
