@@ -241,7 +241,7 @@ function ProgressBar({ shouldProgress, onProgressEnded, duration = 5000 }) {
       className={styles.progressBar}
       style={{
         transition: isProgressing
-          ? `width ${(duration * 1.0 - startValue / 10) / 1000}s linear 0.2s`
+          ? `width ${(duration * (1.0 - startValue / 100)) / 1000}s linear`
           : '',
         width: isProgressing ? '100%' : startWidth,
       }}
