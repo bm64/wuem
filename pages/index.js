@@ -113,10 +113,10 @@ function Home() {
       )}
 
       <Insurances sectionRef={insurancesRef} />
-      <Loans sectionRef={loansRef} />
-
-      <FAQ />
-      <About sectionRef={aboutRef} />
+      <div className={styles.sectionHeader}>
+        <h1>Partnerzy</h1>
+        <hr className={styles.medium_bottom_line} />
+      </div>
 
       <div className={styles.slider__container}>
         <Slider {...settings} className={styles.slider}>
@@ -137,6 +137,10 @@ function Home() {
           </div>
         </Slider>
       </div>
+      <Loans sectionRef={loansRef} />
+
+      <FAQ />
+      <About sectionRef={aboutRef} />
 
       <div ref={contactRef} className={styles.section_header}>
         <h1>Masz pytanie?</h1>
