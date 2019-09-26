@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useMemo, useRef, useEffect } from 'react'
 import styles from '../styles/index.module.scss'
 import {
   FaMapMarkedAlt,
@@ -9,6 +9,8 @@ import {
   FaChevronLeft,
   FaChevronRight,
 } from 'react-icons/fa'
+
+import withFadeIn from '../animations/withFadeIn'
 
 import Layout from '../components/layout'
 import Header from '../components/header'
@@ -49,6 +51,8 @@ function Home() {
   const aboutRef = useRef(null)
   const contactRef = useRef(null)
 
+  const [isContentHovered, setIsContentHovered] = useState(false)
+
   return (
     <Layout>
       <Header
@@ -76,45 +80,23 @@ function Home() {
             transform: `translateX(${currentImage * 100}vw)`,
           }}
         >
-          <div className={styles.carouselImage} style={{ left: '0vw' }}></div>
-          <div
-            className={styles.carouselImage}
-            style={{ left: '-100vw' }}
-          ></div>
+          <div className={styles.carouselImage}></div>
+          <div className={styles.carouselImage}></div>
         </div>
         <div className={styles.carouselContent}>
-          {currentImage === 1 && (
-            <div className={styles.carouselText}>
-              <h1>Ubezpieczenia dla Ciebie i Twoich bliskich</h1>
-              <p>
-                Niezależnie, czy jesteś osobą prywatną, czy firmą, w naszej
-                ofercie znajdziesz ubezpieczenia dopasowane do twoich potrzeb.
-              </p>
-              <div
-                className={styles.carouselButton}
-                onClick={() => window.scrollTo(0, window.innerHeight - 80)}
-              >
-                Sprawdź ofertę
-              </div>
-            </div>
-          )}
-          {currentImage === 0 && (
-            <div className={styles.carouselText}>
-              <h1>Kredyt i leasing na kazda kieszen</h1>
-              <p>
-                Niezależnie, czy jesteś osobą prywatną, czy firmą, w naszej
-                ofercie znajdziesz ubezpieczenia dopasowane do twoich potrzeb.
-              </p>
-              <div
-                className={styles.carouselButton}
-                onClick={() => window.scrollTo(0, window.innerHeight - 80)}
-              >
-                Sprawdź ofertę
-              </div>
-            </div>
-          )}
+          <ProgressBar
+            shouldProgress={!isContentHovered}
+            onProgressEnded={() => setCurrentImage(currentImage === 0 ? 1 : 0)}
+          />
 
-          <FaArrowDown className={styles.arrow} />
+          {currentImage === 1 && <InsurancesContent />}
+          {currentImage === 0 && <FinanceContent />}
+
+          <FaArrowDown
+            className={styles.arrow}
+            onMouseEnter={() => setIsContentHovered(true)}
+            onMouseLeave={() => setIsContentHovered(false)}
+          />
         </div>
       </div>
       {currentImage === 1 && (
@@ -129,6 +111,7 @@ function Home() {
           onClick={() => setCurrentImage(1)}
         />
       )}
+
       <Insurances sectionRef={insurancesRef} />
       <Loans sectionRef={loansRef} />
 
@@ -191,6 +174,113 @@ function Home() {
   )
 }
 
+function ProgressBar({ shouldProgress, onProgressEnded, duration = 5000 }) {
+  const progressRef = useRef(null)
+
+  const [startValue, setStartValue] = useState(null)
+
+  const startWidth = useMemo(() => {
+    if (typeof window === 'undefined') return 0
+    return (startValue * window.innerWidth) / 100
+  }, [startValue])
+
+  const [isProgressing, setIsProgressing] = useState(false)
+  const progressInterval = useState(null)
+
+  const startProgress = () => {
+    if (progressInterval.current) clearInterval(progressInterval.current)
+
+    progressInterval.current = setInterval(() => {
+      if (progressRef.current) {
+        const hasEnded =
+          progressRef.current.getBoundingClientRect().width >
+          window.innerWidth - 30
+        if (hasEnded) {
+          if (onProgressEnded) onProgressEnded()
+          clearInterval(progressInterval.current)
+          setTimeout(() => setStartValue(0), 100)
+        }
+      }
+    }, 200)
+
+    setIsProgressing(true)
+  }
+
+  const stopProgress = () => {
+    if (progressInterval.current) clearInterval(progressInterval.current)
+
+    setStartValue(null)
+    setIsProgressing(false)
+  }
+
+  const pauseProgress = () => {
+    if (progressInterval.current) clearInterval(progressInterval.current)
+
+    setStartValue(
+      (progressRef.current.getBoundingClientRect().width * 100) /
+        window.innerWidth
+    )
+    setIsProgressing(false)
+  }
+
+  useEffect(() => {
+    if (startValue === 0) {
+      stopProgress()
+      setTimeout(() => startProgress(), 300)
+    }
+  }, [startValue])
+
+  useEffect(() => {
+    if (!shouldProgress) pauseProgress()
+    else startProgress()
+  }, [shouldProgress])
+
+  return (
+    <div
+      ref={progressRef}
+      className={styles.progressBar}
+      style={{
+        transition: isProgressing
+          ? `width ${(duration * 1.0 - startValue / 10) / 1000}s linear 0.2s`
+          : '',
+        width: isProgressing ? '100%' : startWidth,
+      }}
+    />
+  )
+}
+
+const InsurancesContent = withFadeIn(() => (
+  <div className={styles.carouselText}>
+    <h1>Ubezpieczenia dla Ciebie i Twoich bliskich</h1>
+    <p>
+      Niezależnie, czy jesteś osobą prywatną, czy firmą, w naszej ofercie
+      znajdziesz ubezpieczenia dopasowane do twoich potrzeb.
+    </p>
+    <div
+      className={styles.carouselButton}
+      onClick={() => window.scrollTo(0, window.innerHeight - 80)}
+    >
+      Sprawdź ofertę
+    </div>
+  </div>
+))
+
+const FinanceContent = withFadeIn(() => (
+  <div className={styles.carouselText}>
+    <h1>Kredyt i leasing na kazda kieszen</h1>
+    <p>
+      Niezależnie, czy jesteś osobą prywatną, czy firmą, w naszej ofercie
+      znajdziesz ubezpieczenia dopasowane do twoich potrzeb.
+    </p>
+    <div
+      className={styles.carouselButton}
+      onClick={() => window.scrollTo(0, window.innerHeight - 80)}
+    >
+      Sprawdź ofertę
+    </div>
+  </div>
+))
+
 const About = ({ sectionRef }) => (
   <div ref={sectionRef} className={styles.about}>
     <div className={styles.aboutImage} />
@@ -209,7 +299,7 @@ const About = ({ sectionRef }) => (
 )
 
 const ContactInfo = () => (
-  <div className={styles.contactSection}>
+  <div className={styles.contactSection} style={{ flex: 2 }}>
     <h1 className={styles.contactHeadline}>Odwiedź nas!</h1>
     <div className={styles.infoItem}>
       <FaMapMarkedAlt />
@@ -245,7 +335,7 @@ const ContactInfo = () => (
 )
 
 const ContactForm = () => (
-  <div className={styles.contactSection}>
+  <div className={styles.contactSection} style={{ flex: 3 }}>
     <h2 className={styles.contactHeadline}>Napisz do nas!</h2>
     <input
       type="text"
@@ -262,6 +352,18 @@ const ContactForm = () => (
       className={styles.messageInput}
       placeholder="W czym możemy Ci pomóc"
     />
+    <label className={styles.contactAgreement}>
+      <input type="checkbox" />
+      <span>
+        Wyrażam zgodę na na przetwarzanie danych osobowych zgodnie z ustawą o
+        ochronie danych osobowych. Podanie danych jest dobrowolne, ale niezbędne
+        do przetworzenia zapytania. Dane wpisane w formularzu kontaktowym będą
+        przetwarzane w celu udzielenia odpowiedzi na przesłane zapytanie oraz w
+        celach marketingowych zgodnie z regulaminem Polityki prywatności.
+        Administratorem danych osobowych jest WueM finanse w Mielcu (39-300) na
+        rynku.
+      </span>
+    </label>
     <div className={styles.submitButton}>Wyślij</div>
   </div>
 )

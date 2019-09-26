@@ -82,18 +82,16 @@ const OC = withSlideDown(() => {
           />
         )}
       </div>
-      <div
-        className={`${styles.insuranceContent} ${
-          !showContent ? styles['insurance-content--hidden'] : ''
-        }`}
-      >
-        <p>
-          OC to ubezpieczenie odpowiedzialności cywilnej posiadaczy pojazdów
-          mechanicznych, które chroni Cię przed odpowiedzialnością cywilną za
-          szkody wyrządzone w wyniku kolizji bądź wypadku w ruchu drogowym.
-        </p>
-        <img src={'/static/cars1.jpg'} />
-      </div>
+      {showContent && (
+        <div className={styles.insuranceContent}>
+          <p>
+            OC to ubezpieczenie odpowiedzialności cywilnej posiadaczy pojazdów
+            mechanicznych, które chroni Cię przed odpowiedzialnością cywilną za
+            szkody wyrządzone w wyniku kolizji bądź wypadku w ruchu drogowym.
+          </p>
+          <img src={'/static/cars1.jpg'} />
+        </div>
+      )}
     </>
   )
 })
@@ -122,21 +120,19 @@ const AC = withSlideDown(() => {
           />
         )}
       </div>
-      <div
-        className={`${styles.insuranceContent} ${
-          !showContent ? styles['insurance-content--hidden'] : ''
-        }`}
-      >
-        <p>
-          Autocasco to dobrowolne ubezpieczenie, pozwalające pokryć koszty
-          naprawy pojazdu powstałe na skutek kolizji drogowej spowodowanej z
-          winy ubezpieczonego, jak również rekompensuje stratę finansową
-          powstałą w wyniku kradzieży pojazdu czy innych zdarzeń losowych.
-          Właściciel pojazdu może dobrać taki zakres ubezpieczenia, jaki jest
-          dla niego najkorzystniejszy.
-        </p>
-        <img src={'/static/leasing_2.jpeg'} />
-      </div>
+      {showContent && (
+        <div className={styles.insuranceContent}>
+          <p>
+            Autocasco to dobrowolne ubezpieczenie, pozwalające pokryć koszty
+            naprawy pojazdu powstałe na skutek kolizji drogowej spowodowanej z
+            winy ubezpieczonego, jak również rekompensuje stratę finansową
+            powstałą w wyniku kradzieży pojazdu czy innych zdarzeń losowych.
+            Właściciel pojazdu może dobrać taki zakres ubezpieczenia, jaki jest
+            dla niego najkorzystniejszy.
+          </p>
+          <img src={'/static/leasing_2.jpeg'} />
+        </div>
+      )}
     </>
   )
 })
@@ -165,18 +161,17 @@ const Assistance = withSlideDown(() => {
           />
         )}
       </div>
-      <div
-        className={`${styles.insuranceContent} ${
-          !showContent ? styles['insurance-content--hidden'] : ''
-        }`}
-      >
-        <p>
-          Assistance to dobrowolne ubezpieczenie działające przez całą dobę.
-          Zapewnia podstawową pomoc, w nieoczekiwanych zdarzeniach losowych,
-          takich jak kolizja, awaria, wypadek czy kradzież pojazdu.
-        </p>
-        <img src={'/static/assistance.jpeg'} />
-      </div>
+
+      {showContent && (
+        <div className={styles.insuranceContent}>
+          <p>
+            Assistance to dobrowolne ubezpieczenie działające przez całą dobę.
+            Zapewnia podstawową pomoc, w nieoczekiwanych zdarzeniach losowych,
+            takich jak kolizja, awaria, wypadek czy kradzież pojazdu.
+          </p>
+          <img src={'/static/assistance.jpeg'} />
+        </div>
+      )}
     </>
   )
 })

@@ -19,18 +19,18 @@
 
   @include for-size(tablet-portrait-up) {
     flex-direction: row;
+    flex-wrap: wrap;
   }
-
-  flex-wrap: wrap;
 }
 
 .question {
-  padding: 3rem 1rem;
+  padding: 3rem 0.7rem;
+
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 
   @include for-size(tablet-landscape-up) {
-    width: 20rem;
+    width: 22rem;
   }
 }
 
@@ -42,7 +42,9 @@
   margin-left: 0.5rem;
 
   display: inline;
+
   vertical-align: top;
+
   color: $black;
   font-size: 1.5rem;
 }

@@ -71,7 +71,7 @@
   display: flex;
   flex-direction: column;
 
-  padding: calc(5vw);
+  padding: 10% 5% 0 10%;
 
   @include for-size(tablet-landscape-up) {
     padding: calc(8rem + 5vw);
@@ -142,6 +142,14 @@
   60% {
     transform: translateY(-15px);
   }
+}
+
+.progress-bar {
+  width: 0px;
+  height: 5px;
+
+  transform: translate3d(0, 0, 0);
+  background-color: $primary-alt;
 }
 
 .about {
@@ -291,8 +299,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
-
-  flex-grow: 1;
 }
 
 .contact-headline {
@@ -379,6 +385,15 @@
 
 .message-input:focus {
   border-bottom: 2px solid $primary-alt;
+}
+
+.contact-agreement {
+}
+
+.contact-agreement > span {
+  margin-left: 1rem;
+  font-size: 1.1rem;
+  font-weight: 400;
 }
 
 .submit-button {

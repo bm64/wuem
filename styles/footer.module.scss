@@ -26,9 +26,7 @@
 }
 
 .footer-line {
-  flex-basis: 100%;
-  flex-shrink: 1;
-  flex-grow: 0;
+  flex: 1;
 
   height: 3px;
   background-color: $primary;
