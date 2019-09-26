@@ -23,6 +23,10 @@
   object-fit: cover;
   height: 30vh;
   padding: 5rem 0;
+
+  @include for-size(phone-only) {
+    display: none;
+  }
 }
 
 .travel-headline {
