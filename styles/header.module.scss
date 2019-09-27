@@ -1,28 +1,57 @@
 @import '_base.scss';
 
+.container {
+  position: fixed;
+
+  width: 100%;
+
+  background-color: $white;
+  z-index: 5;
+}
+
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  flex-basis: 0;
+
   font-style: normal;
   font-weight: 500;
   color: $primary;
+
   background-color: $white;
+
   z-index: 3;
+
   max-width: 1400px;
   margin: 0 auto;
 
   border-bottom: 1px solid #ccc;
 }
-.container {
-  position: fixed;
-  width: 100%;
-  background-color: $white;
-  align-items: center;
-  z-index: 5;
+
+.header-left {
+  padding-left: 0.3rem;
 }
-.menu__container {
+
+.header-middle {
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-right {
+  padding-right: 0.3rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.menu-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -30,28 +59,33 @@
 }
 
 .logo {
-  height: 6.5rem;
   transition: height 0.7s, width 0.7s;
 }
 
-.logo-compact {
-  height: 5rem;
-  transform: scale(0.66, 0.66);
+.hamburger-icon {
+  font-size: 2.7rem;
+
+  border-radius: 5px;
+
+  padding: 0.7rem 0.7rem;
+
+  @include for-size(desktop-up) {
+    display: none;
+  }
 }
 
-.header__left {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
+.menu-item {
+  display: none;
 
-.menu__item {
-  padding: 1rem;
+  padding: 0.7rem;
   cursor: pointer;
+
+  @include for-size(desktop-up) {
+    display: initial;
+  }
 }
 
-.menu__underline {
+.menu-underline {
   width: 0px;
   height: 4px;
   background-color: $primary;
@@ -59,45 +93,62 @@
   //border-radius: 10px;
 }
 
-.menu__item:hover .menu__underline {
+.menu-item:hover .menu-underline {
   width: 100%;
 }
 
-.header__right {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.call-button {
+  min-width: 12rem;
+
+  font-size: 1.5rem;
+  color: $primary-alt;
+
+  background-color: $white;
+
+  z-index: 5;
+  cursor: pointer;
+
+  text-align: center;
+
+  transition: background-color 0.3s;
+
+  @include for-size(phone-only) {
+    display: none;
+  }
+
+  @include for-size(tablet-portrait-up) {
+    padding: 1rem 1.5rem;
+    border: 3px solid $primary-alt;
+  }
 }
 
-.header__icon {
-  color: $white;
-  transform: translateY(-2px);
-  font-size: 2.3rem;
+.call-button > span:first-child {
+  display: none;
+
+  @include for-size(tablet-landscape-up) {
+    display: initial;
+  }
 }
-.call__button {
-  border: 3px solid #1e90ff;
-  outline: none;
-  color: #1e90ff;
-  background-color: $white;
-  transition-duration: 0.2s;
-  font-size: 1.5rem;
-  display: block;
-  z-index: 5;
-  padding: 1rem 2rem;
-  cursor: pointer;
-  align-self: flex-start;
-  transition: background-color 0.3s;
-  min-width: 12rem;
-}
-.call__button:hover > span {
+
+.call-button:hover > span {
   display: none;
 }
-.call__button:hover:before {
+
+.call-button:hover:before {
   content: 'Zadzwoń teraz!';
+
   color: $white;
   text-align: center;
+
   display: block;
 }
-.call__button:hover {
+
+.call-button:hover {
   background-color: $primary-alt;
+}
+
+.direct-call-button {
+  color: $primary-alt;
+  font-size: 3.3rem;
+  padding: 0.7rem;
 }

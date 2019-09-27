@@ -112,6 +112,11 @@
   font-weight: 500;
   color: $black;
   max-width: 55%;
+
+  @include for-size(phone-only) {
+    max-width: 100%;
+  }
+
   text-align: center;
 }
 
@@ -122,6 +127,10 @@
   text-align: center;
   padding: 1rem;
   max-width: 45%;
+
+  @include for-size(phone-only) {
+    max-width: 90%;
+  }
 }
 
 .medium_bottom_line {

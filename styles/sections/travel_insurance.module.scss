@@ -92,9 +92,15 @@
 .tab > h3 {
   color: lighten($black, 25%);
   font-size: 1.5rem;
-  padding: 1.25rem 0rem;
+
+  @include for-size(phone-only) {
+    font-size: 1.25rem;
+  }
+
   text-align: center;
   font-weight: 500;
+
+  padding: 1.25rem 0rem;
 }
 
 .insurance-benefits {

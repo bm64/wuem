@@ -119,6 +119,7 @@ function Home() {
       )}
 
       <Insurances sectionRef={insurancesRef} />
+
       <div className={styles.sectionHeader}>
         <h1>Partnerzy</h1>
         <hr className={styles.medium_bottom_line} />
@@ -193,7 +194,6 @@ function ProgressBar({
   const progressRef = useRef(null)
 
   const [startValue, setStartValue] = useState(null)
-
   const startWidth = useMemo(() => {
     if (typeof window === 'undefined') return 0
     return (startValue * window.innerWidth) / 100

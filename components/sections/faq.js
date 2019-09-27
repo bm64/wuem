@@ -59,4 +59,4 @@ const Question = ({ title = defaultTitle, answer = defaultAnswer }) => (
   </div>
 )
 
-export default FAQ
+export default React.memo(FAQ)
