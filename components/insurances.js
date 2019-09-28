@@ -68,4 +68,4 @@ function Insurances({ sectionRef }) {
   )
 }
 
-export default Insurances
+export default React.memo(Insurances)

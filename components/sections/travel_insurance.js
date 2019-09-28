@@ -92,4 +92,4 @@ const TravelInsuranceImage = withFadeIn(
   2500
 )
 
-export default TravelInsurance
+export default React.memo(TravelInsurance)

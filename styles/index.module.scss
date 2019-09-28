@@ -53,7 +53,11 @@
 
 .carousel-content {
   position: absolute;
-  top: 6.5rem;
+  top: 6.4rem;
+
+  @include for-size(phone-only) {
+    top: 5.2rem;
+  }
 
   height: calc(100vh - 6.5rem);
   width: 100vw;
@@ -165,6 +169,11 @@
 
   background-image: url('/static/about_us.jpeg');
   background-size: 100% 100%;
+
+  @include for-size(phone-only) {
+    background-size: cover;
+    background-position: 30%;
+  }
 }
 
 .about-text {

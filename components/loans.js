@@ -47,4 +47,4 @@ function Loans({ sectionRef }) {
   )
 }
 
-export default Loans
+export default React.memo(Loans)

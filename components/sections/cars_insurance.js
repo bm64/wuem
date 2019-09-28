@@ -177,4 +177,4 @@ const Assistance = withSlideDown(() => {
   )
 })
 
-export default CarsInsurance
+export default React.memo(CarsInsurance)

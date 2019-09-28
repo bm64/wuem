@@ -95,4 +95,4 @@ const HouseInBuildInsurance = () => (
   </div>
 )
 
-export default PropertyInsurance
+export default React.memo(PropertyInsurance)

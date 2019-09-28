@@ -35,4 +35,4 @@ const LoanText = withFadeIn(
 
 const LoanImage = withFadeIn(() => <img src={'/static/loan_1.jpeg'} />, 2500)
 
-export default Loan
+export default React.memo(Loan)

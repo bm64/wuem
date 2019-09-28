@@ -34,4 +34,4 @@ const LeasingImage = withFadeIn(
   2000
 )
 
-export default Leasing
+export default React.memo(Leasing)

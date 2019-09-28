@@ -105,4 +105,4 @@ const HealthInsuranceImage = withFadeIn(
   () => <img src={'/static/health_insurance_img.jpeg'} />,
   2500
 )
-export default HealthInsurance
+export default React.memo(HealthInsurance)
