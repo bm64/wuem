@@ -57,7 +57,7 @@ function Insurances({ sectionRef }) {
           onClick={() => setCurrentSection(3)}
         >
           <FaHome className={styles['menu__item-icon']} />
-          <p>Ubezpieczenia nieruchomości</p>
+          <p>Ubezpieczenia majątkowe</p>
         </div>
       </div>
       {currentSection === 0 && <CarsInsurance />}

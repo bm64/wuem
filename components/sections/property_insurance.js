@@ -27,17 +27,14 @@ const PropertyInsuranceText = withFadeIn(() => {
   return (
     <>
       <h2>
-        Ubezpieczenia <span>nieruchomości</span>
+        Ubezpieczenia <span>majątkowe</span>
       </h2>
       <p>
-        Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
-        fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
-        tincidunt tellus sem, nec placerat nulla commodo vitae. In nec sem ac
-        erat condimentum vestibulum eu quis mauris. Sed non lobortis nisl. Nunc
-        placerat quis turpis ac ornare. Nunc ligula quam, hendrerit vitae
-        pretium non, fermentum eu urna. Nunc euismod, lectus quis sodales
-        sollicitudin, nulla odio accumsan mauris, vel lobortis metus urna a
-        nulla.
+        Ubezpieczenia majątkowe zapewniają ochronę mienia w przypadku kradzieży,
+        uszkodzenia lub innych zdarzeń losowych. Należy pamiętać o tym, że
+        wysokość składki zależy od wartości ubezpieczanego mienia. Pakiety
+        ubezpieczeń majątkowych oferują różne zakresy ochrony nieruchomości.
+        Doradzamy naszym klientom który pakiet jest dla nich odpowiedni.
       </p>
     </>
   )
@@ -61,36 +58,39 @@ const Cards = withFadeIn(
 
 const HouseInsurance = () => (
   <div className={styles.card}>
-    <img src="/static/property1.jpg" />
-    <h3>Ubezpieczenie domu</h3>
+    <img src="/static/property1.jpeg" />
+    <h3>Dom i Mieszkanie</h3>
     <p>
-      Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce fermentum
-      pellentesque ligula, ac porta quam auctor ut. Vivamus tincidunt tellus
-      sem, nec placerat nulla commodo vitae.
+      Ubez­pie­cze­nie domu lub miesz­ka­nia gwa­ran­tuje pokry­cie strat
+      powsta­łych w wyniku zda­rzeń loso­wych, bądź dzia­łal­no­ści osób
+      trze­cich. Wyso­kość wypła­co­nej sumy, oraz zakres ochrony, zależą od
+      rodzaju wybra­nej polisy.
     </p>
   </div>
 )
 
 const FlatInsurance = () => (
   <div className={styles.card}>
-    <img src="/static/property1.jpg" />
-    <h3>Ubezpieczenie mieszkania</h3>
-    <p>
-      Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce fermentum
-      pellentesque ligula, ac porta quam auctor ut. Vivamus tincidunt tellus
-      sem, nec placerat nulla commodo vitae.
-    </p>
+    <img src="/static/property2.jpeg" />
+    <h3>Co jest chronione w ramach ubezpieczenia?</h3>
+    <ul>
+      <li>mury/ściany</li>
+      <li>stałe elementy (np. posadzka, okna, armatura, sanitarna)</li>
+      <li>wyposażenie (np. meble, sprzęt RTV i AGD)</li>
+      <li>życie i zdrowie lokatorów</li>
+    </ul>
   </div>
 )
 
 const HouseInBuildInsurance = () => (
   <div className={styles.card}>
-    <img src="/static/property1.jpg" />
-    <h3>Ubezpieczenia domu w budowie</h3>
+    <img src="/static/property3.jpeg" />
+    <h3>Home Assistance</h3>
     <p>
-      Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce fermentum
-      pellentesque ligula, ac porta quam auctor ut. Vivamus tincidunt tellus
-      sem, nec placerat nulla commodo vitae.
+      Home Assi­stance zapew­nia pomoc w nagłych i nie­prze­wi­dzia­nych
+      awa­riach. Zamiast odszko­do­wa­nia, osoba ubez­pie­czona może liczyć na
+      usługi takie jak dar­mowa naprawa sprzętu RTV i AGD, ser­wis
+      infor­ma­tyczny, lub pomoc fachowca np. hydrau­lika, ślu­sa­rza itd.
     </p>
   </div>
 )

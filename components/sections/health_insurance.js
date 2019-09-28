@@ -13,7 +13,7 @@ function HealthInsurance() {
       </div>
       <div className={styles.fixedSection}>
         <h2 className={styles.benefitsTitle}>
-          Z nami poczujesz sie <span>bezpiecznie</span> w kazdym momencie
+          Zadbaj o swoje <span>zdrowie</span> i Twoich bliskich
         </h2>
         <div className={styles.benefits}>
           <div

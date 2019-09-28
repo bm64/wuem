@@ -22,8 +22,9 @@ function CarsInsurance() {
       <div className={styles.fixedSection}>
         <h2 className={styles.headline}>
           Potrzebujesz <span>kompleksowego</span> ubezpiecznia dla swojego
-          pojazdu? Tutaj znajdziesz to czego szukasz
+          pojazdu?
         </h2>
+        <h2 className={styles.headline}>Tutaj znajdziesz to czego szukasz!</h2>
         <div className={styles.insurances}>
           <OC containerClass={styles.insurance} />
           <AC containerClass={styles.insurance} />
