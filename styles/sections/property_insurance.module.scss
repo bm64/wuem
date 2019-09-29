@@ -55,10 +55,14 @@
   @include for-size(tablet-landscape-up) {
     max-width: 25rem;
   }
+
+  margin-top: 1rem;
 }
 
 .card:hover {
-  transform: scale(1.1);
+  @include for-size(desktop-up) {
+    transform: scale(1.1);
+  }
 }
 
 .card > svg {
