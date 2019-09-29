@@ -75,10 +75,12 @@
 }
 
 .menu-item {
-  display: none;
-
   padding: 0.7rem;
   cursor: pointer;
+}
+
+.header-middle .menu-item {
+  display: none;
 
   @include for-size(desktop-up) {
     display: initial;
@@ -151,4 +153,12 @@
   color: $primary-alt;
   font-size: 3.3rem;
   padding: 0.7rem;
+}
+
+.menu-content {
+  transition: 'height 1s';
+
+  @include for-size(desktop-up) {
+    display: none;
+  }
 }

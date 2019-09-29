@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import ReactDOM, { createPortal } from 'react-dom'
 import styles from '../styles/header.module.scss'
 
-import { FaBars, FaPhone } from 'react-icons/fa'
+import { FaBars, FaTimes, FaPhone } from 'react-icons/fa'
 
 function usePortal() {
   const root = useRef(document.createElement('div'))
@@ -33,6 +33,7 @@ function Header({
 }) {
   const { width } = useWindowSize()
   const [isCompact, setCompact] = useState(false)
+  const [showMenu, setShowMenu] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,10 +42,6 @@ function Header({
     }
 
     window.addEventListener('scroll', handleScroll)
-
-    setTimeout(() => {
-      if (window.innerWidth < 600) setCompact(true)
-    }, 100)
 
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -74,7 +71,18 @@ function Header({
             />
           </div>
           <div className={styles.headerMiddle}>
-            <FaBars className={styles.hamburgerIcon} />
+            {!showMenu ? (
+              <FaBars
+                className={styles.hamburgerIcon}
+                onClick={() => setShowMenu(true)}
+              />
+            ) : (
+              <FaTimes
+                className={styles.hamburgerIcon}
+                onClick={() => setShowMenu(false)}
+              />
+            )}
+
             <MenuItem text="Start" onItemPressed={() => onStartPressed()} />
             <MenuItem
               text="Ubezpieczenia"
@@ -87,6 +95,7 @@ function Header({
             <MenuItem text="O nas" onItemPressed={() => onAboutPressed()} />
             <MenuItem text="Kontakt" onItemPressed={() => onContactPressed()} />
           </div>
+
           <div className={styles.headerRight}>
             {width < 600 && (
               <a href="tel:+48509755700">
@@ -101,6 +110,24 @@ function Header({
               <span>509 755 700</span>
             </div>
           </div>
+        </div>
+        <div
+          style={{
+            display: showMenu && width <= 1200 ? 'initial' : 'none',
+          }}
+          className={styles.menuContent}
+        >
+          <MenuItem text="Start" onItemPressed={() => onStartPressed()} />
+          <MenuItem
+            text="Ubezpieczenia"
+            onItemPressed={() => onInsurancesPressed()}
+          />
+          <MenuItem
+            text="Kredyt i Leasing"
+            onItemPressed={() => onCreditLeasingPressed()}
+          />
+          <MenuItem text="O nas" onItemPressed={() => onAboutPressed()} />
+          <MenuItem text="Kontakt" onItemPressed={() => onContactPressed()} />
         </div>
       </div>
     </>
