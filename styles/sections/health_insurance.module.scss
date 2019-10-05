@@ -67,13 +67,11 @@
   vertical-align: super;
 }
 
-.benefit > p {
-}
-
 .benefit-text {
   padding: 3rem 1rem;
   line-height: 3rem;
   color: lighten($black, 20%);
+  font-weight: 500;
 }
 
 .benefit-container {
@@ -93,4 +91,8 @@
 .benefit-container > p {
   flex: 5;
   align-self: stretch;
+}
+
+.benefit-img {
+  width: 5vw;
 }

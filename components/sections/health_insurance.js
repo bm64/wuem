@@ -30,7 +30,7 @@ function HealthInsurance() {
             }`}
             onClick={() => setCurrentTab(1)}
           >
-            <p>Polisa bez badan lekarskich</p>
+            <p>Pakiet badań</p>
           </div>
           <div
             className={`${styles.benefit} ${
@@ -38,43 +38,39 @@ function HealthInsurance() {
             }`}
             onClick={() => setCurrentTab(2)}
           >
-            <p>Polisa bez badan lekarskich</p>
+            <p>Prywatna opieka medyczna</p>
           </div>
         </div>
         <div className={styles.benefitContainer}>
           {currentTab === 0 && (
             <>
-              <img src="/static/health1.jpg" />
+              <img className={styles.benefitImg} src="/static/health1.jpeg" />
               <p className={styles.benefitText}>
-                Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
-                fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
-                tincidunt tellus sem, nec placerat nulla commodo vitae. In nec
-                sem ac erat condimentum vestibulum eu quis mauris. Sed non
-                lobortis nisl. Nunc placerat quis turpis ac ornare.
+                Dzięki ubezpieczeniu zdrowotnemu posiadacz polisy oraz jego
+                rodzina, otrzymuje dostęp do całodobowej informacji medycznej.
+                Ubezpieczenie zapewnia również możliwość skorzystania z szeregu
+                konsultacji lekarskich oraz ułatwia dostęp do wykonywania badań.
               </p>
             </>
           )}
           {currentTab === 1 && (
             <>
-              <img src="/static/health1.jpg" />
+              <img className={styles.benefitImg} src="/static/health2.jpeg" />
               <p className={styles.benefitText}>
-                Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
-                fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
-                tincidunt tellus sem, nec placerat nulla commodo vitae. In nec
-                sem ac erat condimentum vestibulum eu quis mauris. Sed non
-                lobortis nisl. Nunc placerat quis turpis ac ornare.
+                Ubezpieczenie zdrowotne pozwala na przeprowadzenie szeregu badań
+                w ramach posiadanej polisy. Dostęp dotyczy podstawowych lub
+                rozszerzonych badań: diagnostycznych, laboratoryjnych,
+                rentgenowskich, EKG.
               </p>
             </>
           )}
           {currentTab === 2 && (
             <>
-              <img src="/static/health1.jpg" />
+              <img className={styles.benefitImg} src="/static/health3.jpeg" />
               <p className={styles.benefitText}>
-                Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
-                fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
-                tincidunt tellus sem, nec placerat nulla commodo vitae. In nec
-                sem ac erat condimentum vestibulum eu quis mauris. Sed non
-                lobortis nisl. Nunc placerat quis turpis ac ornare.
+                Prywatna opieka medyczna to najczęściej wybierane dobrowolne
+                ubezpieczenie zdrowotne, gwarantujące dostęp do lekarzy i usług
+                z pominięciem państwowej służby zdrowia.
               </p>
             </>
           )}

@@ -55,6 +55,9 @@ function TravelInsurance() {
               <h3>Ubezpiecznie multitravel</h3>
             </div>
           </div>
+          <p className={styles.benefitsHeader}>
+            Ubezpieczenie turystyczne na terenie RP gwarantuje:
+          </p>
           <ul className={styles.insuranceBenefits}>
             <li>Pokrycie kosztów leczenia i transportu do szpitala </li>
             <li>Odszkodowanie w razie nieszczęśliwego wypadku </li>
@@ -74,14 +77,11 @@ const TravelInsuranceText = withFadeIn(() => {
         Ubezpieczenia <span>turystyczne</span>
       </h2>
       <p>
-        Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
-        fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
-        tincidunt tellus sem, nec placerat nulla commodo vitae. In nec sem ac
-        erat condimentum vestibulum eu quis mauris. Sed non lobortis nisl. Nunc
-        placerat quis turpis ac ornare. Nunc ligula quam, hendrerit vitae
-        pretium non, fermentum eu urna. Nunc euismod, lectus quis sodales
-        sollicitudin, nulla odio accumsan mauris, vel lobortis metus urna a
-        nulla.
+        Ubezpieczenie turystyczne zapewnia ochronę oraz komfort spokojnego i
+        bezpiecznego wyjazdu dla osób udających się za granicę w celach
+        wypoczynkowych, turystycznych, edukacyjnych oraz biznesowych. Zadaniem
+        polisy turystycznej jest zagwarantowanie pomocy medycznej,
+        organizacyjnej i finansowej po wypadku w obcym kraju.
       </p>
     </>
   )

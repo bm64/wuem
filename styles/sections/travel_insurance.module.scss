@@ -108,4 +108,10 @@
 .insurance-benefits > li {
   color: lighten($black, 20%);
   line-height: 2.5rem;
+  font-weight: 500;
+}
+.benefits-header {
+  color: lighten($black, 20%);
+  line-height: 2.5rem;
+  padding-top: 1rem;
 }
