@@ -8,6 +8,7 @@ import {
   FaArrowDown,
   FaChevronLeft,
   FaChevronRight,
+  FaTimes,
 } from 'react-icons/fa'
 
 import withFadeIn from '../animations/withFadeIn'
@@ -75,7 +76,13 @@ function Home() {
         onContactPressed={() => {
           scrollTo(contactRef)
         }}
-      />
+      >
+        <ProgressBar
+          reset={currentImage}
+          shouldProgress={!isContentHovered}
+          onProgressEnded={nextImage}
+        />
+      </Header>
 
       <div className={styles.carouselContainer}>
         <div
@@ -88,12 +95,6 @@ function Home() {
           <div className={styles.carouselImage}></div>
         </div>
         <div className={styles.carouselContent}>
-          <ProgressBar
-            reset={currentImage}
-            shouldProgress={!isContentHovered}
-            onProgressEnded={nextImage}
-          />
-
           {currentImage === 1 && <InsurancesContent />}
           {currentImage === 0 && <FinanceContent />}
 
@@ -181,6 +182,7 @@ function Home() {
           )
         }
       />
+      <Cookies />
     </Layout>
   )
 }
@@ -387,5 +389,19 @@ const ContactForm = () => (
     <div className={styles.submitButton}>Wyślij</div>
   </div>
 )
+
+const Cookies = () => {
+  const [showAlert, setShowAlert] = useState(true)
+  return showAlert ? (
+    <div className={styles.cookies}>
+      <p>
+        Używamy technologii cookies w celu personalizacji treści, udostępniania
+        funkcji mediów społecznościowych oraz analizowania ruchu w Internecie.
+        Kliknij <span>tu</span> aby dowiedziec sie wiecej
+      </p>
+      <FaTimes onClick={() => setShowAlert(false)} />
+    </div>
+  ) : null
+}
 
 export default Home

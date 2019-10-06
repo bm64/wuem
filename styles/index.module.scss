@@ -55,10 +55,6 @@
   position: absolute;
   top: 6.5rem;
 
-  @include for-size(phone-only) {
-    top: 5.2rem;
-  }
-
   height: calc(100vh - 6.5rem);
   width: 100vw;
 
@@ -75,7 +71,7 @@
   display: flex;
   flex-direction: column;
 
-  padding: 10% 5% 0 10%;
+  padding: 10% 5% 0 5%;
 
   @include for-size(tablet-landscape-up) {
     padding: calc(8rem + 5vw);
@@ -128,6 +124,8 @@
   font-size: 4rem;
   text-align: center;
   color: $white;
+
+  z-index: 4;
 
   animation: bounce 2s infinite;
 }
@@ -462,4 +460,47 @@
   text-align: center;
   padding: 1rem;
   max-width: 45%;
+}
+
+.cookies {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+
+  padding: 1rem 1rem;
+
+  @include for-size(tablet-portrait-up) {
+    bottom: 10px;
+    left: 10px;
+    max-width: 16rem;
+  }
+
+  background-color: $white;
+
+  border-radius: 1px;
+  box-shadow: -8px 8px 8px 8px rgba(5, 22, 70, 0.1);
+
+  z-index: 5;
+
+  @include for-size(phone-only) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.cookies > p {
+  color: lighten($black, 10%);
+
+  font-size: 1.125rem;
+}
+
+.cookies > svg {
+  float: right;
+
+  font-size: 2rem;
+
+  @include for-size(phone-only) {
+    font-size: 6rem;
+  }
 }

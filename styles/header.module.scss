@@ -156,6 +156,7 @@
 }
 
 .menu-content {
+  background-color: $white;
   transition: 'height 1s';
 
   @include for-size(desktop-up) {
