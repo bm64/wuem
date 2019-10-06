@@ -55,15 +55,46 @@ function TravelInsurance() {
               <h3>Ubezpiecznie multitravel</h3>
             </div>
           </div>
-          <p className={styles.benefitsHeader}>
-            Ubezpieczenie turystyczne na terenie RP gwarantuje:
-          </p>
-          <ul className={styles.insuranceBenefits}>
-            <li>Pokrycie kosztów leczenia i transportu do szpitala </li>
-            <li>Odszkodowanie w razie nieszczęśliwego wypadku </li>
-            <li>Odszkodowanie za skradziony lub zniszczony bagaż </li>
-            <li>Koszty odwołania podróży </li>
-          </ul>
+          <div className={styles.benefitContainer}>
+            {currentTab === 0 && (
+              <div className={styles.benefit}>
+                <p className={styles.benefitsHeader}>
+                  Ubezpieczenie turystyczne na terenie RP gwarantuje:
+                </p>
+                <ul className={styles.insuranceBenefits}>
+                  <li>Pokrycie kosztów leczenia i transportu do szpitala </li>
+                  <li>Odszkodowanie w razie nieszczęśliwego wypadku </li>
+                  <li>Odszkodowanie za skradziony lub zniszczony bagaż </li>
+                  <li>Koszty odwołania podróży </li>
+                </ul>
+              </div>
+            )}
+            {currentTab === 1 && (
+              <div className={styles.benefit}>
+                <p className={styles.benefitsHeader}>
+                  Ubezpieczenie turystyczne dla wycieczek zagranicznych
+                  gwarantuje:
+                </p>
+                <ul className={styles.insuranceBenefits}>
+                  <li>Pokrycie kosztów leczenia</li>
+                  <li>Odszkodowanie w razie nieszczęśliwego wypadku</li>
+                  <li>Odszkodowanie za zniszczony bagaż lub sprzęt sportowy</li>
+                  <li>Transport do Polski</li>
+                </ul>
+              </div>
+            )}
+            {currentTab === 2 && (
+              <div className={styles.benefit}>
+                <p className={styles.multitravelBenefits}>
+                  Ubezpieczenie Multitravel zapewnia pokrycie kosztów odwołania
+                  wyjazdu oraz leczenia. Dodatkowo chroni od wielu zdarzeń
+                  losowych, np. nieszczęśliwy wypadek, utrata bagażu, opóźnienia
+                  podróży, nagłe zachorowanie oraz wypadki podczas aktywności
+                  sportowych.
+                </p>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </>
