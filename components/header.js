@@ -70,7 +70,13 @@ function Header({
               className={styles.hamburgerIcon}
               onClick={() => setShowMenu(false)}
             />
+<<<<<<< HEAD
           )}
+=======
+            {/*<MenuItem text="O nas" onItemPressed={() => onAboutPressed()} />*/}
+            <MenuItem text="Kontakt" onItemPressed={() => onContactPressed()} />
+          </div>
+>>>>>>> Improve contact form and hide "about us" section
 
           <MenuItem text="Start" onItemPressed={() => onStartPressed()} />
           <MenuItem

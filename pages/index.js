@@ -148,7 +148,7 @@ function Home() {
       <Loans sectionRef={loansRef} />
 
       <FAQ />
-      <About sectionRef={aboutRef} />
+      {/*<About sectionRef={aboutRef} />*/}
 
       <div ref={contactRef} className={styles.section_header}>
         <h1>Masz pytanie?</h1>
@@ -343,7 +343,7 @@ const ContactInfo = () => (
       <FaRegEnvelope />
       <div className={styles.contactText}>
         <h2>E-mail:</h2>
-        <p>biuro@wuemfinanse.pl</p>
+        <p>kontakt@wuemfinanse.pl</p>
       </div>
     </div>
     <div className={styles.infoItem}>
@@ -376,7 +376,7 @@ const ContactForm = () => (
     />
     <label className={styles.contactAgreement}>
       <input type="checkbox" />
-      <span>
+      <p>
         Wyrażam zgodę na na przetwarzanie danych osobowych zgodnie z ustawą o
         ochronie danych osobowych. Podanie danych jest dobrowolne, ale niezbędne
         do przetworzenia zapytania. Dane wpisane w formularzu kontaktowym będą
@@ -384,7 +384,7 @@ const ContactForm = () => (
         celach marketingowych zgodnie z regulaminem Polityki prywatności.
         Administratorem danych osobowych jest WueM finanse w Mielcu (39-300) na
         rynku.
-      </span>
+      </p>
     </label>
     <div className={styles.submitButton}>Wyślij</div>
   </div>
