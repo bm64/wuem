@@ -356,39 +356,57 @@ const ContactInfo = () => (
   </div>
 )
 
-const ContactForm = () => (
-  <div className={styles.contactSection} style={{ flex: 3 }}>
-    <h2 className={styles.contactHeadline}>Napisz do nas!</h2>
-    <input
-      type="text"
-      className={styles.contactInput}
-      placeholder="Twoje imię"
-    />
-    <input
-      type="text"
-      className={styles.contactInput}
-      placeholder="Twój adres e-mail"
-    />
-    <textarea
-      type="text"
-      className={styles.messageInput}
-      placeholder="W czym możemy Ci pomóc"
-    />
-    <label className={styles.contactAgreement}>
-      <input type="checkbox" />
-      <p>
-        Wyrażam zgodę na na przetwarzanie danych osobowych zgodnie z ustawą o
-        ochronie danych osobowych. Podanie danych jest dobrowolne, ale niezbędne
-        do przetworzenia zapytania. Dane wpisane w formularzu kontaktowym będą
-        przetwarzane w celu udzielenia odpowiedzi na przesłane zapytanie oraz w
-        celach marketingowych zgodnie z regulaminem Polityki prywatności.
-        Administratorem danych osobowych jest WueM finanse w Mielcu (39-300) na
-        rynku.
-      </p>
-    </label>
-    <div className={styles.submitButton}>Wyślij</div>
-  </div>
-)
+const ContactForm = () => {
+  const [didSubmit, setDidSubmit] = useState(false)
+  return (
+    <form
+      method={'post'}
+      action={'/mail.php'}
+      className={styles.contactSection}
+      style={{ flex: 3 }}
+      onSubmit={e => {
+        e.preventDefault()
+        setDidSubmit(true)
+      }}
+    >
+      <h2 className={styles.contactHeadline}>Napisz do nas!</h2>
+      <input
+        type="text"
+        name="name"
+        className={styles.contactInput}
+        placeholder="Twoje imię"
+      />
+      <input
+        type="text"
+        name="email"
+        className={styles.contactInput}
+        placeholder="Twój adres e-mail"
+      />
+      <textarea
+        type="text"
+        name="body"
+        className={styles.messageInput}
+        placeholder="W czym możemy Ci pomóc"
+      />
+      <label className={styles.contactAgreement}>
+        <input type="checkbox" />
+        <p>
+          Wyrażam zgodę na na przetwarzanie danych osobowych zgodnie z ustawą o
+          ochronie danych osobowych. Podanie danych jest dobrowolne, ale
+          niezbędne do przetworzenia zapytania. Dane wpisane w formularzu
+          kontaktowym będą przetwarzane w celu udzielenia odpowiedzi na
+          przesłane zapytanie oraz w celach marketingowych zgodnie z regulaminem
+          Polityki prywatności. Administratorem danych osobowych jest WueM
+          finanse w Mielcu (39-300) na rynku.
+        </p>
+      </label>
+      {!didSubmit && (
+        <input type="submit" value="Wyslij" className={styles.submitButton} />
+      )}
+      {didSubmit && <div>Wyslano</div>}
+    </form>
+  )
+}
 
 const Cookies = () => {
   const [showAlert, setShowAlert] = useState(true)
