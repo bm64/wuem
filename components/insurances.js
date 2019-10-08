@@ -17,7 +17,7 @@ function Insurances({ sectionRef }) {
         <h1>Ubezpieczenia dopasowane do Ciebie</h1>
         <p>
           Zapewniamy kompleksową pomoc w doborze najlepszego pakietu ubezpieczeń
-          w atrakcyjnej cenie.
+          w atrakcyjnej cenie
         </p>
         <hr className={styles.medium_bottom_line} />
       </div>

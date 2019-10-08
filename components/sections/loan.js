@@ -19,20 +19,20 @@ const LoanText = withFadeIn(
     <>
       <h2>Kredyt</h2>
       <p>
-        Lorem ipsum dolor sit a met, consectetur adipiscing elit. Fusce
-        fermentum pellentesque ligula, ac porta quam auctor ut. Vivamus
-        tincidunt tellus sem, nec placerat nulla commodo vitae. In nec sem ac
-        erat condimentum vestibulum eu quis mauris. Sed non lobortis nisl. Nunc
-        placerat quis turpis ac ornare. Nunc ligula quam, hendrerit vitae
-        pretium non, fermentum eu urna. Nunc euismod, lectus quis sodales
-        sollicitudin, nulla odio accumsan mauris, vel lobortis metus urna a
-        nulla.
+        Kredyt to pisemna umowa między bankiem a kredytobiorcą, wyniku której
+        bank udostępnia określoną sumę pieniędzy. Kredytobiorca zobowiązuje się
+        do zwrotu całej kwoty kredytu w określonym czasie, najczęściej w formie
+        comiesięcznych rat. Klientom indywidualnym banki najczęściej udzielają
+        kredytów hipotecznych, gotówkowych, samochodowych, podczas gdy wśród
+        kredytów firmowych najpopularniejsze to kredyty obrotowe oraz
+        inwestycyjne. W zależności od potrzeb naszych klientów, pomagamy dobrać
+        najlepszy sposób finansowania
       </p>
     </>
   ),
   2000
 )
 
-const LoanImage = withFadeIn(() => <img src={'/static/loan_1.jpeg'} />, 2500)
+const LoanImage = withFadeIn(() => <img src={'/static/loan.jpeg'} />, 2500)
 
 export default React.memo(Loan)

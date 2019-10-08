@@ -9,32 +9,30 @@ function FAQ() {
       <h2 className={styles.headline}> Najczesciej zadawane pytania </h2>
       <div className={styles.questions}>
         <Question
-          title={`Kiedy potrzebuję ubezpieczenia na życie?`}
+          title={`Czy ubezpieczenie komunikacyjne OC  jest obowiązkowe?`}
           answer={`
-Generalnie, im wcześniej, tym lepiej. Tu liczy się czas. Im wcześniej się ubezpieczysz, tym więcej zyskasz i będziesz mógł to zrobić na korzystniejszych warunkach. Najlepiej jest więc ubezpieczyć się wraz z podjęciem pierwszej pracy zawodowej. Wysokość płaconej przez Ciebie składki będzie zależeć od Twojego wieku, wykonywanego zawodu, stanu zdrowia, a także uprawianych sportów.`}
+          Tak, ubezpieczenie odpowiedzialności cywilnej (OC), jest obowiązkowe dla posiadaczy pojazdów mechanicznych. Aby zwiększyć zakres ochrony dla siebie i swojego pojazdu, możemy wyposażyć się w ubezpieczenia dobrowolne takie jak Autocasco, Assistance, czy NNW.`}
         />
         <Question
-          title={'Jaki jest zakres obowiązkowego ubezpieczenia OC?'}
-          answer={`Ubezpieczeniem OC objęta jest odpowiedzialność cywilna każdej osoby, która kierując pojazdem mechanicznym w okresie trwania odpowiedzialności ubezpieczeniowej, wyrządziła szkodę  w związku z ruchem tego pojazdu.`}
+          title={'Czym grozi brak ubezpieczenia oc pojazdu?'}
+          answer={`Właściciel pojazdu bez aktualnego ubezpieczenia OC, który jednocześnie jest sprawcą kolizji / wypadku, musi ponieść koszty naprawienia wyrządzonej szkody oraz opłacić karę za brak ubezpieczenia.`}
         />
         <Question
-          title={
-            'Czy w ramach prywatnego ubezpieczenia muszę stać w kolejkach do lekarza?'
-          }
-          answer={`Nie. W ramach prywatnej polisy zdrowotnej Ubezpieczony ma zagwarantowane bezpłatne leczenie w prywatnych przychodniach i centach medycznych współpracujących z Ubezpieczycielem. Ubezpieczony dzwoni do wybranej przychodni i umawia się na konkretny dzień i godzinę. Dotyczy to zarówno wizyt u lekarzy pierwszego kontaktu, jak i wizyt u lekarzy specjalistów.`}
+          title={'Czy ubezpieczenie OC pojazdu można opłacać w ratach?'}
+          answer={`Tak, istnieje możliwość rozłożenia płatności na raty. Najczęściej, skutkiem tego jest wzrost ceny składki. Ubezpieczenie OC zazwyczaj zawierane jest na okres 12 miesięcy, przez co istnieje możliwość płatności kwartalnej bądź comiesięcznej. `}
         />
         <Question
-          title={`Co to jest suma ubezpieczenia?`}
-          answer={`To ustalona w umowie ubezpieczenia kwota pieniężna stanowiąca górną granicę odpowiedzialności zakładu ubezpieczeń za szkody poniesione bądź wyrządzone przez ubezpieczonego w okresie na jaki umowa została zawarta.`}
+          title={`Co wpływa na wysokość składki OC?`}
+          answer={`Na wysokość składki ma wpływ wiele czynników. Najważniejsze z nich to: miejsce zameldowania właściciela pojazdu, marka i model pojazdu, pojemność silnika, wiek właściciela i ewentualnych współwłaścicieli, oraz przebieg ubezpieczenia.`}
         />
         <Question
           title={`Czy mogę nabyć polisę dla kogoś innego?`}
           answer={`Tak, jeśli jesteś z nim spokrewniony. Typowym przykładem nabywania polis na życie dla kogoś innego są polisy posagowe. Wykupuje je rodzic lub opiekun prawny dla swojego dziecka. Dziecko, – gdy osiągnie odpowiedni wiek – będzie mogło korzystać ze świadczenia.`}
         />
         <Question
-          title={`Złamałem palec - co mam zrobić żeby dostać odszkodowanie?`}
+          title={`Czy Leasing tylko na samochód?`}
           answer={`
-Jeżeli doznałeś uszczerbku na zdrowiu i posiadasz ubezpieczenie NNW, jak najszybciej zgłoś zaistniałe zdarzenie do towarzystwa. Zakład ubezpieczeń na pewno będzie wymagał pełnej dokumentacji potwierdzającej to zdarzenie. Towarzystwo ma na wypłatę odszkodowania 30 dni – licząc od daty otrzymania zawiadomienia o wypadku.`}
+          Dla osób prowadzących działalność gospodarczą, to nie tylko auto, ale praktycznie wszystkie potrzebne narzędzia i nieruchomości. Obecnie coraz częściej leasingowane są maszyny, sprzęt specjalistyczny, sprzęt elektroniczny czy wyposażenie wnętrz.`}
         />
       </div>
     </div>

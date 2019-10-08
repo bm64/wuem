@@ -86,11 +86,12 @@ const OC = withSlideDown(() => {
       {showContent && (
         <div className={styles.insuranceContent}>
           <p>
-            OC to ubezpieczenie odpowiedzialności cywilnej posiadaczy pojazdów
-            mechanicznych, które chroni Cię przed odpowiedzialnością cywilną za
-            szkody wyrządzone w wyniku kolizji bądź wypadku w ruchu drogowym.
+            OC to ubezpieczenie odpowiedzialności cywilnej dla posiadaczy
+            pojazdów mechanicznych, które chroni Cię przed odpowiedzialnością
+            cywilną za szkody wyrządzone w wyniku kolizji bądź wypadku w ruchu
+            drogowym.
           </p>
-          <img src={'/static/cars1.jpg'} />
+          <img src={'/static/oc.jpeg'} />
         </div>
       )}
     </>
@@ -131,7 +132,7 @@ const AC = withSlideDown(() => {
             Właściciel pojazdu może dobrać taki zakres ubezpieczenia, jaki jest
             dla niego najkorzystniejszy.
           </p>
-          <img src={'/static/leasing_2.jpeg'} />
+          <img src={'/static/autocasco.jpeg'} />
         </div>
       )}
     </>

@@ -191,7 +191,7 @@ function ProgressBar({
   shouldProgress,
   onProgressEnded,
   reset,
-  duration = 5000,
+  duration = 7000,
 }) {
   const progressRef = useRef(null)
 
@@ -289,10 +289,10 @@ const InsurancesContent = withFadeIn(() => (
 
 const FinanceContent = withFadeIn(() => (
   <div className={styles.carouselText}>
-    <h1>Kredyt i leasing na kazda kieszen</h1>
+    <h1>Kredyt i leasing na kazdą kieszeń</h1>
     <p>
-      Niezależnie, czy jesteś osobą prywatną, czy firmą, w naszej ofercie
-      znajdziesz ubezpieczenia dopasowane do twoich potrzeb.
+      Pomagamy wybrać najlepsze metody finansowania dla przedsiębiorców i osób
+      prywatnych.
     </p>
     <div
       className={styles.carouselButton}

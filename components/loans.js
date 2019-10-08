@@ -14,8 +14,8 @@ function Loans({ sectionRef }) {
       <div ref={sectionRef} className={styles.sectionHeader}>
         <h1>Kredyt i Leasing</h1>
         <p>
-          Lorem ipsum dolor sit a met, consectetur adipiscing elit. <br />
-          Fusce fermentum pellentesque ligula
+          Doradzamy która forma finansowania jest dla Ciebie najbardziej
+          korzystna
         </p>
         <hr className={styles.medium_bottom_line} />
       </div>
