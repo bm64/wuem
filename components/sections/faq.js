@@ -6,7 +6,6 @@ import { FaQuestionCircle } from 'react-icons/fa'
 function FAQ() {
   return (
     <div className={styles.fixedSection}>
-      <h2 className={styles.headline}> Najczesciej zadawane pytania </h2>
       <div className={styles.questions}>
         <Question
           title={`Czy ubezpieczenie komunikacyjne OC  jest obowiązkowe?`}

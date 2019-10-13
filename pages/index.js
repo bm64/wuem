@@ -150,11 +150,14 @@ function Home() {
         </Slider>
       </div>
       <Loans sectionRef={loansRef} />
-
+      <div ref={contactRef} className={styles.sectionHeader}>
+        <h1>Najczęściej zadawane pytania</h1>
+        <hr className={styles.medium_bottom_line} />
+      </div>
       <FAQ />
       {/*<About sectionRef={aboutRef} />*/}
 
-      <div ref={contactRef} className={styles.section_header}>
+      <div ref={contactRef} className={styles.sectionHeader}>
         <h1>Masz pytanie?</h1>
         <hr className={styles.medium_bottom_line} />
       </div>

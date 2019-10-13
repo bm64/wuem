@@ -16,7 +16,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-
   @include for-size(tablet-portrait-up) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -31,6 +30,24 @@
 
   @include for-size(tablet-landscape-up) {
     width: 22rem;
+  }
+}
+
+.questions > *:first-child {
+  @include for-size(dekstop-up) {
+    border: none;
+    background-color: red;
+  }
+}
+
+.question:nth-child(2) {
+  @include for-size(dekstop-up) {
+    border: none;
+  }
+}
+.question:nth-child(3) {
+  @include for-size(dekstop-up) {
+    border: none;
   }
 }
 
