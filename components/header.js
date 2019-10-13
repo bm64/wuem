@@ -6,6 +6,7 @@ import { FaBars, FaTimes, FaPhone } from 'react-icons/fa'
 import useWindowSize from '../hooks/useWindowSize'
 
 function Header({
+  headerRef,
   onStartPressed,
   onInsurancesPressed,
   onCreditLeasingPressed,
@@ -35,7 +36,7 @@ function Header({
 
   return (
     <div className={styles.container}>
-      <div className={styles.header}>
+      <div ref={headerRef} className={styles.header}>
         <div className={styles.headerLeft}>
           <div
             className={`${styles.logo} ${

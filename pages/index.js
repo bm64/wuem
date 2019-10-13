@@ -35,22 +35,26 @@ var settings = {
   arrows: false,
 }
 
-function scrollTo(ref) {
-  window.scrollBy(
-    0,
-    ref.current.getBoundingClientRect().top -
-      ref.current.getBoundingClientRect().height +
-      40
-  )
-}
-
 function Home() {
   const [currentImage, setCurrentImage] = useState(1)
 
+  const headerRef = useRef(null)
   const insurancesRef = useRef(null)
-  const loansRef = useRef(null)
+  const financesRef = useRef(null)
   const aboutRef = useRef(null)
   const contactRef = useRef(null)
+
+  const scrollTo = useCallback(
+    ref => {
+      window.scrollBy(
+        0,
+        ref.current.getBoundingClientRect().top -
+          headerRef.current.getBoundingClientRect().height +
+          5
+      )
+    },
+    [headerRef]
+  )
 
   const [isContentHovered, setIsContentHovered] = useState(false)
 
@@ -61,6 +65,7 @@ function Home() {
   return (
     <Layout>
       <Header
+        headerRef={headerRef}
         onStartPressed={() => window.scrollTo(0, 0)}
         onInsurancesPressed={() => {
           setCurrentImage(1)
@@ -71,7 +76,7 @@ function Home() {
           scrollTo(loansRef)
         }}
         onAboutPressed={() => {
-          window.scrollBy(0, aboutRef.current.getBoundingClientRect().top - 60)
+          scrollTo(aboutRef)
         }}
         onContactPressed={() => {
           scrollTo(contactRef)
@@ -96,10 +101,16 @@ function Home() {
         </div>
         <div className={styles.carouselContent}>
           {currentImage === 1 && (
-            <InsurancesContent pauseProgress={setIsContentHovered} />
+            <InsurancesContent
+              pauseProgress={setIsContentHovered}
+              onMorePressed={() => scrollTo(insurancesRef)}
+            />
           )}
           {currentImage === 0 && (
-            <FinanceContent pauseProgress={setIsContentHovered} />
+            <FinanceContent
+              pauseProgress={setIsContentHovered}
+              onMorePressed={() => scrollTo(financesRef)}
+            />
           )}
 
           <FaArrowDown
@@ -149,7 +160,7 @@ function Home() {
           </div>
         </Slider>
       </div>
-      <Loans sectionRef={loansRef} />
+      <Loans sectionRef={financesRef} />
       <div ref={contactRef} className={styles.sectionHeader}>
         <h1>Najczęściej zadawane pytania</h1>
         <hr className={styles.medium_bottom_line} />
@@ -278,7 +289,7 @@ function ProgressBar({
   )
 }
 
-const InsurancesContent = withFadeIn(props => (
+const InsurancesContent = withFadeIn(({ pauseProgress, onMorePressed }) => (
   <div className={styles.carouselText}>
     <h1>Ubezpieczenia dla Ciebie i Twoich bliskich</h1>
     <p>
@@ -286,17 +297,17 @@ const InsurancesContent = withFadeIn(props => (
       znajdziesz ubezpieczenia dopasowane do twoich potrzeb.
     </p>
     <div
-      onMouseEnter={() => props.pauseProgress(true)}
-      onMouseLeave={() => props.pauseProgress(false)}
+      onMouseEnter={() => pauseProgress(true)}
+      onMouseLeave={() => pauseProgress(false)}
       className={styles.carouselButton}
-      onClick={() => window.scrollTo(0, window.innerHeight - 80)}
+      onClick={() => onMorePressed()}
     >
       Sprawdź ofertę
     </div>
   </div>
 ))
 
-const FinanceContent = withFadeIn(props => (
+const FinanceContent = withFadeIn(({ pauseProgress, onMorePressed }) => (
   <div className={styles.carouselText}>
     <h1>Kredyt i leasing na każdą kieszeń</h1>
     <p>
@@ -304,10 +315,10 @@ const FinanceContent = withFadeIn(props => (
       prywatnych.
     </p>
     <div
-      onMouseEnter={() => props.pauseProgress(true)}
-      onMouseLeave={() => props.pauseProgress(false)}
+      onMouseEnter={() => pauseProgress(true)}
+      onMouseLeave={() => pauseProgress(false)}
       className={styles.carouselButton}
-      onClick={() => window.scrollTo(0, window.innerHeight - 80)}
+      onClick={() => onMorePressed()}
     >
       Sprawdź ofertę
     </div>
