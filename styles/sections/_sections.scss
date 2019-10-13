@@ -40,6 +40,9 @@
 
 .content-section {
   @extend .fixed-section;
+}
+
+@mixin tablet-up-only {
   @include for-size(phone-only) {
     display: none;
   }

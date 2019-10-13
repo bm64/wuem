@@ -3,6 +3,7 @@
 
 .cars-section {
   @extend .content-section;
+  @include tablet-up-only();
 }
 .headline {
   color: $black;

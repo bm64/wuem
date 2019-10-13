@@ -3,6 +3,7 @@
 
 .health-section {
   @extend .content-section;
+  @include tablet-up-only();
 }
 .benefits-title {
   text-align: center;

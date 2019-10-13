@@ -2,12 +2,12 @@
 @import '_sections.scss';
 
 .travel-section {
+  @extend .content-section;
+  @include tablet-up-only();
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  @extend .content-section;
-
   @include for-size(tablet-portrait-up) {
     flex-direction: row;
   }

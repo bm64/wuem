@@ -3,6 +3,7 @@
 
 .property-section {
   @extend .content-section;
+  @include tablet-up-only();
 
   display: flex;
   flex-direction: column;

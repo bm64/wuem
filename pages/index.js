@@ -73,7 +73,7 @@ function Home() {
         }}
         onCreditLeasingPressed={() => {
           setCurrentImage(0)
-          scrollTo(loansRef)
+          scrollTo(financesRef)
         }}
         onAboutPressed={() => {
           scrollTo(aboutRef)
