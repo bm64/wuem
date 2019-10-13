@@ -33,6 +33,11 @@
 
 .header-left {
   padding-left: 0.3rem;
+
+  @include for-size(tablet-portrait-up) {
+    flex-basis: 12rem;
+  }
+  padding: 0.5rem 1rem;
 }
 
 .header-middle {
@@ -59,7 +64,27 @@
 }
 
 .logo {
+  width: 5rem;
+  height: 4rem;
   transition: height 0.7s, width 0.7s;
+
+  background-image: url('/static/footer_logo2.png');
+
+  @include for-size(tablet-landscape-up) {
+    background-image: url('/static/logo.png');
+    height: 8rem;
+    width: 18rem;
+  }
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.logo--compact {
+  background-image: url('/static/footer_logo2.png') !important;
+  width: 5rem;
+  height: 4rem;
 }
 
 .hamburger-icon {

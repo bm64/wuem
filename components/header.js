@@ -30,8 +30,6 @@ function Header({
 
     window.addEventListener('scroll', handleScroll)
 
-    setTimeout(() => handleScroll, 0)
-
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
@@ -39,24 +37,10 @@ function Header({
     <div className={styles.container}>
       <div className={styles.header}>
         <div className={styles.headerLeft}>
-          <img
-            class
-            className={`${styles.logo}`}
-            style={
-              isCompact || width < 600
-                ? {
-                    height: '5rem',
-                    transform: 'scale(0.66, 0.66)',
-                  }
-                : {
-                    height: '6rem',
-                  }
-            }
-            src={
-              isCompact || width < 600
-                ? '/static/footer_logo2.png'
-                : '/static/logo.png'
-            }
+          <div
+            className={`${styles.logo} ${
+              isCompact ? styles['logo--compact'] : ''
+            }`}
           />
         </div>
         <div className={styles.headerMiddle}>
