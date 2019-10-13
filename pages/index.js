@@ -95,8 +95,12 @@ function Home() {
           <div className={styles.carouselImage}></div>
         </div>
         <div className={styles.carouselContent}>
-          {currentImage === 1 && <InsurancesContent />}
-          {currentImage === 0 && <FinanceContent />}
+          {currentImage === 1 && (
+            <InsurancesContent pauseProgress={setIsContentHovered} />
+          )}
+          {currentImage === 0 && (
+            <FinanceContent pauseProgress={setIsContentHovered} />
+          )}
 
           <FaArrowDown
             className={styles.arrow}
@@ -271,7 +275,7 @@ function ProgressBar({
   )
 }
 
-const InsurancesContent = withFadeIn(() => (
+const InsurancesContent = withFadeIn(props => (
   <div className={styles.carouselText}>
     <h1>Ubezpieczenia dla Ciebie i Twoich bliskich</h1>
     <p>
@@ -279,6 +283,8 @@ const InsurancesContent = withFadeIn(() => (
       znajdziesz ubezpieczenia dopasowane do twoich potrzeb.
     </p>
     <div
+      onMouseEnter={() => props.pauseProgress(true)}
+      onMouseLeave={() => props.pauseProgress(false)}
       className={styles.carouselButton}
       onClick={() => window.scrollTo(0, window.innerHeight - 80)}
     >
@@ -287,14 +293,16 @@ const InsurancesContent = withFadeIn(() => (
   </div>
 ))
 
-const FinanceContent = withFadeIn(() => (
+const FinanceContent = withFadeIn(props => (
   <div className={styles.carouselText}>
-    <h1>Kredyt i leasing na kazdą kieszeń</h1>
+    <h1>Kredyt i leasing na każdą kieszeń</h1>
     <p>
       Pomagamy wybrać najlepsze metody finansowania dla przedsiębiorców i osób
       prywatnych.
     </p>
     <div
+      onMouseEnter={() => props.pauseProgress(true)}
+      onMouseLeave={() => props.pauseProgress(false)}
       className={styles.carouselButton}
       onClick={() => window.scrollTo(0, window.innerHeight - 80)}
     >
@@ -401,7 +409,9 @@ const ContactForm = () => {
         </p>
       </label>
       {!didSubmit && (
-        <input type="submit" value="Wyslij" className={styles.submitButton} />
+        <div type="submit" value="Wyslij" className={styles.submitButton}>
+          Wyślij
+        </div>
       )}
       {didSubmit && <div>Wyslano</div>}
     </form>

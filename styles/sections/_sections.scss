@@ -38,6 +38,13 @@
   padding-right: 1rem;
 }
 
+.content-section {
+  @extend .fixed-section;
+  @include for-size(phone-only) {
+    display: none;
+  }
+}
+
 // Image-Section specific
 .image-section__text {
   color: lighten($black, 20%);
@@ -51,6 +58,10 @@
   @include for-size(tablet-landscape-up) {
     padding-right: 2rem;
     text-align: left;
+  }
+  @include for-size(phone-only) {
+    text-align: center;
+    //padding: 0 5%;
   }
 }
 

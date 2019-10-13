@@ -1,6 +1,9 @@
 @import '../_base.scss';
 @import '_sections.scss';
 
+.health-section {
+  @extend .content-section;
+}
 .benefits-title {
   text-align: center;
   color: $black;

@@ -19,7 +19,7 @@ function CarsInsurance() {
         <CarsInsuranceText containerClass={styles['image-section__text']} />
         <CarsInsuranceImage containerClass={styles['image-section__image']} />
       </div>
-      <div className={styles.fixedSection}>
+      <div className={styles.carsSection}>
         <h2 className={styles.headline}>
           Potrzebujesz <span>kompleksowego</span> ubezpiecznia dla swojego
           pojazdu?
@@ -43,9 +43,9 @@ const CarsInsuranceText = withFadeIn(() => {
       </h2>
       <p>
         Ubezpieczenia komunikacyjne to najczęściej wybierane produkty
-        ubezpieczeniowe przez Polaków. Obejmują swoją ochroną samochody,
-        motocykle i inne pojazdy. Ubezpieczenie odpowiedzialności cywilnej (OC),
-        jest najpopularniejszym i jednocześnie obowiązkowym ubezpieczeniem
+        ubezpieczeniowe przez. Obejmują swoją ochroną samochody, motocykle i
+        inne pojazdy. Ubezpieczenie odpowiedzialności cywilnej (OC), jest
+        najpopularniejszym i jednocześnie obowiązkowym ubezpieczeniem
         komunikacyjnym. W zależności od potrzeb naszych klientów, doradzamy
         kiedy warto zaopatrzyć się w dodatkowe ubezpieczenia takie jak
         Autocasco, Assistance czy NNW.

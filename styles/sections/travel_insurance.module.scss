@@ -2,11 +2,11 @@
 @import '_sections.scss';
 
 .travel-section {
-  @extend .fixed-section;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @extend .content-section;
 
   @include for-size(tablet-portrait-up) {
     flex-direction: row;
@@ -38,8 +38,8 @@
   color: $black;
 }
 
-.travel-headline > h2:after {
-  content: ' wszedzie';
+.travel-headline > h2:before {
+  content: ' Podróżuj';
   color: $primary-alt;
 }
 

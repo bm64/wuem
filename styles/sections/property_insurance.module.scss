@@ -2,7 +2,7 @@
 @import '_sections.scss';
 
 .property-section {
-  @extend .fixed-section;
+  @extend .content-section;
 
   display: flex;
   flex-direction: column;

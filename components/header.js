@@ -115,7 +115,7 @@ function Header({
           text="Kredyt i Leasing"
           onItemPressed={() => onCreditLeasingPressed()}
         />
-        <MenuItem text="O nas" onItemPressed={() => onAboutPressed()} />
+        {/*<MenuItem text="O nas" onItemPressed={() => onAboutPressed()} />*/}
         <MenuItem text="Kontakt" onItemPressed={() => onContactPressed()} />
       </div>
       {showProgress && <> {children} </>}

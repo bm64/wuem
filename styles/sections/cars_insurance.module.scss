@@ -1,6 +1,9 @@
 @import '../_base.scss';
 @import '_sections.scss';
 
+.cars-section {
+  @extend .content-section;
+}
 .headline {
   color: $black;
 }
@@ -92,6 +95,9 @@
   flex-shrink: 1;
 
   padding: 0 1rem;
+  @include for-size(phone-only) {
+    text-align: center;
+  }
 }
 
 .insurance-content > img {

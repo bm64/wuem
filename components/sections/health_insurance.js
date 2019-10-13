@@ -11,7 +11,7 @@ function HealthInsurance() {
         <HealthInsuranceText containerClass={styles['image-section__text']} />
         <HealthInsuranceImage containerClass={styles['image-section__image']} />
       </div>
-      <div className={styles.fixedSection}>
+      <div className={styles.healthSection}>
         <h2 className={styles.benefitsTitle}>
           Zadbaj o swoje <span>zdrowie</span> i Twoich bliskich
         </h2>

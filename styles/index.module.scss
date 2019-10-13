@@ -41,6 +41,9 @@
   right: 0px;
   top: 50vh;
   z-index: 3;
+  @include for-size(phone-only) {
+    display: none;
+  }
 }
 
 .previous-image-button {
@@ -49,6 +52,9 @@
   left: 0px;
   top: 50vh;
   z-index: 3;
+  @include for-size(phone-only) {
+    display: none;
+  }
 }
 
 .carousel-content {
@@ -61,6 +67,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @include for-size(phone-only) {
+    text-align: center;
+    align-items: center;
+  }
 }
 
 .carousel-text {
@@ -76,15 +87,21 @@
   @include for-size(tablet-landscape-up) {
     padding: calc(8rem + 5vw);
   }
+  @include for-size(phone-only) {
+    padding: 5% 5% 0 5%;
+  }
 }
 
 .carousel-text > h1 {
   font-size: 3rem;
   text-shadow: 0 3px 16px rgba(0, 0, 0, 0.59);
+  @include for-size(phone-only) {
+    font-size: 2.5rem;
+  }
 }
 
 .carousel-text > p {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
   text-shadow: 0 3px 16px rgba(0, 0, 0, 0.59);
 
@@ -109,6 +126,9 @@
   align-self: flex-start;
 
   transition: background-color 0.2s, color 0.2s;
+  @include for-size(phone-only) {
+    align-self: center;
+  }
 }
 
 .carousel-button:hover {
@@ -210,16 +230,28 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  border-bottom: 1px solid #ebebeb;
+  padding: 3rem 0;
+  max-width: 1280px;
 
-  padding: 2rem 0;
+  margin: 0 auto;
+  @include for-size(phone-only) {
+    padding: 1rem 0 3rem 0;
+  }
 }
 
 .slider {
   max-width: 50vw;
-}
 
+  @include for-size(phone-only) {
+    max-width: 90vw;
+  }
+}
 .slider__img {
   max-width: 50vw;
+  @include for-size(phone-only) {
+    max-width: 90vw;
+  }
 }
 
 .section_header {

@@ -18,8 +18,8 @@ function TravelInsurance() {
       <div className={styles.travelSection}>
         <div className={styles.left}>
           <div className={styles.travelHeadline}>
-            <h2>Badz bezpieczny </h2>
-            <h3>Sprawdz nasze ubezpieczenia turystyczne...</h3>
+            <h2> z naszymi ubezpieczeniami </h2>
+            <h3>Bezpiecznie niezależnie od miejsca</h3>
           </div>
           {currentTab === 0 && <img src={'/static/travel1.jpeg'} />}
           {currentTab === 1 && <img src={'/static/travel2.jpeg'} />}
@@ -85,13 +85,17 @@ function TravelInsurance() {
             )}
             {currentTab === 2 && (
               <div className={styles.benefit}>
-                <p className={styles.multitravelBenefits}>
-                  Ubezpieczenie Multitravel zapewnia pokrycie kosztów odwołania
-                  wyjazdu oraz leczenia. Dodatkowo chroni od wielu zdarzeń
-                  losowych, np. nieszczęśliwy wypadek, utrata bagażu, opóźnienia
-                  podróży, nagłe zachorowanie oraz wypadki podczas aktywności
-                  sportowych.
+                <p className={styles.benefitsHeader}>
+                  Ubezpieczenie multitravel gwarantuje:
                 </p>
+                <ul className={styles.insuranceBenefits}>
+                  <li>Pokrycie kosztów odwołania wyjazdu oraz leczenia</li>
+                  <li>Pokrycie kosztów utraty bagażu</li>
+                  <li>
+                    Zabezpieczenie w przypadku nagłego zachorowania bądź wypadku
+                  </li>
+                  <li>Ochrona w razie wypadku podczas aktywności sportowych</li>
+                </ul>
               </div>
             )}
           </div>
