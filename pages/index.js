@@ -11,6 +11,8 @@ import {
   FaTimes,
 } from 'react-icons/fa'
 
+import useLocalStorage from '../hooks/useLocalStorage'
+
 import withFadeIn from '../animations/withFadeIn'
 
 import Layout from '../components/layout'
@@ -433,15 +435,19 @@ const ContactForm = () => {
 }
 
 const Cookies = () => {
-  const [showAlert, setShowAlert] = useState(true)
-  return showAlert ? (
+  const [hasAcceptedCookies, setHasAcceptedCookies] = useLocalStorage(
+    'hasAcceptedCookies',
+    false
+  )
+
+  return !hasAcceptedCookies ? (
     <div className={styles.cookies}>
       <p>
         Używamy technologii cookies w celu personalizacji treści, udostępniania
         funkcji mediów społecznościowych oraz analizowania ruchu w Internecie.
         Kliknij <span>tu</span> aby dowiedziec sie wiecej
       </p>
-      <FaTimes onClick={() => setShowAlert(false)} />
+      <FaTimes onClick={() => setHasAcceptedCookies(true)} />
     </div>
   ) : null
 }
