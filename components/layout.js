@@ -21,7 +21,11 @@ function Layout({ children }) {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
         />
-        <script src="https://kit.fontawesome.com/4a78aee91a.js" />
+        <link
+          rel="shortcut icon"
+          href="http://wuemfinanse.pl/favicon.ico"
+          type="image/x-icon"
+        />
       </Head>
       <main>{children}</main>
     </>

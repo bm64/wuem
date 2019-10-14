@@ -296,7 +296,7 @@ const InsurancesContent = withFadeIn(({ pauseProgress, onMorePressed }) => (
     <h1>Ubezpieczenia dla Ciebie i Twoich bliskich</h1>
     <p>
       Niezależnie, czy jesteś osobą prywatną, czy firmą, w naszej ofercie
-      znajdziesz ubezpieczenia dopasowane do twoich potrzeb.
+      znajdziesz ubezpieczenia dopasowane do twoich potrzeb
     </p>
     <div
       onMouseEnter={() => pauseProgress(true)}
@@ -314,7 +314,7 @@ const FinanceContent = withFadeIn(({ pauseProgress, onMorePressed }) => (
     <h1>Kredyt i leasing na każdą kieszeń</h1>
     <p>
       Pomagamy wybrać najlepsze metody finansowania dla przedsiębiorców i osób
-      prywatnych.
+      prywatnych
     </p>
     <div
       onMouseEnter={() => pauseProgress(true)}

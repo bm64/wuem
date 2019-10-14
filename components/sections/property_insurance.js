@@ -15,7 +15,7 @@ function PropertyInsurance() {
       </div>
       <div className={styles.propertySection}>
         <h2 className={styles.propertyHeadline}>
-          Zabezpiecz swoje rodzinne progi juz <span>dzis</span>
+          Ochrona dla twoich <span>nieruchomości</span>
         </h2>
         <Cards />
       </div>
