@@ -19,7 +19,7 @@ function TravelInsurance() {
         <div className={styles.left}>
           <div className={styles.travelHeadline}>
             <h2> z naszymi ubezpieczeniami </h2>
-            <h3>Bezpiecznie niezależnie od miejsca</h3>
+            <h3>Bądź bezpieczny gdzie tylko chcesz!</h3>
           </div>
           {currentTab === 0 && <img src={'/static/travel1.jpeg'} />}
           {currentTab === 1 && <img src={'/static/travel2.jpeg'} />}

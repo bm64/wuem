@@ -72,8 +72,8 @@
 
   @include for-size(tablet-landscape-up) {
     background-image: url('/static/logo.png');
-    height: 8rem;
-    width: 18rem;
+    height: 6rem;
+    width: 15rem;
   }
 
   background-position: center;
@@ -100,12 +100,12 @@
 }
 
 .menu-item {
-  text-align: center;
+  text-align: left;
   border-bottom: 1px solid #ccc;
   cursor: pointer;
 
+  padding: 1.5rem;
   @include for-size(desktop-up) {
-    padding: 0.7rem;
     border-bottom: none;
     text-align: left;
   }

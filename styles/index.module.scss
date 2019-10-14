@@ -24,6 +24,9 @@
   background-size: cover;
 
   left: 0vw;
+  @include for-size(phone-only) {
+    background-image: url('/static/mobile_finance.jpeg');
+  }
 }
 
 .carousel-image:nth-child(2) {
