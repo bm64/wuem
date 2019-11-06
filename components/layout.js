@@ -23,7 +23,12 @@ function Layout({ children }) {
         />
         <link
           rel="shortcut icon"
-          href="http://wuemfinanse.pl/favicon.ico"
+          href="https://wuemfinanse.pl/favicon.ico"
+          type="image/x-icon"
+        />
+        <link
+          rel="icon"
+          href="https://wuemfinanse.pl/favicon.ico"
           type="image/x-icon"
         />
       </Head>

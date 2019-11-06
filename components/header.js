@@ -39,6 +39,7 @@ function Header({
       <div ref={headerRef} className={styles.header}>
         <div className={styles.headerLeft}>
           <div
+            onClick={() => onStartPressed()}
             className={`${styles.logo} ${
               isCompact ? styles['logo--compact'] : ''
             }`}

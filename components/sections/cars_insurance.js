@@ -43,8 +43,8 @@ const CarsInsuranceText = withFadeIn(() => {
       </h2>
       <p>
         Ubezpieczenia komunikacyjne to najczęściej wybierane produkty
-        ubezpieczeniowe przez. Obejmują swoją ochroną samochody, motocykle i
-        inne pojazdy. Ubezpieczenie odpowiedzialności cywilnej (OC), jest
+        ubezpieczeniowe. Obejmują swoją ochroną samochody, motocykle i inne
+        pojazdy. Ubezpieczenie odpowiedzialności cywilnej (OC), jest
         najpopularniejszym i jednocześnie obowiązkowym ubezpieczeniem
         komunikacyjnym. W zależności od potrzeb naszych klientów, doradzamy
         kiedy warto zaopatrzyć się w dodatkowe ubezpieczenia takie jak
@@ -88,7 +88,7 @@ const OC = withSlideDown(() => {
           <p>
             OC to ubezpieczenie odpowiedzialności cywilnej dla posiadaczy
             pojazdów mechanicznych, które chroni Cię przed odpowiedzialnością
-            cywilną za szkody wyrządzone w wyniku kolizji bądź wypadku w ruchu
+            cywilną za szkody wyrządzone w wyniku kolizji lub wypadku w ruchu
             drogowym.
           </p>
           <img src={'/static/oc.jpeg'} />
@@ -125,10 +125,10 @@ const AC = withSlideDown(() => {
       {showContent && (
         <div className={styles.insuranceContent}>
           <p>
-            Autocasco to dobrowolne ubezpieczenie, pozwalające pokryć koszty
+            Autocasco to dobrowolne ubezpieczenie pozwalające pokryć koszty
             naprawy pojazdu powstałe na skutek kolizji drogowej spowodowanej z
             winy ubezpieczonego, jak również rekompensuje stratę finansową
-            powstałą w wyniku kradzieży pojazdu czy innych zdarzeń losowych.
+            powstałą w wyniku kradzieży pojazdu, czy innych zdarzeń losowych.
             Właściciel pojazdu może dobrać taki zakres ubezpieczenia, jaki jest
             dla niego najkorzystniejszy.
           </p>

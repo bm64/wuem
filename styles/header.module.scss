@@ -70,6 +70,7 @@
 
   background-image: url('/static/footer_logo2.png');
 
+  cursor: pointer;
   @include for-size(tablet-landscape-up) {
     background-image: url('/static/logo.png');
     height: 6rem;
@@ -82,6 +83,7 @@
 }
 
 .logo--compact {
+  cursor: pointer;
   background-image: url('/static/footer_logo2.png') !important;
   width: 5rem;
   height: 4rem;
@@ -193,7 +195,7 @@
 }
 
 .direct-call-button {
-  color: $primary-alt;
+  color: $primary;
   font-size: 3.3rem;
   padding: 0.7rem;
 }

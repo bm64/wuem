@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../styles/footer.module.scss'
 
-function Footer({ onContactPressed }) {
+function Footer({ onContactPressed, onRodoPressed, onPolicyPressed }) {
   return (
     <div className={styles.footer}>
       <div className={styles.footerTop}>
@@ -11,8 +11,8 @@ function Footer({ onContactPressed }) {
       </div>
       <div className={styles.footerContent}>
         <p onClick={() => onContactPressed()}>Kontakt</p>
-        <p>Polityka prywatnosci</p>
-        <p>RODO</p>
+        <p onClick={() => onPolicyPressed()}>Polityka prywatnosci </p>
+        <p onClick={() => onRodoPressed()}>RODO </p>
         <p>© 2019 WueMFinanse.pl</p>
       </div>
     </div>

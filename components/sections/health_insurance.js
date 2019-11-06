@@ -87,11 +87,11 @@ const HealthInsuranceText = withFadeIn(() => {
         Ubezpieczenia <span>zdrowotne</span>
       </h2>
       <p>
-        Ubezpieczenia zdrowotne, w razie choroby lub wypadku, gwarantują dostęp
-        do niezbędnych świadczeń z zakresu opieki medycznej. Dodatkowo
-        zapewniają zabezpieczenie finansowe dla osoby ubezpieczonej oraz jej
-        rodziny. Spośród wielu pakietów ubezpieczeń zdrowotnych, pomagamy wybrać
-        te najbardziej dopasowane do potrzeb naszego klienta.
+        Ubezpieczenia zdrowotne w razie choroby lub wypadku gwarantują dostęp do
+        niezbędnych świadczeń z zakresu opieki medycznej. Dodatkowo zapewniają
+        zabezpieczenie finansowe dla osoby ubezpieczonej oraz jej rodziny.
+        Spośród wielu pakietów ubezpieczeń zdrowotnych, pomagamy wybrać te
+        najbardziej dopasowane do potrzeb naszego klienta.
       </p>
     </>
   )
