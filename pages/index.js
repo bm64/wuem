@@ -742,7 +742,7 @@ const ContactForm = ({ onPolicyPressed }) => {
   return (
     <form
       method={'post'}
-      action={'/mail.php'}
+      action={'/contactform.php'}
       className={styles.contactSection}
       style={{ flex: 3 }}
       onSubmit={e => {
@@ -773,7 +773,7 @@ const ContactForm = ({ onPolicyPressed }) => {
         <input type="checkbox" />
         <p>
           Wyrażam zgodę na na przetwarzanie danych osobowych zgodnie z ustawą o
-          ochronie danych osobowych. Podanie d1anych jest dobrowolne i niezbędne
+          ochronie danych osobowych. Podanie danych jest dobrowolne i niezbędne
           do przetworzenia zapytania. Informacje zawarte w formularzu
           kontaktowym będą wykorzystywane w celu udzielenia odpowiedzi na
           przesłane zapytanie oraz w celach marketingowych zgodnie z regulaminem{' '}
@@ -788,9 +788,9 @@ const ContactForm = ({ onPolicyPressed }) => {
         </p>
       </label>
       {!didSubmit && (
-        <div type="submit" value="Wyslij" className={styles.submitButton}>
+        <button type="submit" name="submit" className={styles.submitButton}>
           Wyślij
-        </div>
+        </button>
       )}
       {didSubmit && <div>Wyslano</div>}
     </form>

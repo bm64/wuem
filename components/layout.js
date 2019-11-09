@@ -5,7 +5,13 @@ function Layout({ children }) {
   return (
     <>
       <Head>
-        <title>WueM Finanse</title>
+        <title>WueM Finanse - Ubezpieczenia, kredyt, leasing, finanse</title>
+        <meta
+          name="description"
+          content="WuemFinanse Ubezpieczenia Finanse Mielec ul.Rynek 27 Godziny otwarcia: pn-pt 09:00 - 17:00 sob. 09:00 - 13:00 Usługi ubezpieczeniowe i finansowe
+"
+        />
+
         <link
           rel="stylesheet"
           type="text/css"
